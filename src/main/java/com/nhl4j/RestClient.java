@@ -3,9 +3,10 @@ package com.nhl4j;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.nhl4j.domain.Schedule;
-import com.nhl4j.domain.TeamsData;
+import com.nhl4j.domain.Boxscore;
+import com.nhl4j.domain.schedule.Schedule;
 import com.nhl4j.domain.game.Game;
+import com.nhl4j.serializers.BoxscoreDeserializer;
 import com.nhl4j.serializers.GameDeserializer;
 import com.nhl4j.serializers.ScheduleDeserializer;
 import org.springframework.http.HttpEntity;
@@ -23,14 +24,20 @@ public class RestClient {
 
     public RestClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
-        objectMapper = new ObjectMapper();
+        this.objectMapper = configureObjectMapper();
+    }
+
+    private ObjectMapper configureObjectMapper() {
+        ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         SimpleModule module = new SimpleModule();
         module.addDeserializer(Game.class, new GameDeserializer(objectMapper));
         module.addDeserializer(Schedule.class, new ScheduleDeserializer(objectMapper));
+        module.addDeserializer(Boxscore.class, new BoxscoreDeserializer(objectMapper));
 
         objectMapper.registerModule(module);
+        return objectMapper;
     }
 
     public <T> T doGet(String url, Class<T> objectType) throws IOException {

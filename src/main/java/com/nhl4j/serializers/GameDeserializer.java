@@ -6,17 +6,14 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import com.nhl4j.domain.Schedule;
 import com.nhl4j.domain.game.Game;
 import com.nhl4j.domain.game.GameStatus;
 import com.nhl4j.domain.game.Team;
 import lombok.val;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
-public class GameDeserializer  extends StdDeserializer<Game> {
+public class GameDeserializer extends StdDeserializer<Game> {
 
     private ObjectMapper objectMapper;
 
@@ -34,7 +31,6 @@ public class GameDeserializer  extends StdDeserializer<Game> {
             throws IOException, JsonProcessingException {
 
         JsonNode gameNode = jsonParser.getCodec().readTree(jsonParser);
-        ObjectMapper mapper = new ObjectMapper();
 
         GameStatus status = objectMapper.treeToValue(gameNode.get("status"), GameStatus.class);
 

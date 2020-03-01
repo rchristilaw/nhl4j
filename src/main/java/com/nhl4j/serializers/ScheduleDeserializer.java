@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import com.nhl4j.domain.Schedule;
+import com.nhl4j.domain.schedule.Schedule;
 import com.nhl4j.domain.game.Game;
 import lombok.val;
 
