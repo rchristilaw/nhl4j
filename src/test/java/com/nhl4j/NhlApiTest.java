@@ -9,7 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Calendar;
+import java.util.Date;
 
 public class NhlApiTest {
 
@@ -29,7 +35,7 @@ public class NhlApiTest {
     }
 
     @Test
-    public void validDate_getSchedule_returnsScheduleWithGames () throws NhlApiException {
+    public void validDate_getSchedule_returnsScheduleWithGames () throws NhlApiException, ParseException {
         Calendar cal = Calendar.getInstance();
         cal.set(2020,2,28);
         val today = cal.getTime();
@@ -43,7 +49,11 @@ public class NhlApiTest {
         Assert.assertNotNull(game.getHome().getName());
         Assert.assertNotNull(game.getGameDate());
 
-        //TODO: Add date start check
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");;
+        val gameDate = df.parse(game.getGameDate());
+
+        Assert.assertEquals(getLocalDateFromDate(today),
+                getLocalDateFromDate(gameDate));
     }
 
     @Test
@@ -51,5 +61,11 @@ public class NhlApiTest {
         Boxscore gameData = nhlApi.getGameBoxscore(2019020999);
 
         Assert.assertNotNull(gameData);
+    }
+
+    private LocalDate getLocalDateFromDate(Date date) {
+        return date.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
     }
 }
