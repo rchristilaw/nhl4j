@@ -2,17 +2,15 @@ package com.nhl4j;
 
 
 import com.nhl4j.domain.Boxscore;
-import com.nhl4j.domain.TeamInfo;
 import com.nhl4j.domain.TeamsData;
 import com.nhl4j.domain.schedule.Schedule;
 import com.nhl4j.exception.NhlApiException;
-import lombok.val;
 import org.springframework.web.client.RestTemplate;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
+import java.util.TimeZone;
 
 public class NhlApi {
 
@@ -36,7 +34,10 @@ public class NhlApi {
         String formattedDate;
         try {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-            formattedDate = formatter.format(date);
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(date);
+            cal.setTimeZone(TimeZone.getTimeZone("UTC"));
+            formattedDate = formatter.format(cal.getTime());
         } catch (Exception ex) {
             throw new NhlApiException("Failed to parse date", ex);
         }

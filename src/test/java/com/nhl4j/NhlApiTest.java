@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public class NhlApiTest {
 
@@ -30,12 +30,20 @@ public class NhlApiTest {
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames () throws NhlApiException {
-        val today = new Date(20200228);
+        Calendar cal = Calendar.getInstance();
+        cal.set(2020,2,28);
+        val today = cal.getTime();
 
         Schedule scheduleData = nhlApi.getScheduleForDate(today);
 
         Assert.assertNotNull(scheduleData);
         Assert.assertTrue(scheduleData.getGames().size() > 0);
+        val game = scheduleData.getGames().get(0);
+        Assert.assertNotNull(game.getAway().getName());
+        Assert.assertNotNull(game.getHome().getName());
+        Assert.assertNotNull(game.getGameDate());
+
+        //TODO: Add date start check
     }
 
     @Test

@@ -35,8 +35,8 @@ public class GameDeserializer extends StdDeserializer<Game> {
         GameStatus status = objectMapper.treeToValue(gameNode.get("status"), GameStatus.class);
 
         JsonNode teamsNode = gameNode.get("teams");
-        Team awayTeam = objectMapper.treeToValue(teamsNode.get("away"), Team.class);
-        Team homeTeam = objectMapper.treeToValue(teamsNode.get("home"), Team.class);
+        Team awayTeam = objectMapper.treeToValue(teamsNode.get("away").get("team"), Team.class);
+        Team homeTeam = objectMapper.treeToValue(teamsNode.get("home").get("team"), Team.class);
 
         val game = new Game();
         game.setId(gameNode.get("gamePk").intValue());
