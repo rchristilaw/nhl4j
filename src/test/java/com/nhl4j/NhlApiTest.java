@@ -37,7 +37,7 @@ public class NhlApiTest {
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames () throws NhlApiException, ParseException {
         Calendar cal = Calendar.getInstance();
-        cal.set(2020,2,28);
+        cal.set(2021,2,13);
         val today = cal.getTime();
 
         Schedule scheduleData = nhlApi.getScheduleForDate(today);
@@ -58,7 +58,7 @@ public class NhlApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws NhlApiException {
-        Boxscore gameData = nhlApi.getGameBoxscore(2019020999);
+        Boxscore gameData = nhlApi.getGameBoxscore(2020020433);
 
         Assert.assertNotNull(gameData);
     }
