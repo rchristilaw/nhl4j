@@ -1,71 +1,58 @@
 package com.nhl4j;
 
-import com.nhl4j.domain.Boxscore;
 import com.nhl4j.domain.schedule.Schedule;
 import com.nhl4j.exception.NhlApiException;
-import lombok.val;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.web.client.RestTemplate;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Calendar;
 import java.util.Date;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class NhlApiTest {
 
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+
     private NhlApi nhlApi;
 
-    @BeforeMethod
+    @BeforeEach
     public void setup() {
         nhlApi = new NhlApi(new RestTemplate());
     }
 
     @Test
     public void validRequest_getTeams_notNullAndAllTeamsReturned() throws NhlApiException {
-        val teams = nhlApi.getTeams();
+        final var teams = nhlApi.getTeams();
 
-        Assert.assertNotNull(teams);
-        Assert.assertEquals(teams.getTeams().size(), 31);
+        assertNotNull(teams);
+        assertEquals(teams.getTeams().size(), 32);
     }
 
     @Test
-    public void validDate_getSchedule_returnsScheduleWithGames () throws NhlApiException, ParseException {
-        Calendar cal = Calendar.getInstance();
-        cal.set(2021,2,13);
-        val today = cal.getTime();
+    public void validDate_getSchedule_returnsScheduleWithGames() throws NhlApiException, ParseException {
+        final var today = Date.from(DATE_FORMAT.parse("2022-11-25").toInstant());
 
         Schedule scheduleData = nhlApi.getScheduleForDate(today);
 
-        Assert.assertNotNull(scheduleData);
-        Assert.assertTrue(scheduleData.getGames().size() > 0);
-        val game = scheduleData.getGames().get(0);
-        Assert.assertNotNull(game.getAway().getName());
-        Assert.assertNotNull(game.getHome().getName());
-        Assert.assertNotNull(game.getGameDate());
+        assertNotNull(scheduleData);
+        assertTrue(scheduleData.getGames().size() > 0);
 
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");;
-        val gameDate = df.parse(game.getGameDate());
+        final var game = scheduleData.getGames().get(0);
+        assertNotNull(game.getAway().getName());
+        assertNotNull(game.getHome().getName());
+        assertNotNull(game.getGameDate());
 
-        Assert.assertEquals(getLocalDateFromDate(today),
-                getLocalDateFromDate(gameDate));
+        final var gameDate = DATE_FORMAT.parse(game.getGameDate());
+        assertEquals(today, gameDate);
     }
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws NhlApiException {
-        Boxscore gameData = nhlApi.getGameBoxscore(2020020433);
+        final var gameData = nhlApi.getGameBoxscore(2022020322);
 
-        Assert.assertNotNull(gameData);
-    }
-
-    private LocalDate getLocalDateFromDate(Date date) {
-        return date.toInstant()
-                .atZone(ZoneId.systemDefault())
-                .toLocalDate();
+        assertNotNull(gameData);
     }
 }
