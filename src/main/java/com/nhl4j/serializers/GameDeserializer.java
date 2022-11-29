@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class GameDeserializer extends StdDeserializer<Game> {
 
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     public GameDeserializer(ObjectMapper objectMapper) {
         this(null, objectMapper);

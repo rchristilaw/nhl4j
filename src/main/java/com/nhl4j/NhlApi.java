@@ -30,6 +30,15 @@ public class NhlApi {
         }
     }
 
+    public TeamsData getTeam(int teamId) throws NhlApiException {
+        try {
+            final var path = String.format("teams/%s?expand=team.roster", teamId);
+            return restClient.doGet(BASE_URL + path, TeamsData.class);
+        } catch (Exception ex) {
+            throw new NhlApiException("Failed to fetch team", ex);
+        }
+    }
+
     public Schedule getScheduleForDate(Date date) throws NhlApiException {
         String formattedDate;
         try {

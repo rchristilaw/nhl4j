@@ -17,7 +17,7 @@ import java.util.List;
 
 public class BoxscoreDeserializer extends StdDeserializer<Boxscore> {
 
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     public BoxscoreDeserializer(ObjectMapper objectMapper) {
         this(null, objectMapper);

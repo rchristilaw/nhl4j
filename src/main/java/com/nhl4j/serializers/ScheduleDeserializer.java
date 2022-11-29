@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ScheduleDeserializer extends StdDeserializer<Schedule> {
 
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     public ScheduleDeserializer(ObjectMapper objectMapper) {
         this(null, objectMapper);

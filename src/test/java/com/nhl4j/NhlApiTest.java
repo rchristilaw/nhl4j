@@ -32,6 +32,13 @@ public class NhlApiTest {
     }
 
     @Test
+    public void validRequest_getTeam3_teamDataWithRoster() throws NhlApiException {
+        final var team = nhlApi.getTeam(3).getTeams().get(0);
+
+        assertNotNull(team);
+    }
+
+    @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws NhlApiException, ParseException {
         final var today = Date.from(DATE_FORMAT.parse("2022-11-25").toInstant());
 
@@ -51,7 +58,7 @@ public class NhlApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws NhlApiException {
-        final var gameData = nhlApi.getGameBoxscore(2022020322);
+        final var gameData = nhlApi.getGameBoxscore(2022020357);
 
         assertNotNull(gameData);
     }

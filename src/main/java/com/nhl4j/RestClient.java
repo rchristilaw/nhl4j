@@ -4,11 +4,13 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.nhl4j.domain.Boxscore;
+import com.nhl4j.domain.TeamInfo;
 import com.nhl4j.domain.schedule.Schedule;
 import com.nhl4j.domain.game.Game;
 import com.nhl4j.serializers.BoxscoreDeserializer;
 import com.nhl4j.serializers.GameDeserializer;
 import com.nhl4j.serializers.ScheduleDeserializer;
+import com.nhl4j.serializers.TeamInfoDeserializer;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -35,6 +37,7 @@ public class RestClient {
         module.addDeserializer(Game.class, new GameDeserializer(objectMapper));
         module.addDeserializer(Schedule.class, new ScheduleDeserializer(objectMapper));
         module.addDeserializer(Boxscore.class, new BoxscoreDeserializer(objectMapper));
+        module.addDeserializer(TeamInfo.class, new TeamInfoDeserializer(objectMapper));
 
         objectMapper.registerModule(module);
         return objectMapper;
