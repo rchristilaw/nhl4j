@@ -33,8 +33,10 @@ public class TeamInfoDeserializer extends StdDeserializer<TeamInfo> {
         teamInfo.setTeamName(teamNode.get("teamName").textValue());
         teamInfo.setAbbreviation(teamNode.get("abbreviation").textValue());
 
-        final var rosterNode = teamNode.get("roster").get("roster");
-        teamInfo.setRoster(buildPlayers(rosterNode));
+        if (teamNode.get("roster") != null) {
+            final var rosterNode = teamNode.get("roster").get("roster");
+            teamInfo.setRoster(buildPlayers(rosterNode));
+        }
 
         return teamInfo;
     }

@@ -13,14 +13,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class NhlApi {
+public class NflApi {
 
     private final RestClient restClient;
 
-    private static final String BASE_URL = "https://statsapi.web.nhl.com/api/v1/";
+    private static final String BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard";
 
-    public NhlApi(RestTemplate restTemplate) {
-        this.restClient = new RestClient(restTemplate, League.NHL);
+    public NflApi(RestTemplate restTemplate) {
+        this.restClient = new RestClient(restTemplate, League.NFL);
     }
 
     public TeamsData getTeams() throws StatsApiException {
@@ -40,10 +40,11 @@ public class NhlApi {
         }
     }
 
+    //https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20230121
     public Schedule getScheduleForDate(Date date) throws StatsApiException {
         String formattedDate;
         try {
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
             Calendar cal = Calendar.getInstance();
             cal.setTime(date);
             cal.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -53,13 +54,14 @@ public class NhlApi {
         }
 
         try {
-            String url = BASE_URL + "schedule?date=" + formattedDate;
+            String url = BASE_URL + "?dates=" + formattedDate;
             return restClient.doGet(url, Schedule.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch the schedule", ex);
         }
     }
 
+    //https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401438002
     public Boxscore getGameBoxscore(int id) throws StatsApiException {
         try {
             String url = BASE_URL + "game/" + id + "/boxscore";

@@ -14,15 +14,15 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-public class ScheduleDeserializer extends StdDeserializer<Schedule> {
+public class NhlScheduleDeserializer extends StdDeserializer<Schedule> {
 
     private final ObjectMapper objectMapper;
 
-    public ScheduleDeserializer(ObjectMapper objectMapper) {
+    public NhlScheduleDeserializer(ObjectMapper objectMapper) {
         this(null, objectMapper);
     }
 
-    public ScheduleDeserializer(Class<?> vc, ObjectMapper objectMapper) {
+    public NhlScheduleDeserializer(Class<?> vc, ObjectMapper objectMapper) {
         super(vc);
         this.objectMapper = objectMapper;
     }
