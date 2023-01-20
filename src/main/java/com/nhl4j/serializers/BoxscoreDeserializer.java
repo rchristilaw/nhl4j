@@ -52,7 +52,7 @@ public class BoxscoreDeserializer extends StdDeserializer<Boxscore> {
         val team = new Team();
 
         val teamDataNode = teamNode.get("team");
-        team.setId(teamDataNode.get("id").intValue());
+        team.setId(teamDataNode.get("id").textValue());
         team.setName(teamDataNode.get("name").textValue());
 
         val statsNode = teamNode.get("teamStats").get("teamSkaterStats");

@@ -39,7 +39,7 @@ public class GameDeserializer extends StdDeserializer<Game> {
         Team homeTeam = objectMapper.treeToValue(teamsNode.get("home").get("team"), Team.class);
 
         val game = new Game();
-        game.setId(gameNode.get("gamePk").intValue());
+        game.setId(gameNode.get("gamePk").textValue());
         game.setHome(homeTeam);
         game.setAway(awayTeam);
         game.setGameDate(gameNode.get("gameDate").textValue());

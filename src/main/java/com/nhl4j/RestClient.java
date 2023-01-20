@@ -4,13 +4,11 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.nhl4j.domain.Boxscore;
+import com.nhl4j.domain.League;
 import com.nhl4j.domain.TeamInfo;
 import com.nhl4j.domain.schedule.Schedule;
 import com.nhl4j.domain.game.Game;
-import com.nhl4j.serializers.BoxscoreDeserializer;
-import com.nhl4j.serializers.GameDeserializer;
-import com.nhl4j.serializers.ScheduleDeserializer;
-import com.nhl4j.serializers.TeamInfoDeserializer;
+import com.nhl4j.serializers.*;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -23,19 +21,24 @@ public class RestClient {
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
+    private final League league;
 
-    public RestClient(RestTemplate restTemplate) {
+    public RestClient(RestTemplate restTemplate, League league) {
         this.restTemplate = restTemplate;
-        this.objectMapper = configureObjectMapper();
+        this.objectMapper = configureObjectMapper(league);
+        this.league = league;
     }
 
-    private ObjectMapper configureObjectMapper() {
+    private ObjectMapper configureObjectMapper(League league) {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         SimpleModule module = new SimpleModule();
         module.addDeserializer(Game.class, new GameDeserializer(objectMapper));
-        module.addDeserializer(Schedule.class, new ScheduleDeserializer(objectMapper));
+
+        final var scheduleDeserializer = league == League.NFL
+                ? new NflScheduleDeserializer(objectMapper) : new NhlScheduleDeserializer(objectMapper);
+        module.addDeserializer(Schedule.class, scheduleDeserializer);
         module.addDeserializer(Boxscore.class, new BoxscoreDeserializer(objectMapper));
         module.addDeserializer(TeamInfo.class, new TeamInfoDeserializer(objectMapper));
 

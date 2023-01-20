@@ -7,9 +7,10 @@ import java.util.List;
 
 @Data
 public class Team {
-    private int id;
+    private String id;
     private String name;
-
+    private String shortName;
+    private String abbreviation;
     private int score;
     private int penaltyMinutes;
     private int shotsOnGoal;
