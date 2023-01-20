@@ -28,7 +28,7 @@ public class TeamInfoDeserializer extends StdDeserializer<TeamInfo> {
         JsonNode teamNode = jsonParser.getCodec().readTree(jsonParser);
 
         final var teamInfo = new TeamInfo();
-        teamInfo.setId(teamNode.get("id").intValue());
+        teamInfo.setId(teamNode.get("id").textValue());
         teamInfo.setName(teamNode.get("name").textValue());
         teamInfo.setTeamName(teamNode.get("teamName").textValue());
         teamInfo.setAbbreviation(teamNode.get("abbreviation").textValue());
@@ -50,7 +50,7 @@ public class TeamInfoDeserializer extends StdDeserializer<TeamInfo> {
             final var playerNode = playerElements.next();
             final var person = playerNode.get("person");
             playerList.add(TeamInfo.Player.builder()
-                    .id(person.get("id").intValue())
+                    .id(person.get("id").textValue())
                     .fullName(person.get("fullName").textValue())
                     .position(playerNode.get("position").get("abbreviation").textValue())
                     .number(playerNode.get("jerseyNumber").textValue())

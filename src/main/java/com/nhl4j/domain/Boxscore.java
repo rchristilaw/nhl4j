@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class Boxscore {
-    private int id;
+    private String id;
     private String gameDate;
     private GameStatus gameStatus;
     private Team homeTeam;

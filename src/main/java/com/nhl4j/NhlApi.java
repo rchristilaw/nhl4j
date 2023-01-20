@@ -31,7 +31,7 @@ public class NhlApi {
         }
     }
 
-    public TeamsData getTeam(int teamId) throws StatsApiException {
+    public TeamsData getTeam(String teamId) throws StatsApiException {
         try {
             final var path = String.format("teams/%s?expand=team.roster", teamId);
             return restClient.doGet(BASE_URL + path, TeamsData.class);
@@ -60,7 +60,7 @@ public class NhlApi {
         }
     }
 
-    public Boxscore getGameBoxscore(int id) throws StatsApiException {
+    public Boxscore getGameBoxscore(String id) throws StatsApiException {
         try {
             String url = BASE_URL + "game/" + id + "/boxscore";
             return restClient.doGet(url, Boxscore.class);

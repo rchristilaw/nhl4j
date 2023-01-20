@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Player {
 
-    private int id;
+    private String id;
     private String fullName;
     private int goals;
     private int assists;

@@ -36,7 +36,7 @@ public class NflApiTest {
     @Test
     @Disabled
     public void validRequest_getTeam3_teamDataWithRoster() throws StatsApiException {
-        final var team = nflApi.getTeam(3).getTeams().get(0);
+        final var team = nflApi.getTeam("3").getTeams().get(0);
 
         assertNotNull(team);
     }
@@ -62,7 +62,7 @@ public class NflApiTest {
     @Test
     @Disabled
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nflApi.getGameBoxscore(2022020357);
+        final var gameData = nflApi.getGameBoxscore("2022020357");
 
         assertNotNull(gameData);
     }
