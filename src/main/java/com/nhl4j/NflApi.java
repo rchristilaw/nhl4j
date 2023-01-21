@@ -17,7 +17,7 @@ public class NflApi {
 
     private final RestClient restClient;
 
-    private static final String BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard";
+    private static final String BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/";
 
     public NflApi(RestTemplate restTemplate) {
         this.restClient = new RestClient(restTemplate, League.NFL);
@@ -54,7 +54,7 @@ public class NflApi {
         }
 
         try {
-            String url = BASE_URL + "?dates=" + formattedDate;
+            String url = BASE_URL + "scoreboard?dates=" + formattedDate;
             return restClient.doGet(url, Schedule.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch the schedule", ex);
@@ -62,9 +62,9 @@ public class NflApi {
     }
 
     //https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401438002
-    public Boxscore getGameBoxscore(String id) throws StatsApiException {
+    public Boxscore getGameBoxscore(String gameId) throws StatsApiException {
         try {
-            String url = BASE_URL + "game/" + id + "/boxscore";
+            String url = BASE_URL + "summary?event=" + gameId;
             return restClient.doGet(url, Boxscore.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch the schedule", ex);

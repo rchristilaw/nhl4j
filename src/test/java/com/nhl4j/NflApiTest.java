@@ -60,9 +60,8 @@ public class NflApiTest {
     }
 
     @Test
-    @Disabled
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nflApi.getGameBoxscore("2022020357");
+        final var gameData = nflApi.getGameBoxscore("401438002");
 
         assertNotNull(gameData);
     }

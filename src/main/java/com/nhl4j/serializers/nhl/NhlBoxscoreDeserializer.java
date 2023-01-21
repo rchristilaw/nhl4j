@@ -1,47 +1,46 @@
-package com.nhl4j.serializers;
+package com.nhl4j.serializers.nhl;
 
 import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.nhl4j.domain.Boxscore;
 import com.nhl4j.domain.Player;
+import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.game.Team;
-import lombok.val;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BoxscoreDeserializer extends StdDeserializer<Boxscore> {
+public class NhlBoxscoreDeserializer extends StdDeserializer<Boxscore> {
 
     private final ObjectMapper objectMapper;
 
-    public BoxscoreDeserializer(ObjectMapper objectMapper) {
+    public NhlBoxscoreDeserializer(ObjectMapper objectMapper) {
         this(null, objectMapper);
     }
 
-    public BoxscoreDeserializer(Class<?> vc, ObjectMapper objectMapper) {
+    public NhlBoxscoreDeserializer(Class<?> vc, ObjectMapper objectMapper) {
         super(vc);
         this.objectMapper = objectMapper;
     }
 
     @Override
     public Boxscore deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
-            throws IOException, JsonProcessingException {
+            throws IOException {
 
         JsonNode gameNode = jsonParser.getCodec().readTree(jsonParser);
 
         JsonNode teamsNode = gameNode.get("teams");
 
         JsonNode awayTeamNode = teamsNode.get("away");
-        val awayTeam = buildTeamData(awayTeamNode);
+        final var awayTeam = buildTeamData(awayTeamNode);
         JsonNode homeTeamNode = teamsNode.get("home");
-        val homeTeam = buildTeamData(homeTeamNode);
+        final var homeTeam = buildTeamData(homeTeamNode);
 
-        val boxscore = new Boxscore();
+        final var boxscore = new Boxscore();
         boxscore.setAwayTeam(awayTeam);
         boxscore.setHomeTeam(homeTeam);
 
@@ -49,13 +48,13 @@ public class BoxscoreDeserializer extends StdDeserializer<Boxscore> {
     }
 
     private Team buildTeamData(JsonNode teamNode) {
-        val team = new Team();
+        final var team = new Team();
 
-        val teamDataNode = teamNode.get("team");
-        team.setId(teamDataNode.get("id").textValue());
+        final var teamDataNode = teamNode.get("team");
+        team.setId(teamDataNode.get("id").toString());
         team.setName(teamDataNode.get("name").textValue());
 
-        val statsNode = teamNode.get("teamStats").get("teamSkaterStats");
+        final var statsNode = teamNode.get("teamStats").get("teamSkaterStats");
         team.setScore(statsNode.get("goals").intValue());
         team.setPenaltyMinutes(statsNode.get("pim").intValue());
         team.setShotsOnGoal(statsNode.get("shots").intValue());
@@ -67,12 +66,12 @@ public class BoxscoreDeserializer extends StdDeserializer<Boxscore> {
     }
 
     private List<Player> buildPlayers(JsonNode playersNode) {
-        val playerList = new ArrayList<Player>();
+        final var playerList = new ArrayList<Player>();
 
-        val playerElements = playersNode.elements();
+        final var playerElements = playersNode.elements();
 
         while(playerElements.hasNext()) {
-            val playerNode = playerElements.next();
+            final var playerNode = playerElements.next();
             playerList.add(buildPlayer(playerNode));
         }
 
@@ -80,18 +79,18 @@ public class BoxscoreDeserializer extends StdDeserializer<Boxscore> {
     }
 
     private Player buildPlayer(JsonNode playerNode) {
-        val player = new Player();
+        final var player = new Player();
 
-        val playerInfo = playerNode.get("person");
-        player.setId(playerInfo.get("id").textValue());
+        final var playerInfo = playerNode.get("person");
+        player.setId(playerInfo.get("id").toString());
         player.setFullName(playerInfo.get("fullName").textValue());
 
-        val stats = playerNode.get("stats").get("skaterStats");
+        final var stats = playerNode.get("stats").get("skaterStats");
         if (stats != null) {
-            player.setGoals(stats.get("goals").intValue());
-            player.setAssists(stats.get("assists").intValue());
-            player.setPenaltyMins(stats.get("penaltyMinutes").intValue());
-            player.setShotsOnGoal(stats.get("shots").intValue());
+            player.getStats().put(Stat.GOALS, stats.get("goals").textValue());
+            player.getStats().put(Stat.ASSISTS, stats.get("assists").textValue());
+            player.getStats().put(Stat.PIMS, stats.get("penaltyMinutes").textValue());
+            player.getStats().put(Stat.SOGS, stats.get("shots").textValue());
         }
 
         return player;

@@ -1,4 +1,4 @@
-package com.nhl4j.serializers;
+package com.nhl4j.serializers.nhl;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -11,13 +11,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TeamInfoDeserializer extends StdDeserializer<TeamInfo> {
+public class NhlTeamInfoDeserializer extends StdDeserializer<TeamInfo> {
 
-    public TeamInfoDeserializer(ObjectMapper objectMapper) {
+    public NhlTeamInfoDeserializer(ObjectMapper objectMapper) {
         this(null, objectMapper);
     }
 
-    public TeamInfoDeserializer(Class<?> vc, ObjectMapper objectMapper) {
+    public NhlTeamInfoDeserializer(Class<?> vc, ObjectMapper objectMapper) {
         super(vc);
     }
 
@@ -28,7 +28,7 @@ public class TeamInfoDeserializer extends StdDeserializer<TeamInfo> {
         JsonNode teamNode = jsonParser.getCodec().readTree(jsonParser);
 
         final var teamInfo = new TeamInfo();
-        teamInfo.setId(teamNode.get("id").textValue());
+        teamInfo.setId(teamNode.get("id").toString());
         teamInfo.setName(teamNode.get("name").textValue());
         teamInfo.setTeamName(teamNode.get("teamName").textValue());
         teamInfo.setAbbreviation(teamNode.get("abbreviation").textValue());

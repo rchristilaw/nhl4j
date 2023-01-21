@@ -18,6 +18,7 @@ public class TeamInfo {
     private String abbreviation;
     private List<Player> roster;
 
+
     @Builder
     public record Player(String id, String fullName, String position, String number) { }
 }

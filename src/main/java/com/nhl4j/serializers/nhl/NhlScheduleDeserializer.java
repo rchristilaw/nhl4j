@@ -1,4 +1,4 @@
-package com.nhl4j.serializers;
+package com.nhl4j.serializers.nhl;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,4 +1,4 @@
-package com.nhl4j.serializers;
+package com.nhl4j.serializers.nfl;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -7,8 +7,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.nhl4j.domain.game.Game;
-import com.nhl4j.domain.game.GameStatus;
-import com.nhl4j.domain.game.Team;
 import com.nhl4j.domain.schedule.Schedule;
 
 import java.io.IOException;
@@ -51,10 +49,12 @@ public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
 
         for (final var event : events) {
             final var game = new Game();
-            game.setId(event.get("id").textValue());
+            game.setId(event.get("id").toString());
             game.setGameDate(event.get("date").textValue());
-            game.setHome(parseTeam(event, "home"));
-            game.setAway(parseTeam(event, "away"));
+
+            final var competitionNode = event.get("competitions").get(0);
+            game.setHome(NflDeserializationHelper.parseTeamFromCompetitionsNode(competitionNode, "home"));
+            game.setAway(NflDeserializationHelper.parseTeamFromCompetitionsNode(competitionNode, "away"));
 
             game.setGameStatus(new GameStatus());
             games.add(game);
@@ -63,22 +63,6 @@ public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
         return games;
     }
 
-    private Team parseTeam(JsonNode event, String homeAway) {
-        final var team = new Team();
-        final var competitorNodes = event.get("competitions").get(0).get("competitors");
 
-        for (final var competitorNode : competitorNodes) {
-            if (!competitorNode.get("homeAway").textValue().equals(homeAway)) {
-                continue;
-            }
-            final var teamNode = competitorNode.get("team");
-            team.setId(teamNode.get("id").textValue());
-            team.setName(teamNode.get("displayName").textValue());
-            team.setShortName(teamNode.get("name").textValue());
-            team.setAbbreviation(teamNode.get("abbreviation").textValue());
-            return team;
-        }
-        return null;
-    }
 
 }

@@ -8,7 +8,12 @@ import com.nhl4j.domain.League;
 import com.nhl4j.domain.TeamInfo;
 import com.nhl4j.domain.schedule.Schedule;
 import com.nhl4j.domain.game.Game;
-import com.nhl4j.serializers.*;
+import com.nhl4j.serializers.nfl.NflBoxscoreDeserializer;
+import com.nhl4j.serializers.nfl.NflScheduleDeserializer;
+import com.nhl4j.serializers.nhl.NhlBoxscoreDeserializer;
+import com.nhl4j.serializers.nhl.NhlGameDeserializer;
+import com.nhl4j.serializers.nhl.NhlScheduleDeserializer;
+import com.nhl4j.serializers.nhl.NhlTeamInfoDeserializer;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -34,13 +39,17 @@ public class RestClient {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         SimpleModule module = new SimpleModule();
-        module.addDeserializer(Game.class, new GameDeserializer(objectMapper));
+        module.addDeserializer(Game.class, new NhlGameDeserializer(objectMapper));
 
-        final var scheduleDeserializer = league == League.NFL
-                ? new NflScheduleDeserializer(objectMapper) : new NhlScheduleDeserializer(objectMapper);
-        module.addDeserializer(Schedule.class, scheduleDeserializer);
-        module.addDeserializer(Boxscore.class, new BoxscoreDeserializer(objectMapper));
-        module.addDeserializer(TeamInfo.class, new TeamInfoDeserializer(objectMapper));
+        if (league == League.NFL) {
+            module.addDeserializer(Schedule.class, new NflScheduleDeserializer(objectMapper));
+            module.addDeserializer(Boxscore.class, new NflBoxscoreDeserializer(objectMapper));
+        } else {
+            module.addDeserializer(Schedule.class, new NhlScheduleDeserializer(objectMapper));
+            module.addDeserializer(Boxscore.class, new NhlBoxscoreDeserializer(objectMapper));
+        }
+
+        module.addDeserializer(TeamInfo.class, new NhlTeamInfoDeserializer(objectMapper));
 
         objectMapper.registerModule(module);
         return objectMapper;

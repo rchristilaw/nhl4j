@@ -1,4 +1,4 @@
-package com.nhl4j.serializers;
+package com.nhl4j.serializers.nhl;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -13,15 +13,15 @@ import lombok.val;
 
 import java.io.IOException;
 
-public class GameDeserializer extends StdDeserializer<Game> {
+public class NhlGameDeserializer extends StdDeserializer<Game> {
 
     private final ObjectMapper objectMapper;
 
-    public GameDeserializer(ObjectMapper objectMapper) {
+    public NhlGameDeserializer(ObjectMapper objectMapper) {
         this(null, objectMapper);
     }
 
-    public GameDeserializer(Class<?> vc, ObjectMapper objectMapper) {
+    public NhlGameDeserializer(Class<?> vc, ObjectMapper objectMapper) {
         super(vc);
         this.objectMapper = objectMapper;
     }
@@ -32,19 +32,22 @@ public class GameDeserializer extends StdDeserializer<Game> {
 
         JsonNode gameNode = jsonParser.getCodec().readTree(jsonParser);
 
-        GameStatus status = objectMapper.treeToValue(gameNode.get("status"), GameStatus.class);
-
         JsonNode teamsNode = gameNode.get("teams");
         Team awayTeam = objectMapper.treeToValue(teamsNode.get("away").get("team"), Team.class);
         Team homeTeam = objectMapper.treeToValue(teamsNode.get("home").get("team"), Team.class);
 
         val game = new Game();
-        game.setId(gameNode.get("gamePk").textValue());
+        game.setId(gameNode.get("gamePk").toString());
         game.setHome(homeTeam);
         game.setAway(awayTeam);
         game.setGameDate(gameNode.get("gameDate").textValue());
-        game.setGameStatus(status);
+        game.setGameStatus(parseGameStatus(gameNode.get("status")));
 
         return game;
+    }
+
+    private GameStatus parseGameStatus(JsonNode statusNode) {
+        //TODO parse NHL game status
+        return GameStatus.LIVE;
     }
 }
