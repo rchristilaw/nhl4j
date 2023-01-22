@@ -1,6 +1,5 @@
-package com.nhl4j.domain.schedule;
+package com.nhl4j.domain;
 
-import com.nhl4j.domain.game.Game;
 import lombok.Data;
 
 import java.util.List;
@@ -9,6 +8,4 @@ import java.util.List;
 public class Schedule {
     private int totalGames;
     private List<Game> games;
-
-//    String dates;
 }

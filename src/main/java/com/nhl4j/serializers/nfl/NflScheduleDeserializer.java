@@ -1,34 +1,32 @@
 package com.nhl4j.serializers.nfl;
 
 import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import com.nhl4j.domain.game.Game;
-import com.nhl4j.domain.schedule.Schedule;
+import com.nhl4j.domain.Game;
+import com.nhl4j.domain.Schedule;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseGameStatusFromCompetitionNode;
+import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseTeamFromCompetitionNode;
+
 public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
 
-    private final ObjectMapper objectMapper;
-
-    public NflScheduleDeserializer(ObjectMapper objectMapper) {
-        this(null, objectMapper);
+    public NflScheduleDeserializer() {
+        this(null);
     }
 
-    public NflScheduleDeserializer(Class<?> vc, ObjectMapper objectMapper) {
+    public NflScheduleDeserializer(Class<?> vc) {
         super(vc);
-        this.objectMapper = objectMapper;
     }
 
     @Override
     public Schedule deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
-            throws IOException, JsonProcessingException {
+            throws IOException {
 
         JsonNode scheduleNode = jsonParser.getCodec().readTree(jsonParser);
 
@@ -53,10 +51,10 @@ public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
             game.setGameDate(event.get("date").textValue());
 
             final var competitionNode = event.get("competitions").get(0);
-            game.setHome(NflDeserializationHelper.parseTeamFromCompetitionsNode(competitionNode, "home"));
-            game.setAway(NflDeserializationHelper.parseTeamFromCompetitionsNode(competitionNode, "away"));
+            game.setHome(parseTeamFromCompetitionNode(competitionNode, "home"));
+            game.setAway(parseTeamFromCompetitionNode(competitionNode, "away"));
 
-            game.setGameStatus(new GameStatus());
+            game.setGameStatus(parseGameStatusFromCompetitionNode(competitionNode));
             games.add(game);
         }
 

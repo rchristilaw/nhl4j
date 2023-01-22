@@ -1,6 +1,6 @@
 package com.nhl4j;
 
-import com.nhl4j.domain.schedule.Schedule;
+import com.nhl4j.domain.Schedule;
 import com.nhl4j.exception.StatsApiException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,12 +28,12 @@ public class NhlApiTest {
         final var teams = nhlApi.getTeams();
 
         assertNotNull(teams);
-        assertEquals(teams.getTeams().size(), 32);
+        assertEquals(teams.size(), 32);
     }
 
     @Test
     public void validRequest_getTeam3_teamDataWithRoster() throws StatsApiException {
-        final var team = nhlApi.getTeam("3").getTeams().get(0);
+        final var team = nhlApi.getTeam("3");
 
         assertNotNull(team);
     }
@@ -48,8 +48,8 @@ public class NhlApiTest {
         assertTrue(scheduleData.getGames().size() > 0);
 
         final var game = scheduleData.getGames().get(0);
-        assertNotNull(game.getAway().getName());
-        assertNotNull(game.getHome().getName());
+        assertNotNull(game.getAway().getFullName());
+        assertNotNull(game.getHome().getFullName());
         assertNotNull(game.getGameDate());
 
         final var gameDate = DATE_FORMAT.parse(game.getGameDate());
@@ -58,7 +58,7 @@ public class NhlApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nhlApi.getGameBoxscore("2022020723");
+        final var gameData = nhlApi.getGameDetails("2022020723");
 
         assertNotNull(gameData);
     }

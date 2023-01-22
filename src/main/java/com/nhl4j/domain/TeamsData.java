@@ -6,5 +6,5 @@ import java.util.List;
 
 @Data
 public class TeamsData {
-    List<TeamInfo> teams;
+    List<Team> teams;
 }

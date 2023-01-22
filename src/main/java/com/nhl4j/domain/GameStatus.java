@@ -1,4 +1,4 @@
-package com.nhl4j.domain.game;
+package com.nhl4j.domain;
 
 public enum GameStatus {
     UPCOMING,

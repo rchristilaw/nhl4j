@@ -3,17 +3,16 @@ package com.nhl4j;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.nhl4j.domain.Boxscore;
 import com.nhl4j.domain.League;
-import com.nhl4j.domain.TeamInfo;
-import com.nhl4j.domain.schedule.Schedule;
-import com.nhl4j.domain.game.Game;
-import com.nhl4j.serializers.nfl.NflBoxscoreDeserializer;
+import com.nhl4j.domain.Team;
+import com.nhl4j.domain.Schedule;
+import com.nhl4j.domain.Game;
+import com.nhl4j.serializers.nfl.NflGameDeserializer;
 import com.nhl4j.serializers.nfl.NflScheduleDeserializer;
-import com.nhl4j.serializers.nhl.NhlBoxscoreDeserializer;
+import com.nhl4j.serializers.nfl.NflTeamDeserializer;
 import com.nhl4j.serializers.nhl.NhlGameDeserializer;
 import com.nhl4j.serializers.nhl.NhlScheduleDeserializer;
-import com.nhl4j.serializers.nhl.NhlTeamInfoDeserializer;
+import com.nhl4j.serializers.nhl.NhlTeamDeserializer;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -39,17 +38,16 @@ public class RestClient {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         SimpleModule module = new SimpleModule();
-        module.addDeserializer(Game.class, new NhlGameDeserializer(objectMapper));
 
         if (league == League.NFL) {
-            module.addDeserializer(Schedule.class, new NflScheduleDeserializer(objectMapper));
-            module.addDeserializer(Boxscore.class, new NflBoxscoreDeserializer(objectMapper));
+            module.addDeserializer(Schedule.class, new NflScheduleDeserializer());
+            module.addDeserializer(Game.class, new NflGameDeserializer());
+            module.addDeserializer(Team.class, new NflTeamDeserializer());
         } else {
+            module.addDeserializer(Game.class, new NhlGameDeserializer());
             module.addDeserializer(Schedule.class, new NhlScheduleDeserializer(objectMapper));
-            module.addDeserializer(Boxscore.class, new NhlBoxscoreDeserializer(objectMapper));
+            module.addDeserializer(Team[].class, new NhlTeamDeserializer());
         }
-
-        module.addDeserializer(TeamInfo.class, new NhlTeamInfoDeserializer(objectMapper));
 
         objectMapper.registerModule(module);
         return objectMapper;
