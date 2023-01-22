@@ -38,7 +38,7 @@ public class NflApiTest {
         final var team = nflApi.getTeam("2");
 
         assertNotNull(team);
-//        assertTrue(team.getRoster().size() > 0);
+        assertTrue(team.getRoster().size() > 0);
     }
 
     @Test
