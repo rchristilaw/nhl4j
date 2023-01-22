@@ -22,9 +22,17 @@ public class NflTeamDeserializer extends StdDeserializer<Team> {
     public Team deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
             throws IOException {
 
-        JsonNode scheduleNode = jsonParser.getCodec().readTree(jsonParser);
+        final JsonNode teamNode = jsonParser.getCodec().readTree(jsonParser);
 
+
+        final var teamDataNode = teamNode.get("team");
         final var team = new Team();
+
+        team.setId(teamDataNode.get("id").toString());
+        team.setFullName(teamDataNode.get("displayName").textValue());
+        team.setCityName(teamDataNode.get("location").textValue());
+        team.setNickName(teamDataNode.get("name").textValue());
+        team.setAbbreviation(teamDataNode.get("abbreviation").textValue());
 
         return team;
     }

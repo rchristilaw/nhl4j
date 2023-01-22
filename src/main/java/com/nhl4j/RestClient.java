@@ -3,11 +3,9 @@ package com.nhl4j;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.nhl4j.domain.League;
-import com.nhl4j.domain.Team;
-import com.nhl4j.domain.Schedule;
-import com.nhl4j.domain.Game;
+import com.nhl4j.domain.*;
 import com.nhl4j.serializers.nfl.NflGameDeserializer;
+import com.nhl4j.serializers.nfl.NflRosterDeserializer;
 import com.nhl4j.serializers.nfl.NflScheduleDeserializer;
 import com.nhl4j.serializers.nfl.NflTeamDeserializer;
 import com.nhl4j.serializers.nhl.NhlGameDeserializer;
@@ -20,6 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.util.List;
 
 public class RestClient {
 
@@ -43,6 +42,7 @@ public class RestClient {
             module.addDeserializer(Schedule.class, new NflScheduleDeserializer());
             module.addDeserializer(Game.class, new NflGameDeserializer());
             module.addDeserializer(Team.class, new NflTeamDeserializer());
+            module.addDeserializer(Player[].class, new NflRosterDeserializer());
         } else {
             module.addDeserializer(Game.class, new NhlGameDeserializer());
             module.addDeserializer(Schedule.class, new NhlScheduleDeserializer(objectMapper));

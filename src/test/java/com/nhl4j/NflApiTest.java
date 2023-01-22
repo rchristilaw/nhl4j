@@ -34,11 +34,11 @@ public class NflApiTest {
     }
 
     @Test
-    @Disabled
-    public void validRequest_getTeam3_teamDataWithRoster() throws StatsApiException {
-        final var team = nflApi.getTeam("3");
+    public void validRequest_getTeam2_teamDataWithRoster() throws StatsApiException {
+        final var team = nflApi.getTeam("2");
 
         assertNotNull(team);
+//        assertTrue(team.getRoster().size() > 0);
     }
 
     @Test

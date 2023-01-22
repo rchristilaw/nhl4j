@@ -26,9 +26,10 @@ public class NflApi {
         }
     }
 
+    //https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/22
     public Team getTeam(String teamId) throws StatsApiException {
         try {
-            final var path = String.format("teams/%s?expand=team.roster", teamId);
+            final var path = String.format("teams/%s", teamId);
             return restClient.doGet(BASE_URL + path, Team.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch team: " + teamId, ex);
