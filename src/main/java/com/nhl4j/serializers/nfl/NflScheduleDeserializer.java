@@ -47,7 +47,7 @@ public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
 
         for (final var event : events) {
             final var game = new Game();
-            game.setId(event.get("id").toString());
+            game.setId(event.get("id").textValue());
             game.setGameDate(event.get("date").textValue());
 
             final var competitionNode = event.get("competitions").get(0);

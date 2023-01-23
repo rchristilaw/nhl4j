@@ -5,14 +5,28 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.nhl4j.domain.Game;
+import com.nhl4j.domain.Player;
+import com.nhl4j.domain.Stat;
+import com.nhl4j.domain.Team;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
+import static com.nhl4j.domain.Stat.*;
 import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseGameStatusFromCompetitionNode;
 import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseTeamFromCompetitionNode;
 
 public class NflGameDeserializer extends StdDeserializer<Game> {
+
+    private static Map<String, List<Stat>> STAT_CATEGORIES = Map.of(
+            "passing", List.of(PASSING_YARDS, PASSING_COMPLETIONS_ATTEMPTS, PASSING_TDS, PASSING_INTS),
+            "rushing", List.of(RUSHING_YARDS, RUSHING_ATTEMPTS, RUSHING_TDS, RUSHING_LONG),
+            "receiving", List.of(RECEIVING_YARDS, RECEPTIONS, RECEIVING_TDS, RECEIVING_LONG)
+            );
 
     public NflGameDeserializer() {
         this(null);
@@ -31,14 +45,94 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
         final var competitionNode = gameNode.get("header").get("competitions").get(0);
 
         final var game = new Game();
-        game.setId(competitionNode.get("id").toString());
+        game.setId(competitionNode.get("id").textValue());
         game.setGameDate(competitionNode.get("date").toString());
         game.setGameStatus(parseGameStatusFromCompetitionNode(competitionNode));
 
         game.setHome(parseTeamFromCompetitionNode(competitionNode, "home"));
         game.setAway(parseTeamFromCompetitionNode(competitionNode, "away"));
+        game.getHome().setRoster(new ArrayList<>());
+        game.getAway().setRoster(new ArrayList<>());
+
+        final var boxscoreNode = gameNode.get("boxscore");
+        parseStats(boxscoreNode, game.getHome());
+        parseStats(boxscoreNode, game.getAway());
 
         return game;
+    }
+
+    private void parseStats(JsonNode boxscoreNode, Team team) {
+        if (boxscoreNode.get("players") != null) {
+            final var teamPlayerStatsNode = boxscoreNode.get("players");
+
+            for (final var playerStatsNode : teamPlayerStatsNode) {
+                if (!playerStatsNode.get("team").get("id").textValue().equals(team.getId())) {
+                    continue;
+                }
+
+                for (final var statCategory : STAT_CATEGORIES.entrySet()) {
+                    final var categoryNode = getStatsNodeByType(
+                            (ArrayNode)playerStatsNode.get("statistics"), statCategory.getKey());
+
+                    if (categoryNode == null) {
+                        continue;
+                    }
+
+                    final var keys = (ArrayNode)categoryNode.get("keys");
+
+                    for (int i = 0; i < keys.size(); i++) {
+                        final var key = keys.get(i);
+
+                        final var statKey = statCategory.getValue().stream()
+                                .filter(it -> it.getKey().equals(key.textValue()))
+                                .findFirst().orElse(null);
+
+                        if (statKey == null) {
+                            continue;
+                        }
+
+                        final var athletesNode = (ArrayNode)categoryNode.get("athletes");
+                        for (final var athleteNode : athletesNode) {
+                            final var statValue = athleteNode.get("stats").get(i).textValue();
+                            addStatToPlayer(team, athleteNode.get("athlete"), statKey, statValue);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    private JsonNode getStatsNodeByType(ArrayNode statsNodes, String statType) {
+        for (final var statsNode : statsNodes) {
+            if (statType.equals(statsNode.get("name").textValue())) {
+                return statsNode;
+            }
+        }
+        return null;
+    }
+
+    private void addStatToPlayer(Team team, JsonNode playerNode, Stat stat, String value) {
+        final var currentPlayer = parsePlayerNode(playerNode);
+
+        final var player = team.getRoster().stream()
+                .filter(it -> it.getId().equals(currentPlayer.getId()))
+                .findFirst().orElse(null);
+
+        if (player != null) {
+            player.getStats().put(stat, value);
+        } else {
+            currentPlayer.getStats().put(stat, value);
+            team.getRoster().add(currentPlayer);
+        }
+    }
+
+    private Player parsePlayerNode(JsonNode playerNode) {
+        final var player = new Player();
+        player.setId(playerNode.get("id").textValue());
+        player.setFullName(playerNode.get("displayName").textValue());
+
+        return player;
     }
 
 }

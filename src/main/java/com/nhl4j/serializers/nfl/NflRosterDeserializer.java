@@ -38,10 +38,10 @@ public class NflRosterDeserializer extends StdDeserializer<Player[]> {
 
             for (final var playerNode : playersNode) {
                 final var player = new Player();
-                player.setId(playerNode.get("id").toString());
+                player.setId(playerNode.get("id").textValue());
                 player.setFullName(playerNode.get("fullName").textValue());
                 player.setPosition(playerNode.get("position").get("abbreviation").textValue());
-                player.setNumber(playerNode.get("jersey").textValue());
+                player.setNumber(playerNode.get("jersey") != null ? playerNode.get("jersey").textValue() : "0");
 
                 roster.add(player);
             }

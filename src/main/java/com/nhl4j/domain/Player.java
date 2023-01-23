@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Data
@@ -18,5 +19,5 @@ public class Player {
     private String position;
     private String number;
 
-    private Map<Stat, String> stats;
+    private Map<Stat, String> stats = new HashMap<>();
 }

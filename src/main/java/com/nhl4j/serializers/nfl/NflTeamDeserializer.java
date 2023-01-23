@@ -28,7 +28,7 @@ public class NflTeamDeserializer extends StdDeserializer<Team> {
         final var teamDataNode = teamNode.get("team");
         final var team = new Team();
 
-        team.setId(teamDataNode.get("id").toString());
+        team.setId(teamDataNode.get("id").textValue());
         team.setFullName(teamDataNode.get("displayName").textValue());
         team.setCityName(teamDataNode.get("location").textValue());
         team.setNickName(teamDataNode.get("name").textValue());

@@ -2,6 +2,7 @@ package com.nhl4j.serializers.nfl;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.nhl4j.domain.GameStatus;
+import com.nhl4j.domain.Player;
 import com.nhl4j.domain.Team;
 
 public class NflDeserializationHelper {
@@ -15,7 +16,7 @@ public class NflDeserializationHelper {
                 continue;
             }
             final var teamNode = competitorNode.get("team");
-            team.setId(teamNode.get("id").toString());
+            team.setId(teamNode.get("id").textValue());
             team.setFullName(teamNode.get("displayName").textValue());
             team.setNickName(teamNode.get("name").textValue());
             team.setCityName(teamNode.get("name").textValue());
@@ -24,7 +25,6 @@ public class NflDeserializationHelper {
         }
         return null;
     }
-
 
     public static GameStatus parseGameStatusFromCompetitionNode(JsonNode competitionNode) {
         final var statusValue = competitionNode.get("status").get("type").get("name").toString();
