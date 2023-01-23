@@ -5,41 +5,44 @@ import lombok.Getter;
 @Getter
 public enum Stat {
     // All
-    SCORE,
+    SCORE("total score"),
 
     // Hockey
-    GOALS,
-    ASSISTS,
-    PIMS,
-    SOGS,
-    HITS,
+    GOALS("goals"),
+    ASSISTS("assists"),
+    PIMS("penalty minutes"),
+    SOGS("shots on goal"),
+    HITS("hits"),
 
     // Football
-    PASSING_YARDS("passingYards"),
-    PASSING_COMPLETIONS_ATTEMPTS("completions/passingAttempts"),
-    PASSING_TDS("passingTouchdowns"),
-    PASSING_INTS("interceptions"),
+    PASSING_YARDS("passing yards", "passingYards"),
+    PASSING_COMPLETIONS_ATTEMPTS("Comp/Attempts", "completions/passingAttempts"),
+    PASSING_TDS("passing TDs", "passingTouchdowns"),
+    PASSING_INTS("interceptions", "interceptions"),
 
-    RUSHING_YARDS("rushingYards"),
-    RUSHING_ATTEMPTS("rushingAttempts"),
-    RUSHING_TDS("rushingTouchdowns"),
-    RUSHING_LONG("longRushing"),
+    RUSHING_YARDS("rushing yards", "rushingYards"),
+    RUSHING_ATTEMPTS("rushing attempts", "rushingAttempts"),
+    RUSHING_TDS("rushing TDs", "rushingTouchdowns"),
+    RUSHING_LONG("longest rush", "longRushing"),
 
-    RECEIVING_YARDS("receivingYards"),
-    RECEPTIONS("receptions"),
-    RECEIVING_TDS("receivingTouchdowns"),
-    RECEIVING_LONG("longReception"),
+    RECEIVING_YARDS("receiving yards", "receivingYards"),
+    RECEPTIONS("receptions", "receptions"),
+    RECEIVING_TDS("receiving TDs", "receivingTouchdowns"),
+    RECEIVING_LONG("longest reception", "longReception"),
 
-    FUMBLES,
-    INTERCEPTIONS;
+    FUMBLES("fumbles"),
+    INTERCEPTIONS("interceptions");
 
-    Stat() {
+    Stat(String name) {
+        this.name = name;
         this.key = "";
     }
 
-    Stat(String key) {
+    Stat(String name, String key) {
+        this.name = name;
         this.key = key;
     }
 
-    private String key;
+    private final String name;
+    private final String key;
 }
