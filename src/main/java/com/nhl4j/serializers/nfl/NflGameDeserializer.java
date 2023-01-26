@@ -18,6 +18,8 @@ import java.util.List;
 import java.util.Map;
 
 import static com.nhl4j.domain.Stat.*;
+import static com.nhl4j.serializers.StatHelper.getMaxStat;
+import static com.nhl4j.serializers.StatHelper.getSumOfPlayerStat;
 import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseGameStatusFromCompetitionNode;
 import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseTeamFromCompetitionNode;
 
@@ -62,11 +64,19 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
         parseTeamStats(boxscoreNode, game.getAway());
 
         StatHelper.buildGameStats(game);
+        game.getStats().put(RECEIVING_LONG, getMaxStat(game, RECEIVING_LONG));
+        game.getStats().put(RUSHING_LONG, getMaxStat(game, RUSHING_LONG));
+        game.getStats().put(FIELD_GOALS_LONG, getMaxStat(game, FIELD_GOALS_LONG));
+        game.getStats().put(PUNTS_LONG, getMaxStat(game, PUNTS_LONG));
 
         return game;
     }
 
     private void parseTeamStats(JsonNode boxscoreNode, Team team) {
+        if (boxscoreNode.get("players") != null) {
+            parsePlayerStats(team, (ArrayNode) boxscoreNode.get("players"));
+        }
+
         if (boxscoreNode.get("teams") != null) {
             for (final var teamsNode : boxscoreNode.get("teams")) {
                 if (!teamsNode.get("team").get("id").textValue().equals(team.getId())) {
@@ -80,14 +90,15 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
                 teamStats.put(FUMBLES, getTeamStat(FUMBLES, statisticsNode));
                 teamStats.put(TURNOVERS, getTeamStat(TURNOVERS, statisticsNode));
 
+                teamStats.put(FIELD_GOALS, getSumOfPlayerStat(team, FIELD_GOALS));
+                teamStats.put(KICKING_POINTS, getSumOfPlayerStat(team, KICKING_POINTS));
+                teamStats.put(PUNTS, getSumOfPlayerStat(team, PUNTS));
+                teamStats.put(PUNT_YARDS, getSumOfPlayerStat(team, PUNT_YARDS));
+
                 // Need to parse out the sack yards value
                 final var sacks = getTeamStat(SACKS, statisticsNode).split("-")[0];
                 teamStats.put(SACKS, sacks);
             }
-        }
-
-        if (boxscoreNode.get("players") != null) {
-            parsePlayerStats(team, (ArrayNode) boxscoreNode.get("players"));
         }
     }
 
