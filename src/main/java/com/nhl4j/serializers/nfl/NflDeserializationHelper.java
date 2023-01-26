@@ -1,8 +1,10 @@
 package com.nhl4j.serializers.nfl;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.nhl4j.domain.GameStatus;
 import com.nhl4j.domain.Player;
+import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
 
 public class NflDeserializationHelper {
@@ -21,9 +23,27 @@ public class NflDeserializationHelper {
             team.setNickName(teamNode.get("name").textValue());
             team.setCityName(teamNode.get("name").textValue());
             team.setAbbreviation(teamNode.get("abbreviation").textValue());
+
+            if (competitorNode.get("score") != null) {
+                team.getStats().put(Stat.SCORE, competitorNode.get("score").textValue());
+            }
+
+            if (competitorNode.get("linescores") != null) {
+                final var linescoresNode = (ArrayNode)competitorNode.get("linescores");
+                team.getStats().put(Stat.SCORE_Q1, getLineScore(linescoresNode, 0));
+                team.getStats().put(Stat.SCORE_Q2, getLineScore(linescoresNode, 1));
+                team.getStats().put(Stat.SCORE_Q3, getLineScore(linescoresNode, 2));
+                team.getStats().put(Stat.SCORE_Q4, getLineScore(linescoresNode, 3));
+            }
+
             return team;
         }
         return null;
+    }
+
+    private static String getLineScore(ArrayNode linescoresNode, int index) {
+        return linescoresNode.get(index) != null
+                ? linescoresNode.get(index).get("displayValue").textValue() : "0";
     }
 
     public static GameStatus parseGameStatusFromCompetitionNode(JsonNode competitionNode) {

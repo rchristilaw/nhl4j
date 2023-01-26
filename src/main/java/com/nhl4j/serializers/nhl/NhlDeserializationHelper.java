@@ -50,9 +50,13 @@ public class NhlDeserializationHelper {
             final var skaterStatsNode = statsNode.get("skaterStats");
             final var stats = new HashMap<Stat, String>();
             stats.put(Stat.GOALS, skaterStatsNode.get("goals").toString());
+            stats.put(Stat.GOALS_PP, skaterStatsNode.get("powerPlayGoals").toString());
+            stats.put(Stat.GOALS_SH, skaterStatsNode.get("shortHandedGoals").toString());
             stats.put(Stat.ASSISTS, skaterStatsNode.get("assists").toString());
             stats.put(Stat.PIMS, skaterStatsNode.get("penaltyMinutes").toString());
             stats.put(Stat.SOGS, skaterStatsNode.get("shots").toString());
+            stats.put(Stat.HITS, skaterStatsNode.get("hits").toString());
+            stats.put(Stat.FACEOFF_WINS, skaterStatsNode.get("faceOffWins").toString());
             player.setStats(stats);
         }
 

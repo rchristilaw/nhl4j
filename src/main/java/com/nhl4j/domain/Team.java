@@ -18,5 +18,5 @@ public class Team {
 
     List<Player> roster;
 
-    private Map<Stat, String> stats;
+    private Map<Stat, String> stats = new HashMap<>();
 }

@@ -8,6 +8,7 @@ import com.nhl4j.domain.Game;
 import com.nhl4j.domain.GameStatus;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
+import com.nhl4j.serializers.StatHelper;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -54,6 +55,8 @@ public class NhlGameDeserializer extends StdDeserializer<Game> {
         game.setHome(homeTeam);
         game.setAway(awayTeam);
 
+        StatHelper.buildGameStats(game);
+
         return game;
     }
 
@@ -67,10 +70,11 @@ public class NhlGameDeserializer extends StdDeserializer<Game> {
         if (teamNode.get("teamStats") != null) {
             final var statsNode = teamNode.get("teamStats").get("teamSkaterStats");
             final var stats = new HashMap<Stat, String>();
-            stats.put(Stat.GOALS, statsNode.get("goals").textValue());
-            stats.put(Stat.PIMS, statsNode.get("pim").textValue());
-            stats.put(Stat.SOGS, statsNode.get("shots").textValue());
-            stats.put(Stat.HITS, statsNode.get("hits").textValue());
+            stats.put(Stat.GOALS, statsNode.get("goals").toString());
+            stats.put(Stat.GOALS_PP, statsNode.get("powerPlayGoals").toString());
+            stats.put(Stat.PIMS, statsNode.get("pim").toString());
+            stats.put(Stat.SOGS, statsNode.get("shots").toString());
+            stats.put(Stat.HITS, statsNode.get("hits").toString());
 
             team.setStats(stats);
         }

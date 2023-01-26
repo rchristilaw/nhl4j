@@ -43,7 +43,7 @@ public class NflApiTest {
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2023-01-21").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2023-01-29").toInstant());
 
         Schedule scheduleData = nflApi.getScheduleForDate(today);
 

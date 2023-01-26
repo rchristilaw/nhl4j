@@ -10,6 +10,7 @@ import com.nhl4j.domain.Game;
 import com.nhl4j.domain.Player;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
+import com.nhl4j.serializers.StatHelper;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,9 +24,11 @@ import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseTeamFromCo
 public class NflGameDeserializer extends StdDeserializer<Game> {
 
     private static Map<String, List<Stat>> STAT_CATEGORIES = Map.of(
-            "passing", List.of(PASSING_YARDS, PASSING_COMPLETIONS_ATTEMPTS, PASSING_TDS, PASSING_INTS),
+            "passing", List.of(PASSING_YARDS, PASSING_COMPLETIONS, PASSING_TDS, PASSING_INTS),
             "rushing", List.of(RUSHING_YARDS, RUSHING_ATTEMPTS, RUSHING_TDS, RUSHING_LONG),
-            "receiving", List.of(RECEIVING_YARDS, RECEPTIONS, RECEIVING_TDS, RECEIVING_LONG)
+            "receiving", List.of(RECEIVING_YARDS, RECEPTIONS, RECEIVING_TDS, RECEIVING_LONG),
+            "kicking", List.of(FIELD_GOALS, FIELD_GOALS_LONG, KICKING_POINTS),
+            "punting", List.of(PUNTS, PUNTS_LONG, PUNT_YARDS)
             );
 
     public NflGameDeserializer() {
@@ -55,50 +58,78 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
         game.getAway().setRoster(new ArrayList<>());
 
         final var boxscoreNode = gameNode.get("boxscore");
-        parseStats(boxscoreNode, game.getHome());
-        parseStats(boxscoreNode, game.getAway());
+        parseTeamStats(boxscoreNode, game.getHome());
+        parseTeamStats(boxscoreNode, game.getAway());
+
+        StatHelper.buildGameStats(game);
 
         return game;
     }
 
-    private void parseStats(JsonNode boxscoreNode, Team team) {
-        if (boxscoreNode.get("players") != null) {
-            final var teamPlayerStatsNode = boxscoreNode.get("players");
-
-            for (final var playerStatsNode : teamPlayerStatsNode) {
-                if (!playerStatsNode.get("team").get("id").textValue().equals(team.getId())) {
+    private void parseTeamStats(JsonNode boxscoreNode, Team team) {
+        if (boxscoreNode.get("teams") != null) {
+            for (final var teamsNode : boxscoreNode.get("teams")) {
+                if (!teamsNode.get("team").get("id").textValue().equals(team.getId())) {
                     continue;
                 }
 
-                for (final var statCategory : STAT_CATEGORIES.entrySet()) {
-                    final var categoryNode = getStatsNodeByType(
-                            (ArrayNode)playerStatsNode.get("statistics"), statCategory.getKey());
+                final var teamStats = team.getStats();
 
-                    if (categoryNode == null) {
+                final var statisticsNode = (ArrayNode)teamsNode.get("statistics");
+                teamStats.put(INTERCEPTIONS, getTeamStat(INTERCEPTIONS, statisticsNode));
+                teamStats.put(FUMBLES, getTeamStat(FUMBLES, statisticsNode));
+                teamStats.put(TURNOVERS, getTeamStat(TURNOVERS, statisticsNode));
+
+                // Need to parse out the sack yards value
+                final var sacks = getTeamStat(SACKS, statisticsNode).split("-")[0];
+                teamStats.put(SACKS, sacks);
+            }
+        }
+
+        if (boxscoreNode.get("players") != null) {
+            parsePlayerStats(team, (ArrayNode) boxscoreNode.get("players"));
+        }
+    }
+
+    private String getTeamStat(Stat stat, ArrayNode statisticsNode)  {
+        final var statNode = getStatsNodeByType(statisticsNode, stat.getKey());
+        return statNode != null ? statNode.get("displayValue").textValue() : "0";
+    }
+
+    private void parsePlayerStats(Team team, ArrayNode teamPlayerStatsNode) {
+        for (final var playerStatsNode : teamPlayerStatsNode) {
+            if (!playerStatsNode.get("team").get("id").textValue().equals(team.getId())) {
+                continue;
+            }
+
+            for (final var statCategory : STAT_CATEGORIES.entrySet()) {
+                final var categoryNode = getStatsNodeByType(
+                        (ArrayNode)playerStatsNode.get("statistics"), statCategory.getKey());
+
+                if (categoryNode == null) {
+                    continue;
+                }
+
+                final var keys = (ArrayNode)categoryNode.get("keys");
+
+                for (int i = 0; i < keys.size(); i++) {
+                    final var key = keys.get(i);
+
+                    final var statKey = statCategory.getValue().stream()
+                            .filter(it -> it.getKey().equals(key.textValue()))
+                            .findFirst().orElse(null);
+
+                    if (statKey == null) {
                         continue;
                     }
 
-                    final var keys = (ArrayNode)categoryNode.get("keys");
-
-                    for (int i = 0; i < keys.size(); i++) {
-                        final var key = keys.get(i);
-
-                        final var statKey = statCategory.getValue().stream()
-                                .filter(it -> it.getKey().equals(key.textValue()))
-                                .findFirst().orElse(null);
-
-                        if (statKey == null) {
-                            continue;
-                        }
-
-                        final var athletesNode = (ArrayNode)categoryNode.get("athletes");
-                        for (final var athleteNode : athletesNode) {
-                            final var statValue = athleteNode.get("stats").get(i).textValue();
-                            addStatToPlayer(team, athleteNode.get("athlete"), statKey, statValue);
-                        }
+                    final var athletesNode = (ArrayNode)categoryNode.get("athletes");
+                    for (final var athleteNode : athletesNode) {
+                        final var statValue = athleteNode.get("stats").get(i).textValue();
+                        addStatToPlayer(team, athleteNode.get("athlete"), statKey, statValue);
                     }
-
                 }
+
             }
         }
     }
@@ -118,6 +149,10 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
         final var player = team.getRoster().stream()
                 .filter(it -> it.getId().equals(currentPlayer.getId()))
                 .findFirst().orElse(null);
+
+        if (stat.isSplitStat()) {
+            value = value.split("/")[0];
+        }
 
         if (player != null) {
             player.getStats().put(stat, value);
