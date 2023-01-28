@@ -3,7 +3,6 @@ package com.nhl4j.serializers.nfl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.nhl4j.domain.GameStatus;
-import com.nhl4j.domain.Player;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
 
@@ -47,7 +46,7 @@ public class NflDeserializationHelper {
     }
 
     public static GameStatus parseGameStatusFromCompetitionNode(JsonNode competitionNode) {
-        final var statusValue = competitionNode.get("status").get("type").get("name").toString();
+        final var statusValue = competitionNode.get("status").get("type").get("name").textValue();
         if (statusValue.equals("STATUS_FINAL")) {
             return GameStatus.FINAL;
         } else if (statusValue.equals("STATUS_SCHEDULED")) {

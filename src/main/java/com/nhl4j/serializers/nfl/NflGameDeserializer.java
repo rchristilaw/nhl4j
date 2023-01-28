@@ -25,7 +25,7 @@ import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseTeamFromCo
 
 public class NflGameDeserializer extends StdDeserializer<Game> {
 
-    private static Map<String, List<Stat>> STAT_CATEGORIES = Map.of(
+    private static final Map<String, List<Stat>> STAT_CATEGORIES = Map.of(
             "passing", List.of(PASSING_YARDS, PASSING_COMPLETIONS, PASSING_TDS, PASSING_INTS),
             "rushing", List.of(RUSHING_YARDS, RUSHING_ATTEMPTS, RUSHING_TDS, RUSHING_LONG),
             "receiving", List.of(RECEIVING_YARDS, RECEPTIONS, RECEIVING_TDS, RECEIVING_LONG),
@@ -94,6 +94,8 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
                 teamStats.put(KICKING_POINTS, getSumOfPlayerStat(team, KICKING_POINTS));
                 teamStats.put(PUNTS, getSumOfPlayerStat(team, PUNTS));
                 teamStats.put(PUNT_YARDS, getSumOfPlayerStat(team, PUNT_YARDS));
+                teamStats.put(RUSHING_TDS, getSumOfPlayerStat(team, RUSHING_TDS));
+                teamStats.put(PASSING_TDS, getSumOfPlayerStat(team, PASSING_TDS));
 
                 // Need to parse out the sack yards value
                 final var sacks = getTeamStat(SACKS, statisticsNode).split("-")[0];

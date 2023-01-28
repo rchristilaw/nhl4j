@@ -4,63 +4,57 @@ import lombok.Getter;
 
 @Getter
 public enum Stat {
-    // All
-    SCORE("points"),
-    SCORE_Q1("1st quarter points"),
-    SCORE_Q2("2nd quarter points"),
-    SCORE_Q3("3rd quarter points"),
-    SCORE_Q4("4th quarter points"),
-
     // Hockey
-    GOALS("goals"),
-    GOALS_PP("power play goals"),
-    GOALS_SH("short handed goals"),
-    ASSISTS("assists"),
-    PIMS("penalty minutes"),
-    SOGS("shots on goal"),
-    HITS("hits"),
-    FACEOFF_WINS("faceoff wins"),
+    GOALS,
+    GOALS_PP,
+    GOALS_SH,
+    ASSISTS,
+    PIMS,
+    SOGS,
+    HITS,
+    FACEOFF_WINS,
 
     // Football
-    PASSING_YARDS("passing yards", "passingYards"),
-    PASSING_COMPLETIONS("Comp/Attempts", "completions/passingAttempts"),
-    PASSING_TDS("passing TDs", "passingTouchdowns"),
-    PASSING_INTS("interceptions", "interceptions"),
+    SCORE,
+    SCORE_Q1,
+    SCORE_Q2,
+    SCORE_Q3,
+    SCORE_Q4,
+    PASSING_YARDS("passingYards"),
+    PASSING_COMPLETIONS("completions/passingAttempts"),
+    PASSING_TDS("passingTouchdowns"),
+    PASSING_INTS("interceptions"),
 
-    RUSHING_YARDS("rushing yards", "rushingYards"),
-    RUSHING_ATTEMPTS("rushing attempts", "rushingAttempts"),
-    RUSHING_TDS("rushing TDs", "rushingTouchdowns"),
-    RUSHING_LONG("longest rush", "longRushing"),
+    RUSHING_YARDS("rushingYards"),
+    RUSHING_ATTEMPTS("rushingAttempts"),
+    RUSHING_TDS("rushingTouchdowns"),
+    RUSHING_LONG("longRushing"),
 
-    RECEIVING_YARDS("receiving yards", "receivingYards"),
-    RECEPTIONS("receptions", "receptions"),
-    RECEIVING_TDS("receiving TDs", "receivingTouchdowns"),
-    RECEIVING_LONG("longest reception", "longReception"),
+    RECEIVING_YARDS("receivingYards"),
+    RECEPTIONS("receptions"),
+    RECEIVING_TDS("receivingTouchdowns"),
+    RECEIVING_LONG("longReception"),
 
-    FIELD_GOALS("field goals", "fieldGoalsMade/fieldGoalAttempts"),
-    FIELD_GOALS_LONG("longest field goal", "longFieldGoalMade"),
-    KICKING_POINTS("kicking points", "totalKickingPoints"),
+    FIELD_GOALS("fieldGoalsMade/fieldGoalAttempts"),
+    FIELD_GOALS_LONG("longFieldGoalMade"),
+    KICKING_POINTS("totalKickingPoints"),
 
-    PUNTS("punts", "punts"),
-    PUNTS_LONG("longest punt", "longPunt"),
-    PUNT_YARDS("punt yards", "puntYards"),
+    PUNTS("punts"),
+    PUNTS_LONG("longPunt"),
+    PUNT_YARDS("puntYards"),
 
-    SACKS("sacks", "sacksYardsLost"),
-    FUMBLES("fumbles lost", "fumblesLost"),
-    INTERCEPTIONS("interceptions", "interceptions"),
-    TURNOVERS("turnovers", "turnovers");
+    SACKS("sacksYardsLost"),
+    FUMBLES("fumblesLost"),
+    INTERCEPTIONS("interceptions"),
+    TURNOVERS("turnovers");
 
-    Stat(String name) {
-        this.name = name;
+    Stat() {
         this.key = "";
     }
 
-    Stat(String name, String key) {
-        this.name = name;
+    Stat(String key) {
         this.key = key;
     }
-
-    private final String name;
     private final String key;
 
     public boolean isSplitStat() {
