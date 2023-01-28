@@ -4,6 +4,9 @@ import lombok.Getter;
 
 @Getter
 public enum Stat {
+    // All
+    SCORE,
+
     // Hockey
     GOALS,
     GOALS_PP,
@@ -15,7 +18,6 @@ public enum Stat {
     FACEOFF_WINS,
 
     // Football
-    SCORE,
     SCORE_Q1,
     SCORE_Q2,
     SCORE_Q3,

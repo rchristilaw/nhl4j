@@ -70,6 +70,7 @@ public class NhlGameDeserializer extends StdDeserializer<Game> {
         if (teamNode.get("teamStats") != null) {
             final var statsNode = teamNode.get("teamStats").get("teamSkaterStats");
             final var stats = new HashMap<Stat, String>();
+            stats.put(Stat.SCORE, statsNode.get("goals").toString());
             stats.put(Stat.GOALS, statsNode.get("goals").toString());
             stats.put(Stat.GOALS_PP, statsNode.get("powerPlayGoals").toString());
             stats.put(Stat.PIMS, statsNode.get("pim").toString());
