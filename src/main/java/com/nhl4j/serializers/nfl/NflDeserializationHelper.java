@@ -8,7 +8,7 @@ import com.nhl4j.domain.Team;
 
 public class NflDeserializationHelper {
 
-    public static Team parseTeamFromCompetitionNode(JsonNode competitionNode, String homeAway) {
+    public static Team parseTeamFromCompetitionNode(JsonNode competitionNode, String homeAway, boolean isBoxscore) {
         final var team = new Team();
         final var competitorNodes = competitionNode.get("competitors");
 
@@ -27,7 +27,7 @@ public class NflDeserializationHelper {
                 team.getStats().put(Stat.SCORE, competitorNode.get("score").textValue());
             }
 
-            if (competitorNode.get("linescores") != null) {
+            if (isBoxscore && competitorNode.get("linescores") != null) {
                 final var linescoresNode = (ArrayNode)competitorNode.get("linescores");
                 team.getStats().put(Stat.SCORE_Q1, getLineScore(linescoresNode, 0));
                 team.getStats().put(Stat.SCORE_Q2, getLineScore(linescoresNode, 1));

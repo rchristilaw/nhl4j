@@ -54,8 +54,8 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
         game.setGameDate(competitionNode.get("date").toString());
         game.setGameStatus(parseGameStatusFromCompetitionNode(competitionNode));
 
-        game.setHome(parseTeamFromCompetitionNode(competitionNode, "home"));
-        game.setAway(parseTeamFromCompetitionNode(competitionNode, "away"));
+        game.setHome(parseTeamFromCompetitionNode(competitionNode, "home", true));
+        game.setAway(parseTeamFromCompetitionNode(competitionNode, "away", true));
         game.getHome().setRoster(new ArrayList<>());
         game.getAway().setRoster(new ArrayList<>());
 

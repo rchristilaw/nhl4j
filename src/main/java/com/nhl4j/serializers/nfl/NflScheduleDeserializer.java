@@ -51,8 +51,8 @@ public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
             game.setGameDate(event.get("date").textValue());
 
             final var competitionNode = event.get("competitions").get(0);
-            game.setHome(parseTeamFromCompetitionNode(competitionNode, "home"));
-            game.setAway(parseTeamFromCompetitionNode(competitionNode, "away"));
+            game.setHome(parseTeamFromCompetitionNode(competitionNode, "home", false));
+            game.setAway(parseTeamFromCompetitionNode(competitionNode, "away", false));
 
             game.setGameStatus(parseGameStatusFromCompetitionNode(competitionNode));
             games.add(game);
