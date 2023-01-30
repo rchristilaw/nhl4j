@@ -44,19 +44,24 @@ public class StatHelper {
 
     public static String getMaxStat(Game game, Stat stat) {
 
-        final var allPlayers = new ArrayList<Player>();
-        allPlayers.addAll(game.getHome().getRoster());
-        allPlayers.addAll(game.getAway().getRoster());
+        final var homeMax = getMaxStat(game.getHome(), stat);
+        game.getHome().getStats().put(stat, normalizeValue(homeMax));
 
+        final var awayMax = getMaxStat(game.getAway(), stat);
+        game.getAway().getStats().put(stat, normalizeValue(awayMax));
+
+        return normalizeValue(Float.max(homeMax, awayMax));
+    }
+
+    private static Float getMaxStat(Team team, Stat stat) {
         float maxValue = 0;
-        for (final var player : allPlayers) {
+        for (final var player : team.getRoster()) {
             if (player.getStats().containsKey(stat)) {
                 final var currentValue = Float.parseFloat(player.getStats().get(stat));
                 maxValue = Float.max(currentValue, maxValue);
             }
         }
-
-        return normalizeValue(maxValue);
+        return maxValue;
     }
 
     private static String normalizeValue(float value) {
