@@ -1,11 +1,8 @@
 package com.nhl4j.serializers;
 
 import com.nhl4j.domain.Game;
-import com.nhl4j.domain.Player;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
-
-import java.util.ArrayList;
 
 public class StatHelper {
 
