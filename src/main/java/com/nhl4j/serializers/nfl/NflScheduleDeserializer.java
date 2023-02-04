@@ -35,10 +35,9 @@ public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
         final var events = scheduleNode.get("events");
 
         if (events != null) {
-            schedule.setGames(parseEventsToGames(events));
+            schedule.getGames().addAll(parseEventsToGames(events));
         }
 
-        schedule.setTotalGames(schedule.getGames().size());
         return schedule;
     }
 

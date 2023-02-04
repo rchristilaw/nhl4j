@@ -32,11 +32,10 @@ public class NhlScheduleDeserializer extends StdDeserializer<Schedule> {
         JsonNode scheduleNode = jsonParser.getCodec().readTree(jsonParser);
 
         final var schedule = new Schedule();
-        schedule.setTotalGames(scheduleNode.get("totalGames").intValue());
-
         final var gamesNode = scheduleNode.get("dates").get(0).get("games");
-        final var games = Arrays.asList(objectMapper.treeToValue(gamesNode, Game[].class));
-        schedule.setGames(games);
+        if (gamesNode != null) {
+            schedule.getGames().addAll(Arrays.asList(objectMapper.treeToValue(gamesNode, Game[].class)));
+        }
 
         return schedule;
     }
