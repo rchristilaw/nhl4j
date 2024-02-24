@@ -1,21 +1,24 @@
 package com.nhl4j;
 
 
-import com.nhl4j.domain.*;
+import com.nhl4j.domain.Game;
+import com.nhl4j.domain.ApiSource;
+import com.nhl4j.domain.Schedule;
+import com.nhl4j.domain.Team;
 import com.nhl4j.exception.StatsApiException;
 import org.springframework.web.client.RestTemplate;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class NhlApi {
+public class NhlApiV1 {
 
     private final RestClient restClient;
 
-    private static final String BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/";
+    private static final String BASE_URL = "https://statsapi.web.nhl.com/api/v1/";
 
-    public NhlApi(RestTemplate restTemplate) {
-        this.restClient = new RestClient(restTemplate, ApiSource.ESPN_NHL);
+    public NhlApiV1(RestTemplate restTemplate) {
+        this.restClient = new RestClient(restTemplate, ApiSource.NHL);
     }
 
     public List<Team> getTeams() throws StatsApiException {
@@ -26,27 +29,19 @@ public class NhlApi {
         }
     }
 
-    //https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/22
     public Team getTeam(String teamId) throws StatsApiException {
         try {
-            final var teamPath = String.format("%s/teams/%s", BASE_URL, teamId);
-
-            final var team = restClient.doGet(teamPath, Team.class);
-
-            final var roster = Arrays.asList(restClient.doGet(teamPath + "/roster", Player[].class));
-            team.setRoster(roster);
-
-            return team;
+            final var path = String.format("teams/%s?expand=team.roster", teamId);
+            return restClient.doGet(BASE_URL + path, Team[].class)[0];
         } catch (Exception ex) {
-            throw new StatsApiException("Failed to fetch team: " + teamId, ex);
+            throw new StatsApiException("Failed to fetch team", ex);
         }
     }
 
-    //https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20230121
     public Schedule getScheduleForDate(Date date) throws StatsApiException {
         String formattedDate;
         try {
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
             Calendar cal = Calendar.getInstance();
             cal.setTime(date);
             cal.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -56,17 +51,16 @@ public class NhlApi {
         }
 
         try {
-            String url = BASE_URL + "scoreboard?dates=" + formattedDate;
+            String url = BASE_URL + "schedule?date=" + formattedDate;
             return restClient.doGet(url, Schedule.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch the schedule", ex);
         }
     }
 
-    //https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/summary?event=401560124
     public Game getGameDetails(String gameId) throws StatsApiException {
         try {
-            String url = BASE_URL + "summary?event=" + gameId;
+            String url = BASE_URL + "game/" + gameId + "/feed/live";
             return restClient.doGet(url, Game.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch game: " + gameId, ex);

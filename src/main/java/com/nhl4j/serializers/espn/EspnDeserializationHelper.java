@@ -1,4 +1,4 @@
-package com.nhl4j.serializers.nfl;
+package com.nhl4j.serializers.espn;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -6,7 +6,7 @@ import com.nhl4j.domain.GameStatus;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
 
-public class NflDeserializationHelper {
+public class EspnDeserializationHelper {
 
     public static Team parseTeamFromCompetitionNode(JsonNode competitionNode, String homeAway, boolean isBoxscore) {
         final var team = new Team();

@@ -6,22 +6,23 @@ import lombok.Getter;
 public enum Stat {
     // All
     SCORE,
-
-    // Hockey
-    GOALS,
-    GOALS_PP,
-    GOALS_SH,
-    ASSISTS,
-    PIMS,
-    SOGS,
-    HITS,
-    FACEOFF_WINS,
-
-    // Football
     SCORE_Q1,
     SCORE_Q2,
     SCORE_Q3,
     SCORE_Q4,
+
+    // Hockey
+    GOALS("goals"),
+    ASSISTS("assists"),
+    GOALS_PP("powerPlayGoals"),
+    GOALS_SH("shortHandedGoals"),
+    PIMS("penaltyMinutes"),
+    SOGS("shotsTotal"),
+    HITS("hits"),
+    FACEOFF_WINS("faceoffsWon"),
+    SAVES("saves"),
+
+    // Football
     PASSING_YARDS("passingYards"),
     PASSING_COMPLETIONS("completions/passingAttempts"),
     PASSING_TDS("passingTouchdowns"),

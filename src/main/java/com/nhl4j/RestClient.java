@@ -4,10 +4,10 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.nhl4j.domain.*;
-import com.nhl4j.serializers.nfl.NflGameDeserializer;
-import com.nhl4j.serializers.nfl.NflRosterDeserializer;
-import com.nhl4j.serializers.nfl.NflScheduleDeserializer;
-import com.nhl4j.serializers.nfl.NflTeamDeserializer;
+import com.nhl4j.serializers.espn.EspnGameDeserializer;
+import com.nhl4j.serializers.espn.EspnRosterDeserializer;
+import com.nhl4j.serializers.espn.EspnScheduleDeserializer;
+import com.nhl4j.serializers.espn.EspnTeamDeserializer;
 import com.nhl4j.serializers.nhl.NhlGameDeserializer;
 import com.nhl4j.serializers.nhl.NhlScheduleDeserializer;
 import com.nhl4j.serializers.nhl.NhlTeamDeserializer;
@@ -18,31 +18,30 @@ import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.util.List;
 
 public class RestClient {
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
-    private final League league;
+    private final ApiSource apiSource;
 
-    public RestClient(RestTemplate restTemplate, League league) {
+    public RestClient(RestTemplate restTemplate, ApiSource apiSource) {
         this.restTemplate = restTemplate;
-        this.objectMapper = configureObjectMapper(league);
-        this.league = league;
+        this.objectMapper = configureObjectMapper(apiSource);
+        this.apiSource = apiSource;
     }
 
-    private ObjectMapper configureObjectMapper(League league) {
+    private ObjectMapper configureObjectMapper(ApiSource apiSource) {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         SimpleModule module = new SimpleModule();
 
-        if (league == League.NFL) {
-            module.addDeserializer(Schedule.class, new NflScheduleDeserializer());
-            module.addDeserializer(Game.class, new NflGameDeserializer());
-            module.addDeserializer(Team.class, new NflTeamDeserializer());
-            module.addDeserializer(Player[].class, new NflRosterDeserializer());
+        if (apiSource.isEspn()) {
+            module.addDeserializer(Schedule.class, new EspnScheduleDeserializer());
+            module.addDeserializer(Game.class, new EspnGameDeserializer(apiSource));
+            module.addDeserializer(Team.class, new EspnTeamDeserializer());
+            module.addDeserializer(Player[].class, new EspnRosterDeserializer());
         } else {
             module.addDeserializer(Game.class, new NhlGameDeserializer());
             module.addDeserializer(Schedule.class, new NhlScheduleDeserializer(objectMapper));

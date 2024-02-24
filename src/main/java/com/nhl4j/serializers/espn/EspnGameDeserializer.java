@@ -1,18 +1,16 @@
-package com.nhl4j.serializers.nfl;
+package com.nhl4j.serializers.espn;
 
 import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.nhl4j.domain.Game;
-import com.nhl4j.domain.Player;
-import com.nhl4j.domain.Stat;
-import com.nhl4j.domain.Team;
+import com.nhl4j.domain.*;
 import com.nhl4j.serializers.StatHelper;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,12 +18,12 @@ import java.util.Map;
 import static com.nhl4j.domain.Stat.*;
 import static com.nhl4j.serializers.StatHelper.getMaxStat;
 import static com.nhl4j.serializers.StatHelper.getSumOfPlayerStat;
-import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseGameStatusFromCompetitionNode;
-import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseTeamFromCompetitionNode;
+import static com.nhl4j.serializers.espn.EspnDeserializationHelper.parseGameStatusFromCompetitionNode;
+import static com.nhl4j.serializers.espn.EspnDeserializationHelper.parseTeamFromCompetitionNode;
 
-public class NflGameDeserializer extends StdDeserializer<Game> {
+public class EspnGameDeserializer extends StdDeserializer<Game> {
 
-    private static final Map<String, List<Stat>> STAT_CATEGORIES = Map.of(
+    private static final Map<String, List<Stat>> NFL_STAT_CATEGORIES = Map.of(
             "passing", List.of(PASSING_YARDS, PASSING_COMPLETIONS, PASSING_TDS, PASSING_INTS),
             "rushing", List.of(RUSHING_YARDS, RUSHING_ATTEMPTS, RUSHING_TDS, RUSHING_LONG),
             "receiving", List.of(RECEIVING_YARDS, RECEPTIONS, RECEIVING_TDS, RECEIVING_LONG),
@@ -33,17 +31,26 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
             "punting", List.of(PUNTS, PUNTS_LONG, PUNT_YARDS)
             );
 
-    public NflGameDeserializer() {
-        this(null);
+    private static final Map<String, List<Stat>> NHL_STAT_CATEGORIES = Map.of(
+            "forwards", List.of(GOALS, ASSISTS, GOALS_PP, GOALS_SH, PIMS, SOGS, HITS, FACEOFF_WINS),
+            "defenses", List.of(GOALS, ASSISTS, GOALS_PP, GOALS_SH, PIMS, SOGS, HITS, FACEOFF_WINS),
+            "goalies", List.of(SAVES)
+    );
+
+    public EspnGameDeserializer(ApiSource source) {
+        this(null, source);
     }
 
-    public NflGameDeserializer(Class<?> vc) {
+    public EspnGameDeserializer(Class<?> vc, ApiSource apiSource) {
         super(vc);
+        this.apiSource = apiSource;
     }
+
+    private ApiSource apiSource;
 
     @Override
     public Game deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
-            throws IOException, JsonProcessingException {
+            throws IOException {
 
         JsonNode gameNode = jsonParser.getCodec().readTree(jsonParser);
 
@@ -51,7 +58,15 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
 
         final var game = new Game();
         game.setId(competitionNode.get("id").textValue());
-        game.setGameDate(competitionNode.get("date").toString());
+        final var dateString = competitionNode.get("date").textValue();
+        game.setGameDate(dateString);
+
+        final var sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+        try {
+            game.setDate(sdf.parse(dateString).toInstant());
+        } catch (ParseException ignored) {
+        }
+
         game.setGameStatus(parseGameStatusFromCompetitionNode(competitionNode));
 
         game.setHome(parseTeamFromCompetitionNode(competitionNode, "home", true));
@@ -64,10 +79,13 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
         parseTeamStats(boxscoreNode, game.getAway());
 
         StatHelper.buildGameStats(game);
-        game.getStats().put(RECEIVING_LONG, getMaxStat(game, RECEIVING_LONG));
-        game.getStats().put(RUSHING_LONG, getMaxStat(game, RUSHING_LONG));
-        game.getStats().put(FIELD_GOALS_LONG, getMaxStat(game, FIELD_GOALS_LONG));
-        game.getStats().put(PUNTS_LONG, getMaxStat(game, PUNTS_LONG));
+
+        if (apiSource == ApiSource.ESPN_NFL) {
+            game.getStats().put(RECEIVING_LONG, getMaxStat(game, RECEIVING_LONG));
+            game.getStats().put(RUSHING_LONG, getMaxStat(game, RUSHING_LONG));
+            game.getStats().put(FIELD_GOALS_LONG, getMaxStat(game, FIELD_GOALS_LONG));
+            game.getStats().put(PUNTS_LONG, getMaxStat(game, PUNTS_LONG));
+        }
 
         return game;
     }
@@ -86,20 +104,31 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
                 final var teamStats = team.getStats();
 
                 final var statisticsNode = (ArrayNode)teamsNode.get("statistics");
-                teamStats.put(INTERCEPTIONS, getTeamStat(INTERCEPTIONS, statisticsNode));
-                teamStats.put(FUMBLES, getTeamStat(FUMBLES, statisticsNode));
-                teamStats.put(TURNOVERS, getTeamStat(TURNOVERS, statisticsNode));
 
-                teamStats.put(FIELD_GOALS, getSumOfPlayerStat(team, FIELD_GOALS));
-                teamStats.put(KICKING_POINTS, getSumOfPlayerStat(team, KICKING_POINTS));
-                teamStats.put(PUNTS, getSumOfPlayerStat(team, PUNTS));
-                teamStats.put(PUNT_YARDS, getSumOfPlayerStat(team, PUNT_YARDS));
-                teamStats.put(RUSHING_TDS, getSumOfPlayerStat(team, RUSHING_TDS));
-                teamStats.put(PASSING_TDS, getSumOfPlayerStat(team, PASSING_TDS));
+                if (apiSource == ApiSource.ESPN_NFL) {
+                    teamStats.put(INTERCEPTIONS, getTeamStat(INTERCEPTIONS, statisticsNode));
+                    teamStats.put(FUMBLES, getTeamStat(FUMBLES, statisticsNode));
+                    teamStats.put(TURNOVERS, getTeamStat(TURNOVERS, statisticsNode));
 
-                // Need to parse out the sack yards value
-                final var sacks = getTeamStat(SACKS, statisticsNode).split("-")[0];
-                teamStats.put(SACKS, sacks);
+                    teamStats.put(FIELD_GOALS, getSumOfPlayerStat(team, FIELD_GOALS));
+                    teamStats.put(KICKING_POINTS, getSumOfPlayerStat(team, KICKING_POINTS));
+                    teamStats.put(PUNTS, getSumOfPlayerStat(team, PUNTS));
+                    teamStats.put(PUNT_YARDS, getSumOfPlayerStat(team, PUNT_YARDS));
+                    teamStats.put(RUSHING_TDS, getSumOfPlayerStat(team, RUSHING_TDS));
+                    teamStats.put(PASSING_TDS, getSumOfPlayerStat(team, PASSING_TDS));
+
+                    // Need to parse out the sack yards value
+                    final var sacks = getTeamStat(SACKS, statisticsNode).split("-")[0];
+                    teamStats.put(SACKS, sacks);
+                } else if (apiSource == ApiSource.ESPN_NHL) {
+                    teamStats.put(GOALS_PP, getTeamStat(GOALS_PP, statisticsNode));
+                    teamStats.put(GOALS_SH, getTeamStat(GOALS_SH, statisticsNode));
+                    teamStats.put(PIMS, getTeamStat(PIMS, statisticsNode));
+                    teamStats.put(SOGS, getTeamStat(SOGS, statisticsNode));
+                    teamStats.put(HITS, getTeamStat(HITS, statisticsNode));
+                    teamStats.put(FACEOFF_WINS, getTeamStat(FACEOFF_WINS, statisticsNode));
+                }
+
             }
         }
     }
@@ -115,7 +144,10 @@ public class NflGameDeserializer extends StdDeserializer<Game> {
                 continue;
             }
 
-            for (final var statCategory : STAT_CATEGORIES.entrySet()) {
+            final var categories = apiSource == ApiSource.ESPN_NFL
+                    ? NFL_STAT_CATEGORIES : NHL_STAT_CATEGORIES;
+
+            for (final var statCategory : categories.entrySet()) {
                 final var categoryNode = getStatsNodeByType(
                         (ArrayNode)playerStatsNode.get("statistics"), statCategory.getKey());
 

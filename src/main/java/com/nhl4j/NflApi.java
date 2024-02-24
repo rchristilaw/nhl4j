@@ -15,7 +15,7 @@ public class NflApi {
     private static final String BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/";
 
     public NflApi(RestTemplate restTemplate) {
-        this.restClient = new RestClient(restTemplate, League.NFL);
+        this.restClient = new RestClient(restTemplate, ApiSource.ESPN_NFL);
     }
 
     public List<Team> getTeams() throws StatsApiException {

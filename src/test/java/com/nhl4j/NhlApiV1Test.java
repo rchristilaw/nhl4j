@@ -12,15 +12,15 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NhlApiTest {
+public class NhlApiV1Test {
 
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
-    private NhlApi nhlApi;
+    private NhlApiV1 nhlApi;
 
     @BeforeEach
     public void setup() {
-        nhlApi = new NhlApi(new RestTemplate());
+        nhlApi = new NhlApiV1(new RestTemplate());
     }
 
     @Test
@@ -40,7 +40,7 @@ public class NhlApiTest {
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2024-02-22").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2022-11-25").toInstant());
 
         Schedule scheduleData = nhlApi.getScheduleForDate(today);
 
@@ -58,7 +58,7 @@ public class NhlApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nhlApi.getGameDetails("401560124");
+        final var gameData = nhlApi.getGameDetails("2022020767");
 
         assertNotNull(gameData);
     }

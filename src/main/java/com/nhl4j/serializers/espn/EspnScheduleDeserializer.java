@@ -1,4 +1,4 @@
-package com.nhl4j.serializers.nfl;
+package com.nhl4j.serializers.espn;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -11,16 +11,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseGameStatusFromCompetitionNode;
-import static com.nhl4j.serializers.nfl.NflDeserializationHelper.parseTeamFromCompetitionNode;
+import static com.nhl4j.serializers.espn.EspnDeserializationHelper.parseGameStatusFromCompetitionNode;
+import static com.nhl4j.serializers.espn.EspnDeserializationHelper.parseTeamFromCompetitionNode;
 
-public class NflScheduleDeserializer extends StdDeserializer<Schedule> {
+public class EspnScheduleDeserializer extends StdDeserializer<Schedule> {
 
-    public NflScheduleDeserializer() {
+    public EspnScheduleDeserializer() {
         this(null);
     }
 
-    public NflScheduleDeserializer(Class<?> vc) {
+    public EspnScheduleDeserializer(Class<?> vc) {
         super(vc);
     }
 

@@ -1,4 +1,4 @@
-package com.nhl4j.serializers.nfl;
+package com.nhl4j.serializers.espn;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -6,20 +6,17 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.nhl4j.domain.Player;
-import com.nhl4j.domain.Team;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
-public class NflRosterDeserializer extends StdDeserializer<Player[]> {
+public class EspnRosterDeserializer extends StdDeserializer<Player[]> {
 
-    public NflRosterDeserializer() {
+    public EspnRosterDeserializer() {
         this(null);
     }
 
-    public NflRosterDeserializer(Class<?> vc) {
+    public EspnRosterDeserializer(Class<?> vc) {
         super(vc);
     }
 

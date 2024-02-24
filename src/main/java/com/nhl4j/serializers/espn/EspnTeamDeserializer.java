@@ -1,4 +1,4 @@
-package com.nhl4j.serializers.nfl;
+package com.nhl4j.serializers.espn;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -8,13 +8,13 @@ import com.nhl4j.domain.Team;
 
 import java.io.IOException;
 
-public class NflTeamDeserializer extends StdDeserializer<Team> {
+public class EspnTeamDeserializer extends StdDeserializer<Team> {
 
-    public NflTeamDeserializer() {
+    public EspnTeamDeserializer() {
         this(null);
     }
 
-    public NflTeamDeserializer(Class<?> vc) {
+    public EspnTeamDeserializer(Class<?> vc) {
         super(vc);
     }
 
