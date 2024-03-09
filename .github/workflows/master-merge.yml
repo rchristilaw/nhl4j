@@ -41,5 +41,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: ${{ steps.draft_release.outputs.tag_name }}
-          FILES: |
-            /home/runner/work/nhl4j/nhl4j/target/nhl4j.jar
+          FILES: /home/runner/work/nhl4j/nhl4j/target/nhl4j-${{ env.VERSION }}.jar
