@@ -32,7 +32,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set release values
-        run: echo "VERSION_NUM=$(echo "${{ steps.draft_release.outputs.tag_name }}#"v")" >> $GITHUB_ENV
+        run: |
+          version = ${{ steps.draft_release.outputs.tag_name }}
+          version_num = echo "${version#"v"}"
+          echo "VERSION_NUM=version_num >> $GITHUB_ENV
 
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
