@@ -6,6 +6,7 @@
 
     <groupId>com.nhl4j</groupId>
     <artifactId>nhl4j</artifactId>
+    <version>[RELEASE]</version>
 
     <packaging>jar</packaging>
 

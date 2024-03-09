@@ -31,6 +31,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set release values
+        run: echo "VERSION_NUM=$(echo "${{ steps.draft_release.outputs.tag_name }}#"v")" >> $GITHUB_ENV
+
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "[[RELEASE]]"
+          replace: ${{ env.VERSION_NUM }}
+          include: "**pom.xml"
+          regex: false
+
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
@@ -42,4 +53,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: ${{ steps.draft_release.outputs.tag_name }}
           FILES: |
-            /home/runner/work/nhl4j/nhl4j/target/nhl4j-${{ steps.draft_release.outputs.tag_name }}.jar
+            /home/runner/work/nhl4j/nhl4j/target/nhl4j-${{ VERSION_NUM }}.jar
