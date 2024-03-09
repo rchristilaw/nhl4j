@@ -1,0 +1,50 @@
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+template: |
+  $CHANGES
+# Changelog definitions
+filter-by-commitish: true
+sort-by: 'merged_at'
+sort-direction: 'descending'
+exclude-labels:
+  - 'changelog/exclude'
+
+# Category definitions
+category-template: "## $TITLE"
+categories:
+  - title: '🚨 Breaking Changes'
+    labels:
+      - 'category/breaking-change'
+  - title: '🏢 Business'
+    labels:
+      - 'category/business'
+  - title: '🚀 API'
+    labels:
+      - 'category/api'
+  - title: '🏗️ Internal'
+    labels:
+      - 'category/internal'
+  - title: '🛠 Technical Debt'
+    labels:
+      - 'category/technical-debt'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'category/bug'
+
+# Change definitions
+no-changes-template: "* Minor updates and bug fixes"
+change-template: "* [#$NUMBER] $TITLE - @$AUTHOR"
+change-title-escapes: '\<*_&'
+
+# Versioning definitions
+version-resolver:
+  major:
+    labels:
+      - 'release/major'
+  minor:
+    labels:
+      - 'release/minor'
+  patch:
+    labels:
+      - 'release/patch'
+  default: 'patch'

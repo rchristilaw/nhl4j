@@ -19,5 +19,6 @@ public class Player {
     private String position;
     private String number;
 
+    @Builder.Default
     private Map<Stat, String> stats = new HashMap<>();
 }
