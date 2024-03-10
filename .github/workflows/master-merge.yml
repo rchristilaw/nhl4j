@@ -33,7 +33,8 @@ jobs:
 
       - name: Set release values
         run: |
-          echo "VERSION_NUM=${${{ steps.draft_release.outputs.tag_name }}#"v"}" >> $GITHUB_ENV
+          ver=${{ steps.draft_release.outputs.tag_name }}
+          echo "VERSION_NUM=${ver#"v"}" >> $GITHUB_ENV
 
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
