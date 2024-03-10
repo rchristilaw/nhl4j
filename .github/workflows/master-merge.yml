@@ -39,7 +39,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
-          find: "[[RELEASE]]"
+          find: "RELEASE-X.X.X"
           replace: ${{ env.VERSION_NUM }}
           include: "**pom.xml"
           regex: false
