@@ -78,6 +78,8 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
         parseTeamStats(boxscoreNode, game.getHome());
         parseTeamStats(boxscoreNode, game.getAway());
 
+        game.setBettingLine(BettingLine.parseLinesJson((ArrayNode) gameNode.get("pickcenter")));
+
         StatHelper.buildGameStats(game);
 
         if (apiSource == ApiSource.ESPN_NFL) {

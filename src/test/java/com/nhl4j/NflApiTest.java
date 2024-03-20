@@ -64,5 +64,6 @@ public class NflApiTest {
         final var gameData = nflApi.getGameDetails("401438008");
 
         assertNotNull(gameData);
+        assertNotNull(gameData.getBettingLine().getSpread());
     }
 }

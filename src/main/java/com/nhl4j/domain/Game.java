@@ -15,5 +15,7 @@ public class Game {
     private Team home;
     private Team away;
 
+    private BettingLine bettingLine;
+
     private Map<Stat, String> stats = new HashMap<>();
 }

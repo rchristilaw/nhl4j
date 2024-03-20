@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.nhl4j.domain.BettingLine;
 import com.nhl4j.domain.Game;
 import com.nhl4j.domain.Schedule;
 
@@ -54,6 +56,8 @@ public class EspnScheduleDeserializer extends StdDeserializer<Schedule> {
             game.setAway(parseTeamFromCompetitionNode(competitionNode, "away", false));
 
             game.setGameStatus(parseGameStatusFromCompetitionNode(competitionNode));
+            game.setBettingLine(BettingLine.parseLinesJson((ArrayNode) competitionNode.get("odds")));
+
             games.add(game);
         }
 
