@@ -11,9 +11,10 @@ import com.nhl4j.serializers.StatHelper;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.time.Instant;
+import java.util.*;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 import static com.nhl4j.domain.Stat.*;
 import static com.nhl4j.serializers.StatHelper.getMaxStat;
@@ -29,7 +30,7 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
             "receiving", List.of(RECEIVING_YARDS, RECEPTIONS, RECEIVING_TDS, RECEIVING_LONG),
             "kicking", List.of(FIELD_GOALS, FIELD_GOALS_LONG, KICKING_POINTS),
             "punting", List.of(PUNTS, PUNTS_LONG, PUNT_YARDS)
-            );
+    );
 
     private static final Map<String, List<Stat>> NHL_STAT_CATEGORIES = Map.of(
             "forwards", List.of(GOALS, ASSISTS, GOALS_PP, GOALS_SH, PIMS, SOGS, HITS, FACEOFF_WINS),
@@ -78,6 +79,8 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
         parseTeamStats(boxscoreNode, game.getHome());
         parseTeamStats(boxscoreNode, game.getAway());
 
+        game.setEvents(parseEvents(gameNode));
+
         game.setBettingLine(BettingLine.parseLinesJson((ArrayNode) gameNode.get("pickcenter")));
 
         StatHelper.buildGameStats(game);
@@ -105,7 +108,7 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
 
                 final var teamStats = team.getStats();
 
-                final var statisticsNode = (ArrayNode)teamsNode.get("statistics");
+                final var statisticsNode = (ArrayNode) teamsNode.get("statistics");
 
                 if (apiSource == ApiSource.ESPN_NFL) {
                     teamStats.put(INTERCEPTIONS, getTeamStat(INTERCEPTIONS, statisticsNode));
@@ -135,7 +138,7 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
         }
     }
 
-    private String getTeamStat(Stat stat, ArrayNode statisticsNode)  {
+    private String getTeamStat(Stat stat, ArrayNode statisticsNode) {
         final var statNode = getStatsNodeByType(statisticsNode, stat.getKey());
         return statNode != null ? statNode.get("displayValue").textValue() : "0";
     }
@@ -151,13 +154,13 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
 
             for (final var statCategory : categories.entrySet()) {
                 final var categoryNode = getStatsNodeByType(
-                        (ArrayNode)playerStatsNode.get("statistics"), statCategory.getKey());
+                        (ArrayNode) playerStatsNode.get("statistics"), statCategory.getKey());
 
                 if (categoryNode == null) {
                     continue;
                 }
 
-                final var keys = (ArrayNode)categoryNode.get("keys");
+                final var keys = (ArrayNode) categoryNode.get("keys");
 
                 for (int i = 0; i < keys.size(); i++) {
                     final var key = keys.get(i);
@@ -170,7 +173,7 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
                         continue;
                     }
 
-                    final var athletesNode = (ArrayNode)categoryNode.get("athletes");
+                    final var athletesNode = (ArrayNode) categoryNode.get("athletes");
                     for (final var athleteNode : athletesNode) {
                         final var statValue = athleteNode.get("stats").get(i).textValue();
                         addStatToPlayer(team, athleteNode.get("athlete"), statKey, statValue);
@@ -215,6 +218,58 @@ public class EspnGameDeserializer extends StdDeserializer<Game> {
         player.setFullName(playerNode.get("displayName").textValue());
 
         return player;
+    }
+
+    private List<Game.Event> parseEvents(JsonNode gameNode) {
+        if (gameNode.get("scoringPlays") != null) {
+            return streamOf(gameNode.get("scoringPlays"))
+                    .map(this::parseEventFromScoringPlaysNode)
+                    .toList();
+        } else if (gameNode.get("plays") != null) {
+            return streamOf(gameNode.get("plays"))
+                    .map(this::parseEventFromPlaysNode)
+                    .filter(Objects::nonNull)
+                    .toList();
+        }
+
+        return Collections.emptyList();
+    }
+
+    private Stream<JsonNode> streamOf(JsonNode node) {
+        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(node.elements(), 0), false);
+    }
+
+    private Game.Event parseEventFromScoringPlaysNode(JsonNode eventNode) {
+        return new Game.Event(
+                eventNode.get("id").textValue(),
+                eventNode.get("period").get("number").intValue(),
+                eventNode.get("clock").get("displayValue").textValue(),
+                getScoringType(eventNode.get("scoringType")),
+                eventNode.get("team").get("id").textValue(),
+                List.of());
+    }
+
+    private Stat getScoringType(JsonNode scoringTypeNode) {
+        if (scoringTypeNode.get("name").textValue().equals("field-goal")) {
+            return FIELD_GOALS;
+        } else if (scoringTypeNode.get("name").textValue().equals("touchdown")) {
+            return TDS;
+        }
+        return OTHER;
+    }
+
+    // NHL uses plays node
+    private Game.Event parseEventFromPlaysNode(JsonNode eventNode) {
+        if (eventNode.get("scoringPlay").booleanValue()) {
+            return new Game.Event(
+                    eventNode.get("sequenceNumber").textValue(),
+                    eventNode.get("period").get("number").intValue(),
+                    eventNode.get("clock").get("displayValue").textValue(),
+                    SCORE,
+                    eventNode.get("team").get("id").textValue(),
+                    List.of(eventNode.get("participants").elements().next().get("athlete").get("id").textValue()));
+        }
+        return null;
     }
 
 }

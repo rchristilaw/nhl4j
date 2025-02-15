@@ -40,7 +40,7 @@ public class NhlApiTest {
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2024-02-22").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2025-02-01").toInstant());
 
         Schedule scheduleData = nhlApi.getScheduleForDate(today);
 
@@ -58,7 +58,7 @@ public class NhlApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nhlApi.getGameDetails("401560124");
+        final var gameData = nhlApi.getGameDetails("401688432");
 
         assertNotNull(gameData);
     }

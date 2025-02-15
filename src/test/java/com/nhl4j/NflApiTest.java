@@ -38,17 +38,17 @@ public class NflApiTest {
         final var team = nflApi.getTeam("2");
 
         assertNotNull(team);
-        assertTrue(team.getRoster().size() > 0);
+        assertTrue(!team.getRoster().isEmpty());
     }
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2023-01-29").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2024-10-28").toInstant());
 
         Schedule scheduleData = nflApi.getScheduleForDate(today);
 
         assertNotNull(scheduleData);
-        assertTrue(scheduleData.getGames().size() > 0);
+        assertTrue(!scheduleData.getGames().isEmpty());
 
         final var game = scheduleData.getGames().get(0);
         assertNotNull(game.getAway().getFullName());
@@ -61,7 +61,7 @@ public class NflApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nflApi.getGameDetails("401438008");
+        final var gameData = nflApi.getGameDetails("401671795");
 
         assertNotNull(gameData);
         assertNotNull(gameData.getBettingLine().getSpread());

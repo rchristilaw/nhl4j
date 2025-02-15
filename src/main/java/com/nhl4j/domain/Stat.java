@@ -23,6 +23,7 @@ public enum Stat {
     SAVES("saves"),
 
     // Football
+    TDS,
     PASSING_YARDS("passingYards"),
     PASSING_COMPLETIONS("completions/passingAttempts"),
     PASSING_TDS("passingTouchdowns"),
@@ -49,7 +50,9 @@ public enum Stat {
     SACKS("sacksYardsLost"),
     FUMBLES("fumblesLost"),
     INTERCEPTIONS("interceptions"),
-    TURNOVERS("turnovers");
+    TURNOVERS("turnovers"),
+
+    OTHER;
 
     Stat() {
         this.key = "";
