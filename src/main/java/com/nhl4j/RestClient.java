@@ -4,10 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.nhl4j.domain.*;
-import com.nhl4j.serializers.espn.EspnGameDeserializer;
-import com.nhl4j.serializers.espn.EspnRosterDeserializer;
-import com.nhl4j.serializers.espn.EspnScheduleDeserializer;
-import com.nhl4j.serializers.espn.EspnTeamDeserializer;
+import com.nhl4j.serializers.espn.*;
 import com.nhl4j.serializers.nhl.NhlGameDeserializer;
 import com.nhl4j.serializers.nhl.NhlScheduleDeserializer;
 import com.nhl4j.serializers.nhl.NhlTeamDeserializer;
@@ -42,6 +39,7 @@ public class RestClient {
             module.addDeserializer(Game.class, new EspnGameDeserializer(apiSource));
             module.addDeserializer(Team.class, new EspnTeamDeserializer());
             module.addDeserializer(Player[].class, new EspnRosterDeserializer());
+            module.addDeserializer(Team[].class, new EspnTeamsListDeserializer(objectMapper));
         } else {
             module.addDeserializer(Game.class, new NhlGameDeserializer());
             module.addDeserializer(Schedule.class, new NhlScheduleDeserializer(objectMapper));
