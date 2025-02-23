@@ -1,0 +1,5555 @@
+{
+  "leagues": [
+    {
+      "id": "10",
+      "uid": "s:1~l:10",
+      "name": "Major League Baseball",
+      "abbreviation": "MLB",
+      "midsizeName": "MLB",
+      "slug": "mlb",
+      "season": {
+        "year": 2025,
+        "startDate": "2025-02-15T08:00Z",
+        "endDate": "2025-12-11T07:59Z",
+        "displayName": "2025",
+        "type": {
+          "id": "1",
+          "type": 1,
+          "name": "Spring Training",
+          "abbreviation": "pre"
+        }
+      },
+      "logos": [
+        {
+          "href": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
+          "width": 500,
+          "height": 500,
+          "alt": "",
+          "rel": [
+            "full",
+            "default"
+          ],
+          "lastUpdated": "2023-03-29T12:34Z"
+        },
+        {
+          "href": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500-dark/mlb.png&w=500&h=500&transparent=true",
+          "width": 500,
+          "height": 500,
+          "alt": "",
+          "rel": [
+            "full",
+            "dark"
+          ],
+          "lastUpdated": "2025-02-22T04:26Z"
+        }
+      ],
+      "calendarType": "day",
+      "calendarIsWhitelist": false,
+      "calendarStartDate": "2025-02-15T08:00Z",
+      "calendarEndDate": "2025-12-11T07:59Z",
+      "calendar": [
+        "2025-02-15T08:00Z",
+        "2025-02-16T08:00Z",
+        "2025-02-17T08:00Z",
+        "2025-02-18T08:00Z",
+        "2025-02-19T08:00Z",
+        "2025-03-26T07:00Z",
+        "2025-07-14T07:00Z",
+        "2025-07-16T07:00Z",
+        "2025-07-17T07:00Z",
+        "2025-09-29T07:00Z",
+        "2025-09-30T07:00Z",
+        "2025-10-01T07:00Z",
+        "2025-10-02T07:00Z",
+        "2025-10-03T07:00Z",
+        "2025-10-04T07:00Z",
+        "2025-10-05T07:00Z",
+        "2025-10-06T07:00Z",
+        "2025-10-07T07:00Z",
+        "2025-10-08T07:00Z",
+        "2025-10-09T07:00Z",
+        "2025-10-10T07:00Z",
+        "2025-10-11T07:00Z",
+        "2025-10-12T07:00Z",
+        "2025-10-13T07:00Z",
+        "2025-10-14T07:00Z",
+        "2025-10-15T07:00Z",
+        "2025-10-16T07:00Z",
+        "2025-10-17T07:00Z",
+        "2025-10-18T07:00Z",
+        "2025-10-19T07:00Z",
+        "2025-10-20T07:00Z",
+        "2025-10-21T07:00Z",
+        "2025-10-22T07:00Z",
+        "2025-10-23T07:00Z",
+        "2025-10-24T07:00Z",
+        "2025-10-25T07:00Z",
+        "2025-10-26T07:00Z",
+        "2025-10-27T07:00Z",
+        "2025-10-28T07:00Z",
+        "2025-10-29T07:00Z",
+        "2025-10-30T07:00Z",
+        "2025-10-31T07:00Z",
+        "2025-11-01T07:00Z",
+        "2025-11-02T07:00Z",
+        "2025-11-03T08:00Z",
+        "2025-11-04T08:00Z",
+        "2025-11-05T08:00Z",
+        "2025-11-06T08:00Z",
+        "2025-11-07T08:00Z",
+        "2025-11-08T08:00Z",
+        "2025-11-09T08:00Z",
+        "2025-11-10T08:00Z",
+        "2025-11-11T08:00Z",
+        "2025-11-12T08:00Z",
+        "2025-11-13T08:00Z",
+        "2025-11-14T08:00Z",
+        "2025-11-15T08:00Z",
+        "2025-11-16T08:00Z",
+        "2025-11-17T08:00Z",
+        "2025-11-18T08:00Z",
+        "2025-11-19T08:00Z",
+        "2025-11-20T08:00Z",
+        "2025-11-21T08:00Z",
+        "2025-11-22T08:00Z",
+        "2025-11-23T08:00Z",
+        "2025-11-24T08:00Z",
+        "2025-11-25T08:00Z",
+        "2025-11-26T08:00Z",
+        "2025-11-27T08:00Z",
+        "2025-11-28T08:00Z",
+        "2025-11-29T08:00Z",
+        "2025-11-30T08:00Z",
+        "2025-12-01T08:00Z",
+        "2025-12-02T08:00Z",
+        "2025-12-03T08:00Z",
+        "2025-12-04T08:00Z",
+        "2025-12-05T08:00Z",
+        "2025-12-06T08:00Z",
+        "2025-12-07T08:00Z",
+        "2025-12-08T08:00Z",
+        "2025-12-09T08:00Z",
+        "2025-12-10T08:00Z"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "401694911",
+      "uid": "s:1~l:10~e:401694911",
+      "date": "2025-03-27T19:00Z",
+      "name": "Milwaukee Brewers at New York Yankees",
+      "shortName": "MIL @ NYY",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694911",
+          "uid": "s:1~l:10~e:401694911~c:401694911",
+          "date": "2025-03-27T19:00Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "208",
+            "fullName": "Yankee Stadium",
+            "address": {
+              "city": "Bronx",
+              "state": "New York"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "10",
+              "uid": "s:1~l:10~t:10",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "10",
+                "uid": "s:1~l:10~t:10",
+                "location": "New York",
+                "name": "Yankees",
+                "abbreviation": "NYY",
+                "displayName": "New York Yankees",
+                "shortDisplayName": "Yankees",
+                "color": "132448",
+                "alternateColor": "c4ced4",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/nyy/new-york-yankees",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/nyy/new-york-yankees",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/nyy/new-york-yankees",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/nyy",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "9",
+                  "rankDisplayValue": "Tied-5th"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "4",
+                  "rankDisplayValue": "7th"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".273",
+                  "rankDisplayValue": "6th"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "1",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "0.00",
+                  "rankDisplayValue": "1st"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": "1.000",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "5015255",
+                        "fullName": "Jesus Rodriguez",
+                        "displayName": "Jesus Rodriguez",
+                        "shortName": "J. Rodriguez",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/5015255"
+                          }
+                        ],
+                        "jersey": "97",
+                        "position": {
+                          "abbreviation": "C"
+                        },
+                        "team": {
+                          "id": "10"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "10"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "0",
+                      "value": 0.0,
+                      "athlete": {
+                        "id": "31027",
+                        "fullName": "Paul Goldschmidt",
+                        "displayName": "Paul Goldschmidt",
+                        "shortName": "P. Goldschmidt",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/31027"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31027.png",
+                        "jersey": "48",
+                        "position": {
+                          "abbreviation": "1B"
+                        },
+                        "team": {
+                          "id": "10"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "10"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "1",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "31027",
+                        "fullName": "Paul Goldschmidt",
+                        "displayName": "Paul Goldschmidt",
+                        "shortName": "P. Goldschmidt",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/31027"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31027.png",
+                        "jersey": "48",
+                        "position": {
+                          "abbreviation": "1B"
+                        },
+                        "team": {
+                          "id": "10"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "10"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "62.5",
+                      "value": 62.5,
+                      "athlete": {
+                        "id": "31027",
+                        "fullName": "Paul Goldschmidt",
+                        "displayName": "Paul Goldschmidt",
+                        "shortName": "P. Goldschmidt",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/31027"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31027.png",
+                        "jersey": "48",
+                        "position": {
+                          "abbreviation": "1B"
+                        },
+                        "team": {
+                          "id": "10"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "10"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "uid": "s:1~l:10~t:8",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "8",
+                "uid": "s:1~l:10~t:8",
+                "location": "Milwaukee",
+                "name": "Brewers",
+                "abbreviation": "MIL",
+                "displayName": "Milwaukee Brewers",
+                "shortDisplayName": "Brewers",
+                "color": "13294b",
+                "alternateColor": "ffc72c",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/mil/milwaukee-brewers",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/mil/milwaukee-brewers",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/mil/milwaukee-brewers",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/mil",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png"
+              },
+              "score": "0",
+              "probables": [
+                {
+                  "name": "probableStartingPitcher",
+                  "displayName": "Probable Starting Pitcher",
+                  "shortDisplayName": "Starter",
+                  "abbreviation": "SP",
+                  "playerId": 39825,
+                  "athlete": {
+                    "id": "39825",
+                    "fullName": "Freddy Peralta",
+                    "displayName": "Freddy Peralta",
+                    "shortName": "F. Peralta",
+                    "links": [
+                      {
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ],
+                        "href": "https://www.espn.com/mlb/player/_/id/39825"
+                      }
+                    ],
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/39825.png",
+                    "jersey": "51",
+                    "position": "SP",
+                    "team": {
+                      "id": "8"
+                    }
+                  },
+                  "statistics": [],
+                  "record": ""
+                }
+              ],
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 3:00 PM EDT"
+            }
+          },
+          "broadcasts": [
+            {
+              "market": "national",
+              "names": [
+                "ESPN"
+              ]
+            }
+          ],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $68",
+              "numberAvailable": 12018,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/new-york-yankees-tickets-yankee-stadium-3-27-2025--sports-mlb-baseball/production/5097191?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/yankee-stadium-tickets/venue/6135?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T19:00Z",
+          "broadcast": "ESPN",
+          "geoBroadcasts": [
+            {
+              "type": {
+                "id": "1",
+                "shortName": "TV"
+              },
+              "market": {
+                "id": "1",
+                "type": "National"
+              },
+              "media": {
+                "shortName": "ESPN",
+                "logo": "https://a.espncdn.com/guid/335fd2d2-97b9-336b-81ee-573eb6bdcffc/logos/default.png",
+                "darkLogo": ""
+              },
+              "lang": "en",
+              "region": "us"
+            }
+          ],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694911/brewers-yankees",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 3:00 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694909",
+      "uid": "s:1~l:10~e:401694909",
+      "date": "2025-03-27T19:07Z",
+      "name": "Baltimore Orioles at Toronto Blue Jays",
+      "shortName": "BAL @ TOR",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694909",
+          "uid": "s:1~l:10~e:401694909~c:401694909",
+          "date": "2025-03-27T19:07Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "14",
+            "fullName": "Rogers Centre",
+            "address": {
+              "city": "Toronto",
+              "state": "Ontario"
+            },
+            "indoor": true
+          },
+          "competitors": [
+            {
+              "id": "14",
+              "uid": "s:1~l:10~t:14",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "14",
+                "uid": "s:1~l:10~t:14",
+                "location": "Toronto",
+                "name": "Blue Jays",
+                "abbreviation": "TOR",
+                "displayName": "Toronto Blue Jays",
+                "shortDisplayName": "Blue Jays",
+                "color": "134a8e",
+                "alternateColor": "6cace5",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/tor/toronto-blue-jays",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/tor/toronto-blue-jays",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/tor/toronto-blue-jays",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/tor",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tor.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            },
+            {
+              "id": "1",
+              "uid": "s:1~l:10~t:1",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "1",
+                "uid": "s:1~l:10~t:1",
+                "location": "Baltimore",
+                "name": "Orioles",
+                "abbreviation": "BAL",
+                "displayName": "Baltimore Orioles",
+                "shortDisplayName": "Orioles",
+                "color": "df4601",
+                "alternateColor": "000000",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/bal/baltimore-orioles",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/bal/baltimore-orioles",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/bal/baltimore-orioles",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/bal",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 3:07 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $21",
+              "numberAvailable": 4495,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/toronto-blue-jays-tickets-rogers-centre-3-27-2025--sports-mlb-baseball/production/5099259?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/rogers-centre-tickets/venue/1559?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T19:07Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694909/orioles-blue-jays",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 3:07 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694912",
+      "uid": "s:1~l:10~e:401694912",
+      "date": "2025-03-27T20:05Z",
+      "name": "Philadelphia Phillies at Washington Nationals",
+      "shortName": "PHI @ WSH",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694912",
+          "uid": "s:1~l:10~e:401694912~c:401694912",
+          "date": "2025-03-27T20:05Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "89",
+            "fullName": "Nationals Park",
+            "address": {
+              "city": "Washington",
+              "state": "District of Columbia"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "20",
+              "uid": "s:1~l:10~t:20",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "20",
+                "uid": "s:1~l:10~t:20",
+                "location": "Washington",
+                "name": "Nationals",
+                "abbreviation": "WSH",
+                "displayName": "Washington Nationals",
+                "shortDisplayName": "Nationals",
+                "color": "ab0003",
+                "alternateColor": "11225b",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/wsh/washington-nationals",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/wsh/washington-nationals",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/wsh/washington-nationals",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/wsh",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/wsh.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            },
+            {
+              "id": "22",
+              "uid": "s:1~l:10~t:22",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "22",
+                "uid": "s:1~l:10~t:22",
+                "location": "Philadelphia",
+                "name": "Phillies",
+                "abbreviation": "PHI",
+                "displayName": "Philadelphia Phillies",
+                "shortDisplayName": "Phillies",
+                "color": "e81828",
+                "alternateColor": "003278",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/phi/philadelphia-phillies",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/phi/philadelphia-phillies",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/phi/philadelphia-phillies",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/phi",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png"
+              },
+              "score": "0",
+              "probables": [
+                {
+                  "name": "probableStartingPitcher",
+                  "displayName": "Probable Starting Pitcher",
+                  "shortDisplayName": "Starter",
+                  "abbreviation": "SP",
+                  "playerId": 31267,
+                  "athlete": {
+                    "id": "31267",
+                    "fullName": "Zack Wheeler",
+                    "displayName": "Zack Wheeler",
+                    "shortName": "Z. Wheeler",
+                    "links": [
+                      {
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ],
+                        "href": "https://www.espn.com/mlb/player/_/id/31267"
+                      }
+                    ],
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31267.png",
+                    "jersey": "45",
+                    "position": "SP",
+                    "team": {
+                      "id": "22"
+                    }
+                  },
+                  "statistics": [],
+                  "record": ""
+                }
+              ],
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:05 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $30",
+              "numberAvailable": 4986,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/washington-nationals-tickets-nationals-park-3-27-2025--sports-mlb-baseball/production/5097202?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/nationals-park-tickets/venue/5597?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:05Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694912/phillies-nationals",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:05 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694916",
+      "uid": "s:1~l:10~e:401694916",
+      "date": "2025-03-27T20:05Z",
+      "name": "Boston Red Sox at Texas Rangers",
+      "shortName": "BOS @ TEX",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694916",
+          "uid": "s:1~l:10~e:401694916~c:401694916",
+          "date": "2025-03-27T20:05Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "231",
+            "fullName": "Globe Life Field",
+            "address": {
+              "city": "Arlington",
+              "state": "Texas"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "13",
+              "uid": "s:1~l:10~t:13",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "13",
+                "uid": "s:1~l:10~t:13",
+                "location": "Texas",
+                "name": "Rangers",
+                "abbreviation": "TEX",
+                "displayName": "Texas Rangers",
+                "shortDisplayName": "Rangers",
+                "color": "003278",
+                "alternateColor": "c0111f",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/tex/texas-rangers",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/tex/texas-rangers",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/tex/texas-rangers",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/tex",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tex.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "8",
+                  "rankDisplayValue": "Tied-8th"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "2",
+                  "rankDisplayValue": "Tied-8th"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".250",
+                  "rankDisplayValue": "8th"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "1",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "5.63",
+                  "rankDisplayValue": "7th"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": ".500",
+                      "value": 0.5,
+                      "athlete": {
+                        "id": "33842",
+                        "fullName": "Jonah Heim",
+                        "displayName": "Jonah Heim",
+                        "shortName": "J. Heim",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/33842"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33842.png",
+                        "jersey": "28",
+                        "position": {
+                          "abbreviation": "C"
+                        },
+                        "team": {
+                          "id": "13"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "13"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "0",
+                      "value": 0.0,
+                      "athlete": {
+                        "id": "32146",
+                        "fullName": "Marcus Semien",
+                        "displayName": "Marcus Semien",
+                        "shortName": "M. Semien",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/32146"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/32146.png",
+                        "jersey": "2",
+                        "position": {
+                          "abbreviation": "2B"
+                        },
+                        "team": {
+                          "id": "13"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "13"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "0",
+                      "value": 0.0,
+                      "athlete": {
+                        "id": "32146",
+                        "fullName": "Marcus Semien",
+                        "displayName": "Marcus Semien",
+                        "shortName": "M. Semien",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/32146"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/32146.png",
+                        "jersey": "2",
+                        "position": {
+                          "abbreviation": "2B"
+                        },
+                        "team": {
+                          "id": "13"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "13"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "60.8",
+                      "value": 60.75,
+                      "athlete": {
+                        "id": "33842",
+                        "fullName": "Jonah Heim",
+                        "displayName": "Jonah Heim",
+                        "shortName": "J. Heim",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/33842"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33842.png",
+                        "jersey": "28",
+                        "position": {
+                          "abbreviation": "C"
+                        },
+                        "team": {
+                          "id": "13"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "13"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "uid": "s:1~l:10~t:2",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "2",
+                "uid": "s:1~l:10~t:2",
+                "location": "Boston",
+                "name": "Red Sox",
+                "abbreviation": "BOS",
+                "displayName": "Boston Red Sox",
+                "shortDisplayName": "Red Sox",
+                "color": "0d2b56",
+                "alternateColor": "bd3039",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/bos/boston-red-sox",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/bos/boston-red-sox",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/bos/boston-red-sox",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/bos",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:05 PM EDT"
+            }
+          },
+          "broadcasts": [
+            {
+              "market": "home",
+              "names": [
+                "Rangers Sports Network"
+              ]
+            }
+          ],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $109",
+              "numberAvailable": 2153,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/texas-rangers-tickets-globe-life-field-3-27-2025--sports-mlb-baseball/production/5099884?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/globe-life-field-tickets/venue/21878?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:05Z",
+          "broadcast": "",
+          "geoBroadcasts": [
+            {
+              "type": {
+                "id": "1",
+                "shortName": "TV"
+              },
+              "market": {
+                "id": "2",
+                "type": "Home"
+              },
+              "media": {
+                "shortName": "Rangers Sports Network"
+              },
+              "lang": "en",
+              "region": "us"
+            }
+          ],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694916/red-sox-rangers",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:05 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694913",
+      "uid": "s:1~l:10~e:401694913",
+      "date": "2025-03-27T20:10Z",
+      "name": "Pittsburgh Pirates at Miami Marlins",
+      "shortName": "PIT @ MIA",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694913",
+          "uid": "s:1~l:10~e:401694913~c:401694913",
+          "date": "2025-03-27T20:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "4223",
+            "fullName": "loanDepot park",
+            "address": {
+              "city": "Miami",
+              "state": "Florida"
+            },
+            "indoor": true
+          },
+          "competitors": [
+            {
+              "id": "28",
+              "uid": "s:1~l:10~t:28",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "28",
+                "uid": "s:1~l:10~t:28",
+                "location": "Miami",
+                "name": "Marlins",
+                "abbreviation": "MIA",
+                "displayName": "Miami Marlins",
+                "shortDisplayName": "Marlins",
+                "color": "00a3e0",
+                "alternateColor": "000000",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/mia/miami-marlins",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/mia/miami-marlins",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/mia/miami-marlins",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/mia",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mia.png"
+              },
+              "score": "0",
+              "probables": [
+                {
+                  "name": "probableStartingPitcher",
+                  "displayName": "Probable Starting Pitcher",
+                  "shortDisplayName": "Starter",
+                  "abbreviation": "SP",
+                  "playerId": 35241,
+                  "athlete": {
+                    "id": "35241",
+                    "fullName": "Sandy Alcantara",
+                    "displayName": "Sandy Alcantara",
+                    "shortName": "S. Alcantara",
+                    "links": [
+                      {
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ],
+                        "href": "https://www.espn.com/mlb/player/_/id/35241"
+                      }
+                    ],
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/35241.png",
+                    "jersey": "22",
+                    "position": "SP",
+                    "team": {
+                      "id": "28"
+                    }
+                  },
+                  "statistics": [],
+                  "record": ""
+                }
+              ],
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            },
+            {
+              "id": "23",
+              "uid": "s:1~l:10~t:23",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "23",
+                "uid": "s:1~l:10~t:23",
+                "location": "Pittsburgh",
+                "name": "Pirates",
+                "abbreviation": "PIT",
+                "displayName": "Pittsburgh Pirates",
+                "shortDisplayName": "Pirates",
+                "color": "000000",
+                "alternateColor": "fdb827",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/pit/pittsburgh-pirates",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/pit/pittsburgh-pirates",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/pit/pittsburgh-pirates",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/pit",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/pit.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:10 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $23",
+              "numberAvailable": 3739,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/miami-marlins-tickets-loandepot-park-3-27-2025--sports-mlb-baseball/production/5099247?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/loandepot-park-tickets/venue/9284?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694913/pirates-marlins",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:10 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694914",
+      "uid": "s:1~l:10~e:401694914",
+      "date": "2025-03-27T20:10Z",
+      "name": "San Francisco Giants at Cincinnati Reds",
+      "shortName": "SF @ CIN",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694914",
+          "uid": "s:1~l:10~e:401694914~c:401694914",
+          "date": "2025-03-27T20:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "83",
+            "fullName": "Great American Ball Park",
+            "address": {
+              "city": "Cincinnati",
+              "state": "Ohio"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "17",
+              "uid": "s:1~l:10~t:17",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "17",
+                "uid": "s:1~l:10~t:17",
+                "location": "Cincinnati",
+                "name": "Reds",
+                "abbreviation": "CIN",
+                "displayName": "Cincinnati Reds",
+                "shortDisplayName": "Reds",
+                "color": "c6011f",
+                "alternateColor": "ffffff",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/cin/cincinnati-reds",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/cin/cincinnati-reds",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/cin/cincinnati-reds",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/cin",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/cin.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            },
+            {
+              "id": "26",
+              "uid": "s:1~l:10~t:26",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "26",
+                "uid": "s:1~l:10~t:26",
+                "location": "San Francisco",
+                "name": "Giants",
+                "abbreviation": "SF",
+                "displayName": "San Francisco Giants",
+                "shortDisplayName": "Giants",
+                "color": "000000",
+                "alternateColor": "fd5a1e",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/sf/san-francisco-giants",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/sf/san-francisco-giants",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/sf/san-francisco-giants",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/sf",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sf.png"
+              },
+              "score": "0",
+              "probables": [
+                {
+                  "name": "probableStartingPitcher",
+                  "displayName": "Probable Starting Pitcher",
+                  "shortDisplayName": "Starter",
+                  "abbreviation": "SP",
+                  "playerId": 41216,
+                  "athlete": {
+                    "id": "41216",
+                    "fullName": "Logan Webb",
+                    "displayName": "Logan Webb",
+                    "shortName": "L. Webb",
+                    "links": [
+                      {
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ],
+                        "href": "https://www.espn.com/mlb/player/_/id/41216"
+                      }
+                    ],
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/41216.png",
+                    "jersey": "62",
+                    "position": "SP",
+                    "team": {
+                      "id": "26"
+                    }
+                  },
+                  "statistics": [],
+                  "record": ""
+                }
+              ],
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:10 PM EDT"
+            }
+          },
+          "broadcasts": [
+            {
+              "market": "home",
+              "names": [
+                "FanDuel SN OH"
+              ]
+            }
+          ],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $59",
+              "numberAvailable": 4173,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/cincinnati-reds-tickets-great-american-ball-park-3-27-2025--sports-mlb-baseball/production/5098251?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/great-american-ball-park-tickets/venue/338?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [
+            {
+              "type": {
+                "id": "1",
+                "shortName": "TV"
+              },
+              "market": {
+                "id": "2",
+                "type": "Home"
+              },
+              "media": {
+                "shortName": "FanDuel SN OH"
+              },
+              "lang": "en",
+              "region": "us"
+            }
+          ],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694914/giants-reds",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:10 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694915",
+      "uid": "s:1~l:10~e:401694915",
+      "date": "2025-03-27T20:10Z",
+      "name": "Los Angeles Angels at Chicago White Sox",
+      "shortName": "LAA @ CHW",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694915",
+          "uid": "s:1~l:10~e:401694915~c:401694915",
+          "date": "2025-03-27T20:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "4",
+            "fullName": "Rate Field",
+            "address": {
+              "city": "Chicago",
+              "state": "Illinois"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "4",
+              "uid": "s:1~l:10~t:4",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "4",
+                "uid": "s:1~l:10~t:4",
+                "location": "Chicago",
+                "name": "White Sox",
+                "abbreviation": "CHW",
+                "displayName": "Chicago White Sox",
+                "shortDisplayName": "White Sox",
+                "color": "000000",
+                "alternateColor": "c4ced4",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/chw/chicago-white-sox",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/chw/chicago-white-sox",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/chw/chicago-white-sox",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/chw",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chw.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            },
+            {
+              "id": "3",
+              "uid": "s:1~l:10~t:3",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "3",
+                "uid": "s:1~l:10~t:3",
+                "location": "Los Angeles",
+                "name": "Angels",
+                "abbreviation": "LAA",
+                "displayName": "Los Angeles Angels",
+                "shortDisplayName": "Angels",
+                "color": "ba0021",
+                "alternateColor": "c4ced4",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/laa/los-angeles-angels",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/laa/los-angeles-angels",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/laa/los-angeles-angels",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/laa",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/laa.png"
+              },
+              "score": "0",
+              "probables": [
+                {
+                  "name": "probableStartingPitcher",
+                  "displayName": "Probable Starting Pitcher",
+                  "shortDisplayName": "Starter",
+                  "abbreviation": "SP",
+                  "playerId": 41415,
+                  "athlete": {
+                    "id": "41415",
+                    "fullName": "Yusei Kikuchi",
+                    "displayName": "Yusei Kikuchi",
+                    "shortName": "Y. Kikuchi",
+                    "links": [
+                      {
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ],
+                        "href": "https://www.espn.com/mlb/player/_/id/41415"
+                      }
+                    ],
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/41415.png",
+                    "jersey": "16",
+                    "position": "SP",
+                    "team": {
+                      "id": "3"
+                    }
+                  },
+                  "statistics": [],
+                  "record": ""
+                }
+              ],
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:10 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $19",
+              "numberAvailable": 15436,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/chicago-white-sox-tickets-guaranteed-rate-field-3-27-2025--sports-mlb-baseball/production/5097188?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/guaranteed-rate-field-tickets/venue/374?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694915/angels-white-sox",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:10 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694917",
+      "uid": "s:1~l:10~e:401694917",
+      "date": "2025-03-27T20:10Z",
+      "name": "Cleveland Guardians at Kansas City Royals",
+      "shortName": "CLE @ KC",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694917",
+          "uid": "s:1~l:10~e:401694917~c:401694917",
+          "date": "2025-03-27T20:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "7",
+            "fullName": "Kauffman Stadium",
+            "address": {
+              "city": "Kansas City",
+              "state": "Missouri"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "7",
+              "uid": "s:1~l:10~t:7",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "7",
+                "uid": "s:1~l:10~t:7",
+                "location": "Kansas City",
+                "name": "Royals",
+                "abbreviation": "KC",
+                "displayName": "Kansas City Royals",
+                "shortDisplayName": "Royals",
+                "color": "004687",
+                "alternateColor": "7ab2dd",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/kc/kansas-city-royals",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/kc/kansas-city-royals",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/kc/kansas-city-royals",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/kc",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/kc.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "9",
+                  "rankDisplayValue": "Tied-5th"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "5",
+                  "rankDisplayValue": "Tied-5th"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".281",
+                  "rankDisplayValue": "5th"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "1",
+                  "rankDisplayValue": "1st"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "1",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "2.00",
+                  "rankDisplayValue": "Tied-2nd"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": "1.000",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "42228",
+                        "fullName": "Dairon Blanco",
+                        "displayName": "Dairon Blanco",
+                        "shortName": "D. Blanco",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/42228"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/42228.png",
+                        "jersey": "44",
+                        "position": {
+                          "abbreviation": "LF"
+                        },
+                        "team": {
+                          "id": "7"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "7"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "1",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "4414108",
+                        "fullName": "Tyler Gentry",
+                        "displayName": "Tyler Gentry",
+                        "shortName": "T. Gentry",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/4414108"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/4414108.png",
+                        "jersey": "27",
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "team": {
+                          "id": "7"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "7"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "3",
+                      "value": 3.0,
+                      "athlete": {
+                        "id": "4414108",
+                        "fullName": "Tyler Gentry",
+                        "displayName": "Tyler Gentry",
+                        "shortName": "T. Gentry",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/4414108"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/4414108.png",
+                        "jersey": "27",
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "team": {
+                          "id": "7"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "7"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "67.5",
+                      "value": 67.5,
+                      "athlete": {
+                        "id": "4414108",
+                        "fullName": "Tyler Gentry",
+                        "displayName": "Tyler Gentry",
+                        "shortName": "T. Gentry",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/4414108"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/4414108.png",
+                        "jersey": "27",
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "team": {
+                          "id": "7"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "7"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5",
+              "uid": "s:1~l:10~t:5",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "5",
+                "uid": "s:1~l:10~t:5",
+                "location": "Cleveland",
+                "name": "Guardians",
+                "abbreviation": "CLE",
+                "displayName": "Cleveland Guardians",
+                "shortDisplayName": "Guardians",
+                "color": "002b5c",
+                "alternateColor": "e31937",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/cle/cleveland-guardians",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/cle/cleveland-guardians",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/cle/cleveland-guardians",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/cle",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/cle.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:10 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $30",
+              "numberAvailable": 5218,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/kansas-city-royals-tickets-kauffman-stadium-3-27-2025--sports-mlb-baseball/production/5098605?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/kauffman-stadium-tickets/venue/841?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694917/guardians-royals",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:10 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694919",
+      "uid": "s:1~l:10~e:401694919",
+      "date": "2025-03-27T20:10Z",
+      "name": "New York Mets at Houston Astros",
+      "shortName": "NYM @ HOU",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694919",
+          "uid": "s:1~l:10~e:401694919~c:401694919",
+          "date": "2025-03-27T20:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "44",
+            "fullName": "Daikin Park",
+            "address": {
+              "city": "Houston",
+              "state": "Texas"
+            },
+            "indoor": true
+          },
+          "competitors": [
+            {
+              "id": "18",
+              "uid": "s:1~l:10~t:18",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "18",
+                "uid": "s:1~l:10~t:18",
+                "location": "Houston",
+                "name": "Astros",
+                "abbreviation": "HOU",
+                "displayName": "Houston Astros",
+                "shortDisplayName": "Astros",
+                "color": "002d62",
+                "alternateColor": "eb6e1f",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/hou/houston-astros",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/hou/houston-astros",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/hou/houston-astros",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/hou",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            },
+            {
+              "id": "21",
+              "uid": "s:1~l:10~t:21",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "21",
+                "uid": "s:1~l:10~t:21",
+                "location": "New York",
+                "name": "Mets",
+                "abbreviation": "NYM",
+                "displayName": "New York Mets",
+                "shortDisplayName": "Mets",
+                "color": "002d72",
+                "alternateColor": "ff5910",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/nym/new-york-mets",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/nym/new-york-mets",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/nym/new-york-mets",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/nym",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nym.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:10 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $40",
+              "numberAvailable": 4519,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/houston-astros-tickets-minute-maid-park-3-27-2025--sports-mlb-baseball/production/5099621?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/minute-maid-park-tickets/venue/515?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694919/mets-astros",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:10 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694920",
+      "uid": "s:1~l:10~e:401694920",
+      "date": "2025-03-27T20:10Z",
+      "name": "Atlanta Braves at San Diego Padres",
+      "shortName": "ATL @ SD",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694920",
+          "uid": "s:1~l:10~e:401694920~c:401694920",
+          "date": "2025-03-27T20:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "85",
+            "fullName": "Petco Park",
+            "address": {
+              "city": "San Diego",
+              "state": "California"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "25",
+              "uid": "s:1~l:10~t:25",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "25",
+                "uid": "s:1~l:10~t:25",
+                "location": "San Diego",
+                "name": "Padres",
+                "abbreviation": "SD",
+                "displayName": "San Diego Padres",
+                "shortDisplayName": "Padres",
+                "color": "2f241d",
+                "alternateColor": "ffc425",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/sd/san-diego-padres",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/sd/san-diego-padres",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/sd/san-diego-padres",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/sd",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "9",
+                  "rankDisplayValue": "Tied-5th"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "5",
+                  "rankDisplayValue": "Tied-5th"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".265",
+                  "rankDisplayValue": "7th"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "1",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "2.00",
+                  "rankDisplayValue": "Tied-2nd"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": ".333",
+                      "value": 0.3333333134651184,
+                      "athlete": {
+                        "id": "40481",
+                        "fullName": "Tirso Ornelas",
+                        "displayName": "Tirso Ornelas",
+                        "shortName": "T. Ornelas",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/40481"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/40481.png",
+                        "jersey": "21",
+                        "position": {
+                          "abbreviation": "LF"
+                        },
+                        "team": {
+                          "id": "25"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "25"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "1",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "31097",
+                        "fullName": "Manny Machado",
+                        "displayName": "Manny Machado",
+                        "shortName": "M. Machado",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/31097"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31097.png",
+                        "jersey": "13",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "25"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "25"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "2",
+                      "value": 2.0,
+                      "athlete": {
+                        "id": "31097",
+                        "fullName": "Manny Machado",
+                        "displayName": "Manny Machado",
+                        "shortName": "M. Machado",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/31097"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31097.png",
+                        "jersey": "13",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "25"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "25"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "66.8",
+                      "value": 66.75,
+                      "athlete": {
+                        "id": "31097",
+                        "fullName": "Manny Machado",
+                        "displayName": "Manny Machado",
+                        "shortName": "M. Machado",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/31097"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31097.png",
+                        "jersey": "13",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "25"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "25"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "15",
+              "uid": "s:1~l:10~t:15",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "15",
+                "uid": "s:1~l:10~t:15",
+                "location": "Atlanta",
+                "name": "Braves",
+                "abbreviation": "ATL",
+                "displayName": "Atlanta Braves",
+                "shortDisplayName": "Braves",
+                "color": "0c2340",
+                "alternateColor": "ba0c2f",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/atl/atlanta-braves",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/atl/atlanta-braves",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/atl/atlanta-braves",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/atl",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:10 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $63",
+              "numberAvailable": 6258,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/san-diego-padres-tickets-petco-park-3-27-2025--sports-mlb-baseball/production/5097182?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/petco-park-tickets/venue/3019?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694920/braves-padres",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:10 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694918",
+      "uid": "s:1~l:10~e:401694918",
+      "date": "2025-03-27T20:15Z",
+      "name": "Minnesota Twins at St. Louis Cardinals",
+      "shortName": "MIN @ STL",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694918",
+          "uid": "s:1~l:10~e:401694918~c:401694918",
+          "date": "2025-03-27T20:15Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "87",
+            "fullName": "Busch Stadium",
+            "address": {
+              "city": "St. Louis",
+              "state": "Missouri"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "24",
+              "uid": "s:1~l:10~t:24",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "24",
+                "uid": "s:1~l:10~t:24",
+                "location": "St. Louis",
+                "name": "Cardinals",
+                "abbreviation": "STL",
+                "displayName": "St. Louis Cardinals",
+                "shortDisplayName": "Cardinals",
+                "color": "be0a14",
+                "alternateColor": "001541",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/stl/st-louis-cardinals",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/stl/st-louis-cardinals",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/stl/st-louis-cardinals",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/stl",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/stl.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            },
+            {
+              "id": "9",
+              "uid": "s:1~l:10~t:9",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "9",
+                "uid": "s:1~l:10~t:9",
+                "location": "Minnesota",
+                "name": "Twins",
+                "abbreviation": "MIN",
+                "displayName": "Minnesota Twins",
+                "shortDisplayName": "Twins",
+                "color": "031f40",
+                "alternateColor": "e20e32",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/min/minnesota-twins",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/min/minnesota-twins",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/min/minnesota-twins",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/min",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png"
+              },
+              "score": "0",
+              "probables": [
+                {
+                  "name": "probableStartingPitcher",
+                  "displayName": "Probable Starting Pitcher",
+                  "shortDisplayName": "Starter",
+                  "abbreviation": "SP",
+                  "playerId": 39671,
+                  "athlete": {
+                    "id": "39671",
+                    "fullName": "Pablo Lopez",
+                    "displayName": "Pablo Lopez",
+                    "shortName": "P. Lopez",
+                    "links": [
+                      {
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ],
+                        "href": "https://www.espn.com/mlb/player/_/id/39671"
+                      }
+                    ],
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/39671.png",
+                    "jersey": "49",
+                    "position": "SP",
+                    "team": {
+                      "id": "9"
+                    }
+                  },
+                  "statistics": [],
+                  "record": ""
+                }
+              ],
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 4:15 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $68",
+              "numberAvailable": 5404,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/st-louis-cardinals-tickets-busch-stadium-3-27-2025--sports-mlb-baseball/production/5098464?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/busch-stadium-tickets/venue/248?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T20:15Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694918/twins-cardinals",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 4:15 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694922",
+      "uid": "s:1~l:10~e:401694922",
+      "date": "2025-03-27T23:00Z",
+      "name": "Detroit Tigers at Los Angeles Dodgers",
+      "shortName": "DET @ LAD",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694922",
+          "uid": "s:1~l:10~e:401694922~c:401694922",
+          "date": "2025-03-27T23:00Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "19",
+            "fullName": "Dodger Stadium",
+            "address": {
+              "city": "Los Angeles",
+              "state": "California"
+            },
+            "indoor": false
+          },
+          "competitors": [
+            {
+              "id": "19",
+              "uid": "s:1~l:10~t:19",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "19",
+                "uid": "s:1~l:10~t:19",
+                "location": "Los Angeles",
+                "name": "Dodgers",
+                "abbreviation": "LAD",
+                "displayName": "Los Angeles Dodgers",
+                "shortDisplayName": "Dodgers",
+                "color": "005a9c",
+                "alternateColor": "ffffff",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/lad/los-angeles-dodgers",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/lad/los-angeles-dodgers",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/lad/los-angeles-dodgers",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/lad",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "20",
+                  "rankDisplayValue": "2nd"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "7",
+                  "rankDisplayValue": "4th"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".294",
+                  "rankDisplayValue": "4th"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "2",
+                  "rankDisplayValue": "1st"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "10.06",
+                  "rankDisplayValue": "9th"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": ".667",
+                      "value": 0.6666666269302368,
+                      "athlete": {
+                        "id": "30791",
+                        "fullName": "Miguel Rojas",
+                        "displayName": "Miguel Rojas",
+                        "shortName": "M. Rojas",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/30791"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/30791.png",
+                        "jersey": "72",
+                        "position": {
+                          "abbreviation": "SS"
+                        },
+                        "team": {
+                          "id": "19"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "19"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "0",
+                      "value": 0.0,
+                      "athlete": {
+                        "id": "30791",
+                        "fullName": "Miguel Rojas",
+                        "displayName": "Miguel Rojas",
+                        "shortName": "M. Rojas",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/30791"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/30791.png",
+                        "jersey": "72",
+                        "position": {
+                          "abbreviation": "SS"
+                        },
+                        "team": {
+                          "id": "19"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "19"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "1",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "32856",
+                        "fullName": "Austin Barnes",
+                        "displayName": "Austin Barnes",
+                        "shortName": "A. Barnes",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/32856"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/32856.png",
+                        "jersey": "15",
+                        "position": {
+                          "abbreviation": "C"
+                        },
+                        "team": {
+                          "id": "19"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "19"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "63.8",
+                      "value": 63.75,
+                      "athlete": {
+                        "id": "33039",
+                        "fullName": "Mookie Betts",
+                        "displayName": "Mookie Betts",
+                        "shortName": "M. Betts",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/33039"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33039.png",
+                        "jersey": "50",
+                        "position": {
+                          "abbreviation": "SS"
+                        },
+                        "team": {
+                          "id": "19"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "19"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "6",
+              "uid": "s:1~l:10~t:6",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "6",
+                "uid": "s:1~l:10~t:6",
+                "location": "Detroit",
+                "name": "Tigers",
+                "abbreviation": "DET",
+                "displayName": "Detroit Tigers",
+                "shortDisplayName": "Tigers",
+                "color": "0a2240",
+                "alternateColor": "ff4713",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/det/detroit-tigers",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/det/detroit-tigers",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/det/detroit-tigers",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/det",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/det.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 7:00 PM EDT"
+            }
+          },
+          "broadcasts": [
+            {
+              "market": "national",
+              "names": [
+                "ESPN"
+              ]
+            }
+          ],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $166",
+              "numberAvailable": 3117,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/los-angeles-dodgers-tickets-dodger-stadium-3-27-2025--sports-mlb-baseball/production/5097899?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/dodger-stadium-tickets/venue/475?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-27T23:00Z",
+          "broadcast": "ESPN",
+          "geoBroadcasts": [
+            {
+              "type": {
+                "id": "1",
+                "shortName": "TV"
+              },
+              "market": {
+                "id": "1",
+                "type": "National"
+              },
+              "media": {
+                "shortName": "ESPN",
+                "logo": "https://a.espncdn.com/guid/335fd2d2-97b9-336b-81ee-573eb6bdcffc/logos/default.png",
+                "darkLogo": ""
+              },
+              "lang": "en",
+              "region": "us"
+            }
+          ],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694922/tigers-dodgers",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 7:00 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694921",
+      "uid": "s:1~l:10~e:401694921",
+      "date": "2025-03-28T02:10Z",
+      "name": "Chicago Cubs at Arizona Diamondbacks",
+      "shortName": "CHC @ ARI",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694921",
+          "uid": "s:1~l:10~e:401694921~c:401694921",
+          "date": "2025-03-28T02:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "30",
+            "fullName": "Chase Field",
+            "address": {
+              "city": "Phoenix",
+              "state": "Arizona"
+            },
+            "indoor": true
+          },
+          "competitors": [
+            {
+              "id": "29",
+              "uid": "s:1~l:10~t:29",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "29",
+                "uid": "s:1~l:10~t:29",
+                "location": "Arizona",
+                "name": "Diamondbacks",
+                "abbreviation": "ARI",
+                "displayName": "Arizona Diamondbacks",
+                "shortDisplayName": "Diamondbacks",
+                "color": "aa182c",
+                "alternateColor": "000000",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/ari/arizona-diamondbacks",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/ari/arizona-diamondbacks",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/ari/arizona-diamondbacks",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/ari",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "12",
+                  "rankDisplayValue": "Tied-3rd"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "8",
+                  "rankDisplayValue": "3rd"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".324",
+                  "rankDisplayValue": "2nd"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "1",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "12.00",
+                  "rankDisplayValue": "10th"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": "1.000",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "32367",
+                        "fullName": "Eugenio Suarez",
+                        "displayName": "Eugenio Suarez",
+                        "shortName": "E. Suarez",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/32367"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/32367.png",
+                        "jersey": "28",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "29"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "29"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "0",
+                      "value": 0.0,
+                      "athlete": {
+                        "id": "31399",
+                        "fullName": "Randal Grichuk",
+                        "displayName": "Randal Grichuk",
+                        "shortName": "R. Grichuk",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/31399"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/31399.png",
+                        "jersey": "15",
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "team": {
+                          "id": "29"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "29"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "2",
+                      "value": 2.0,
+                      "athlete": {
+                        "id": "32367",
+                        "fullName": "Eugenio Suarez",
+                        "displayName": "Eugenio Suarez",
+                        "shortName": "E. Suarez",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/32367"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/32367.png",
+                        "jersey": "28",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "29"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "29"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "65.0",
+                      "value": 65.0,
+                      "athlete": {
+                        "id": "32367",
+                        "fullName": "Eugenio Suarez",
+                        "displayName": "Eugenio Suarez",
+                        "shortName": "E. Suarez",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/32367"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/32367.png",
+                        "jersey": "28",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "29"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "29"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "16",
+              "uid": "s:1~l:10~t:16",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "16",
+                "uid": "s:1~l:10~t:16",
+                "location": "Chicago",
+                "name": "Cubs",
+                "abbreviation": "CHC",
+                "displayName": "Chicago Cubs",
+                "shortDisplayName": "Cubs",
+                "color": "0e3386",
+                "alternateColor": "cc3433",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/chc/chicago-cubs",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/chc/chicago-cubs",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/chc/chicago-cubs",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/chc",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chc.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "26",
+                  "rankDisplayValue": "1st"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "19",
+                  "rankDisplayValue": "1st"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".351",
+                  "rankDisplayValue": "1st"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "2",
+                  "rankDisplayValue": "1st"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "3.50",
+                  "rankDisplayValue": "4th"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": "1.000",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "34945",
+                        "fullName": "Ian Happ",
+                        "displayName": "Ian Happ",
+                        "shortName": "I. Happ",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/34945"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/34945.png",
+                        "jersey": "8",
+                        "position": {
+                          "abbreviation": "LF"
+                        },
+                        "team": {
+                          "id": "16"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "16"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "1",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "38905",
+                        "fullName": "Miguel Amaya",
+                        "displayName": "Miguel Amaya",
+                        "shortName": "M. Amaya",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/38905"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/38905.png",
+                        "jersey": "9",
+                        "position": {
+                          "abbreviation": "C"
+                        },
+                        "team": {
+                          "id": "16"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "16"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "3",
+                      "value": 3.0,
+                      "athlete": {
+                        "id": "4424290",
+                        "fullName": "Gage Workman",
+                        "displayName": "Gage Workman",
+                        "shortName": "G. Workman",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/4424290"
+                          }
+                        ],
+                        "jersey": "25",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "16"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "16"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "72.5",
+                      "value": 72.5,
+                      "athlete": {
+                        "id": "4424290",
+                        "fullName": "Gage Workman",
+                        "displayName": "Gage Workman",
+                        "shortName": "G. Workman",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/4424290"
+                          }
+                        ],
+                        "jersey": "25",
+                        "position": {
+                          "abbreviation": "3B"
+                        },
+                        "team": {
+                          "id": "16"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "16"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 10:10 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $63",
+              "numberAvailable": 3099,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/arizona-diamondbacks-tickets-chase-field-3-27-2025--sports-mlb-baseball/production/5100021?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/chase-field-tickets/venue/143?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-28T02:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694921/cubs-diamondbacks",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 10:10 PM EDT"
+        }
+      }
+    },
+    {
+      "id": "401694923",
+      "uid": "s:1~l:10~e:401694923",
+      "date": "2025-03-28T02:10Z",
+      "name": "Athletics Athletics at Seattle Mariners",
+      "shortName": "ATH @ SEA",
+      "season": {
+        "year": 2025,
+        "type": 2,
+        "slug": "regular-season"
+      },
+      "competitions": [
+        {
+          "id": "401694923",
+          "uid": "s:1~l:10~e:401694923~c:401694923",
+          "date": "2025-03-28T02:10Z",
+          "attendance": 0,
+          "type": {
+            "id": "1",
+            "abbreviation": "STD"
+          },
+          "timeValid": true,
+          "neutralSite": false,
+          "conferenceCompetition": false,
+          "playByPlayAvailable": false,
+          "recent": false,
+          "wasSuspended": false,
+          "venue": {
+            "id": "41",
+            "fullName": "T-Mobile Park",
+            "address": {
+              "city": "Seattle",
+              "state": "Washington"
+            },
+            "indoor": true
+          },
+          "competitors": [
+            {
+              "id": "12",
+              "uid": "s:1~l:10~t:12",
+              "type": "team",
+              "order": 0,
+              "homeAway": "home",
+              "team": {
+                "id": "12",
+                "uid": "s:1~l:10~t:12",
+                "location": "Seattle",
+                "name": "Mariners",
+                "abbreviation": "SEA",
+                "displayName": "Seattle Mariners",
+                "shortDisplayName": "Mariners",
+                "color": "005c5c",
+                "alternateColor": "0c2c56",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/sea/seattle-mariners",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/sea/seattle-mariners",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/sea/seattle-mariners",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/sea",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sea.png"
+              },
+              "score": "0",
+              "statistics": [
+                {
+                  "name": "hits",
+                  "abbreviation": "H",
+                  "displayValue": "2",
+                  "rankDisplayValue": "10th"
+                },
+                {
+                  "name": "runs",
+                  "abbreviation": "R",
+                  "displayValue": "2",
+                  "rankDisplayValue": "Tied-8th"
+                },
+                {
+                  "name": "avg",
+                  "abbreviation": "AVG",
+                  "displayValue": ".071",
+                  "rankDisplayValue": "10th"
+                },
+                {
+                  "name": "saves",
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "losses",
+                  "abbreviation": "L",
+                  "displayValue": "1",
+                  "rankDisplayValue": "Tied-2nd"
+                },
+                {
+                  "name": "wins",
+                  "abbreviation": "W",
+                  "displayValue": "0",
+                  "rankDisplayValue": "Tied-6th"
+                },
+                {
+                  "name": "ERA",
+                  "abbreviation": "ERA",
+                  "displayValue": "4.50",
+                  "rankDisplayValue": "Tied-5th"
+                }
+              ],
+              "hits": 0,
+              "errors": 0,
+              "leaders": [
+                {
+                  "name": "avg",
+                  "displayName": "Batting Average",
+                  "shortDisplayName": "BA",
+                  "abbreviation": "AVG",
+                  "leaders": [
+                    {
+                      "displayValue": "1.000",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "43035",
+                        "fullName": "Blake Hunt",
+                        "displayName": "Blake Hunt",
+                        "shortName": "B. Hunt",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/43035"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/43035.png",
+                        "jersey": "12",
+                        "position": {
+                          "abbreviation": "C"
+                        },
+                        "team": {
+                          "id": "12"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "12"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "homeRuns",
+                  "displayName": "Home Runs",
+                  "shortDisplayName": "HR",
+                  "abbreviation": "HR",
+                  "leaders": [
+                    {
+                      "displayValue": "0",
+                      "value": 0.0,
+                      "athlete": {
+                        "id": "33210",
+                        "fullName": "J.P. Crawford",
+                        "displayName": "J.P. Crawford",
+                        "shortName": "J.P. Crawford",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/33210"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33210.png",
+                        "jersey": "3",
+                        "position": {
+                          "abbreviation": "SS"
+                        },
+                        "team": {
+                          "id": "12"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "12"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "RBIs",
+                  "displayName": "Runs Batted In",
+                  "shortDisplayName": "RBI",
+                  "abbreviation": "RBI",
+                  "leaders": [
+                    {
+                      "displayValue": "1",
+                      "value": 1.0,
+                      "athlete": {
+                        "id": "33210",
+                        "fullName": "J.P. Crawford",
+                        "displayName": "J.P. Crawford",
+                        "shortName": "J.P. Crawford",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/33210"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33210.png",
+                        "jersey": "3",
+                        "position": {
+                          "abbreviation": "SS"
+                        },
+                        "team": {
+                          "id": "12"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "12"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "MLBRating",
+                  "displayName": "MLB Rating",
+                  "shortDisplayName": "MLB",
+                  "abbreviation": "MLB",
+                  "leaders": [
+                    {
+                      "displayValue": "61.0",
+                      "value": 61.0,
+                      "athlete": {
+                        "id": "43035",
+                        "fullName": "Blake Hunt",
+                        "displayName": "Blake Hunt",
+                        "shortName": "B. Hunt",
+                        "links": [
+                          {
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ],
+                            "href": "https://www.espn.com/mlb/player/_/id/43035"
+                          }
+                        ],
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/43035.png",
+                        "jersey": "12",
+                        "position": {
+                          "abbreviation": "C"
+                        },
+                        "team": {
+                          "id": "12"
+                        },
+                        "active": true
+                      },
+                      "team": {
+                        "id": "12"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "11",
+              "uid": "s:1~l:10~t:11",
+              "type": "team",
+              "order": 1,
+              "homeAway": "away",
+              "team": {
+                "id": "11",
+                "uid": "s:1~l:10~t:11",
+                "location": "Athletics",
+                "name": "Athletics",
+                "abbreviation": "ATH",
+                "displayName": "Athletics",
+                "shortDisplayName": "Athletics",
+                "color": "003831",
+                "alternateColor": "efb21e",
+                "isActive": true,
+                "links": [
+                  {
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/_/name/ath/athletics",
+                    "text": "Clubhouse",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/ath/athletics",
+                    "text": "Roster",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/ath/athletics",
+                    "text": "Statistics",
+                    "isExternal": false,
+                    "isPremium": false
+                  },
+                  {
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/ath",
+                    "text": "Schedule",
+                    "isExternal": false,
+                    "isPremium": false
+                  }
+                ],
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ath.png"
+              },
+              "score": "0",
+              "statistics": [],
+              "hits": 0,
+              "errors": 0
+            }
+          ],
+          "notes": [],
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 1,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Scheduled",
+              "shortDetail": "3/27 - 10:10 PM EDT"
+            }
+          },
+          "broadcasts": [],
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "tickets": [
+            {
+              "summary": "Tickets as low as $30",
+              "numberAvailable": 21917,
+              "links": [
+                {
+                  "href": "https://www.vividseats.com/seattle-mariners-tickets-t-mobile-park-3-27-2025--sports-mlb-baseball/production/5098334?wsUser=717"
+                },
+                {
+                  "href": "https://www.vividseats.com/t-mobile-park-tickets/venue/1488?wsUser=717"
+                }
+              ]
+            }
+          ],
+          "startDate": "2025-03-28T02:10Z",
+          "broadcast": "",
+          "geoBroadcasts": [],
+          "highlights": []
+        }
+      ],
+      "links": [
+        {
+          "language": "en-US",
+          "rel": [
+            "summary",
+            "desktop",
+            "event"
+          ],
+          "href": "https://www.espn.com/mlb/game/_/gameId/401694923/athletics-mariners",
+          "text": "Gamecast",
+          "shortText": "Gamecast",
+          "isExternal": false,
+          "isPremium": false
+        }
+      ],
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 1,
+        "type": {
+          "id": "1",
+          "name": "STATUS_SCHEDULED",
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "3/27 - 10:10 PM EDT"
+        }
+      }
+    }
+  ]
+}

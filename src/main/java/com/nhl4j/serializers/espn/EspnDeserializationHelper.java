@@ -6,6 +6,8 @@ import com.nhl4j.domain.GameStatus;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
 
+import static com.nhl4j.util.JsonUtil.getListFromNode;
+
 public class EspnDeserializationHelper {
 
     public static Team parseTeamFromCompetitionNode(JsonNode competitionNode, String homeAway, boolean isBoxscore) {
@@ -33,6 +35,11 @@ public class EspnDeserializationHelper {
                 team.getStats().put(Stat.SCORE_Q2, getLineScore(linescoresNode, 1));
                 team.getStats().put(Stat.SCORE_Q3, getLineScore(linescoresNode, 2));
                 team.getStats().put(Stat.SCORE_Q4, getLineScore(linescoresNode, 3));
+
+                final var lineScores = getListFromNode(competitorNode, "linescores").stream()
+                        .map(it -> it.get("displayValue").textValue())
+                        .toList();
+                team.setLineScore(lineScores);
             }
 
             return team;

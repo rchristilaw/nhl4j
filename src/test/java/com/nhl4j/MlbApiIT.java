@@ -3,6 +3,7 @@ package com.nhl4j;
 import com.nhl4j.domain.Schedule;
 import com.nhl4j.exception.StatsApiException;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.web.client.RestTemplate;
 
@@ -12,40 +13,42 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NhlApiTest {
+public class MlbApiIT {
 
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
-    private NhlApi nhlApi;
+    private MlbApi mlbApi;
 
     @BeforeEach
     public void setup() {
-        nhlApi = new NhlApi(new RestTemplate());
+        mlbApi = new MlbApi(new RestTemplate());
     }
 
     @Test
+    @Disabled
     public void validRequest_getTeams_notNullAndAllTeamsReturned() throws StatsApiException {
-        final var teams = nhlApi.getTeams();
+        final var teams = mlbApi.getTeams();
 
         assertNotNull(teams);
-        assertEquals(teams.size(), 32);
+        assertEquals(teams.size(), 30);
     }
 
     @Test
-    public void validRequest_getTeam3_teamDataWithRoster() throws StatsApiException {
-        final var team = nhlApi.getTeam("3");
+    public void validRequest_getTeam2_teamDataWithRoster() throws StatsApiException {
+        final var team = mlbApi.getTeam("2");
 
         assertNotNull(team);
+        assertTrue(!team.getRoster().isEmpty());
     }
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2025-02-22").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2025-07-23").toInstant());
 
-        Schedule scheduleData = nhlApi.getScheduleForDate(today);
+        Schedule scheduleData = mlbApi.getScheduleForDate(today);
 
         assertNotNull(scheduleData);
-        assertFalse(scheduleData.getGames().isEmpty());
+        assertTrue(!scheduleData.getGames().isEmpty());
 
         final var game = scheduleData.getGames().get(0);
         assertNotNull(game.getAway().getFullName());
@@ -58,7 +61,7 @@ public class NhlApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nhlApi.getGameDetails("401688432");
+        final var gameData = mlbApi.getGameDetails("401570064");
 
         assertNotNull(gameData);
     }

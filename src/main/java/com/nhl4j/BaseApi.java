@@ -16,12 +16,12 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 
-public class RestClient {
+public class BaseApi {
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
-    public RestClient(RestTemplate restTemplate, ApiSource apiSource) {
+    public BaseApi(RestTemplate restTemplate, ApiSource apiSource) {
         this.restTemplate = restTemplate;
         this.objectMapper = configureObjectMapper(apiSource);
     }
@@ -52,7 +52,7 @@ public class RestClient {
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", MediaType.APPLICATION_JSON.getType());
 
-        HttpEntity<?> entity = new HttpEntity(headers);
+        HttpEntity<?> entity = new HttpEntity<>(headers);
 
         HttpEntity<String> response = restTemplate.exchange(
                 url,

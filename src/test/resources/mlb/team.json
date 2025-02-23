@@ -1,0 +1,1338 @@
+{
+  "team": {
+    "id": "14",
+    "uid": "s:1~l:10~t:14",
+    "slug": "toronto-blue-jays",
+    "location": "Toronto",
+    "name": "Blue Jays",
+    "abbreviation": "TOR",
+    "displayName": "Toronto Blue Jays",
+    "shortDisplayName": "Blue Jays",
+    "color": "134a8e",
+    "alternateColor": "6cace5",
+    "isActive": true,
+    "logos": [
+      {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+          "full",
+          "default"
+        ],
+        "lastUpdated": "2024-07-01T17:48Z"
+      },
+      {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/tor.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+          "full",
+          "dark"
+        ],
+        "lastUpdated": "2024-07-01T17:49Z"
+      },
+      {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tor.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+          "full",
+          "scoreboard"
+        ],
+        "lastUpdated": "2024-07-01T17:48Z"
+      },
+      {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/scoreboard/tor.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+          "full",
+          "scoreboard",
+          "dark"
+        ],
+        "lastUpdated": "2024-07-01T17:49Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_white_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "primary_logo_on_white_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_black_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "primary_logo_on_black_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_primary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "primary_logo_on_primary_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_secondary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "primary_logo_on_secondary_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_white_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "secondary_logo_on_white_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_black_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "secondary_logo_on_black_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_primary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "secondary_logo_on_primary_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      },
+      {
+        "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_secondary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "alt": "",
+        "rel": [
+          "full",
+          "secondary_logo_on_secondary_color"
+        ],
+        "lastUpdated": "2024-12-03T19:55Z"
+      }
+    ],
+    "record": {
+      "items": [
+        {
+          "description": "Overall Record",
+          "type": "total",
+          "summary": "0-0",
+          "stats": [
+            {
+              "name": "OTLosses",
+              "value": 0.0
+            },
+            {
+              "name": "OTWins",
+              "value": 0.0
+            },
+            {
+              "name": "avgPointsAgainst",
+              "value": 0.0
+            },
+            {
+              "name": "avgPointsFor",
+              "value": 0.0
+            },
+            {
+              "name": "differential",
+              "value": 0.0
+            },
+            {
+              "name": "divisionWinPercent",
+              "value": 0.0
+            },
+            {
+              "name": "gamesBehind",
+              "value": 0.0
+            },
+            {
+              "name": "gamesPlayed",
+              "value": 0.0
+            },
+            {
+              "name": "leagueWinPercent",
+              "value": 0.0
+            },
+            {
+              "name": "losses",
+              "value": 0.0
+            },
+            {
+              "name": "playoffSeed",
+              "value": 0.0
+            },
+            {
+              "name": "pointDifferential",
+              "value": 0.0
+            },
+            {
+              "name": "points",
+              "value": 0.0
+            },
+            {
+              "name": "pointsAgainst",
+              "value": 0.0
+            },
+            {
+              "name": "pointsFor",
+              "value": 0.0
+            },
+            {
+              "name": "streak",
+              "value": 0.0
+            },
+            {
+              "name": "ties",
+              "value": 0.0
+            },
+            {
+              "name": "winPercent",
+              "value": 0.0
+            },
+            {
+              "name": "wins",
+              "value": 0.0
+            },
+            {
+              "name": "divisionGamesBehind",
+              "value": 0.0
+            },
+            {
+              "name": "divisionPercent",
+              "value": 0.0
+            },
+            {
+              "name": "divisionTied",
+              "value": 0.0
+            },
+            {
+              "name": "homeLosses",
+              "value": 0.0
+            },
+            {
+              "name": "homeTies",
+              "value": 0.0
+            },
+            {
+              "name": "homeWins",
+              "value": 0.0
+            },
+            {
+              "name": "magicNumberDivision",
+              "value": 0.0
+            },
+            {
+              "name": "magicNumberWildcard",
+              "value": 0.0
+            },
+            {
+              "name": "playoffPercent",
+              "value": 0.0
+            },
+            {
+              "name": "roadLosses",
+              "value": 0.0
+            },
+            {
+              "name": "roadTies",
+              "value": 0.0
+            },
+            {
+              "name": "roadWins",
+              "value": 0.0
+            },
+            {
+              "name": "wildCardPercent",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "description": "Home Record",
+          "type": "home",
+          "summary": "0-0",
+          "stats": [
+            {
+              "name": "OTLosses",
+              "value": 0.0
+            },
+            {
+              "name": "OTWins",
+              "value": 0.0
+            },
+            {
+              "name": "avgPointsAgainst",
+              "value": 0.0
+            },
+            {
+              "name": "avgPointsFor",
+              "value": 0.0
+            },
+            {
+              "name": "differential",
+              "value": 0.0
+            },
+            {
+              "name": "divisionWinPercent",
+              "value": 0.0
+            },
+            {
+              "name": "gamesBehind",
+              "value": 0.0
+            },
+            {
+              "name": "gamesPlayed",
+              "value": 0.0
+            },
+            {
+              "name": "leagueWinPercent",
+              "value": 0.0
+            },
+            {
+              "name": "losses",
+              "value": 0.0
+            },
+            {
+              "name": "playoffSeed",
+              "value": 0.0
+            },
+            {
+              "name": "pointDifferential",
+              "value": 0.0
+            },
+            {
+              "name": "points",
+              "value": 0.0
+            },
+            {
+              "name": "pointsAgainst",
+              "value": 0.0
+            },
+            {
+              "name": "pointsFor",
+              "value": 0.0
+            },
+            {
+              "name": "streak",
+              "value": 0.0
+            },
+            {
+              "name": "ties",
+              "value": 0.0
+            },
+            {
+              "name": "winPercent",
+              "value": 0.0
+            },
+            {
+              "name": "wins",
+              "value": 0.0
+            },
+            {
+              "name": "divisionGamesBehind",
+              "value": 0.0
+            },
+            {
+              "name": "divisionPercent",
+              "value": 0.0
+            },
+            {
+              "name": "divisionTied",
+              "value": 0.0
+            },
+            {
+              "name": "homeLosses",
+              "value": 0.0
+            },
+            {
+              "name": "homeTies",
+              "value": 0.0
+            },
+            {
+              "name": "homeWins",
+              "value": 0.0
+            },
+            {
+              "name": "magicNumberDivision",
+              "value": 0.0
+            },
+            {
+              "name": "magicNumberWildcard",
+              "value": 0.0
+            },
+            {
+              "name": "playoffPercent",
+              "value": 0.0
+            },
+            {
+              "name": "roadLosses",
+              "value": 0.0
+            },
+            {
+              "name": "roadTies",
+              "value": 0.0
+            },
+            {
+              "name": "roadWins",
+              "value": 0.0
+            },
+            {
+              "name": "wildCardPercent",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "description": "Away Record",
+          "type": "road",
+          "summary": "0-0",
+          "stats": [
+            {
+              "name": "OTLosses",
+              "value": 0.0
+            },
+            {
+              "name": "OTWins",
+              "value": 0.0
+            },
+            {
+              "name": "avgPointsAgainst",
+              "value": 0.0
+            },
+            {
+              "name": "avgPointsFor",
+              "value": 0.0
+            },
+            {
+              "name": "differential",
+              "value": 0.0
+            },
+            {
+              "name": "divisionWinPercent",
+              "value": 0.0
+            },
+            {
+              "name": "gamesBehind",
+              "value": 0.0
+            },
+            {
+              "name": "gamesPlayed",
+              "value": 0.0
+            },
+            {
+              "name": "leagueWinPercent",
+              "value": 0.0
+            },
+            {
+              "name": "losses",
+              "value": 0.0
+            },
+            {
+              "name": "playoffSeed",
+              "value": 0.0
+            },
+            {
+              "name": "pointDifferential",
+              "value": 0.0
+            },
+            {
+              "name": "points",
+              "value": 0.0
+            },
+            {
+              "name": "pointsAgainst",
+              "value": 0.0
+            },
+            {
+              "name": "pointsFor",
+              "value": 0.0
+            },
+            {
+              "name": "streak",
+              "value": 0.0
+            },
+            {
+              "name": "ties",
+              "value": 0.0
+            },
+            {
+              "name": "winPercent",
+              "value": 0.0
+            },
+            {
+              "name": "wins",
+              "value": 0.0
+            },
+            {
+              "name": "divisionGamesBehind",
+              "value": 0.0
+            },
+            {
+              "name": "divisionPercent",
+              "value": 0.0
+            },
+            {
+              "name": "divisionTied",
+              "value": 0.0
+            },
+            {
+              "name": "homeLosses",
+              "value": 0.0
+            },
+            {
+              "name": "homeTies",
+              "value": 0.0
+            },
+            {
+              "name": "homeWins",
+              "value": 0.0
+            },
+            {
+              "name": "magicNumberDivision",
+              "value": 0.0
+            },
+            {
+              "name": "magicNumberWildcard",
+              "value": 0.0
+            },
+            {
+              "name": "playoffPercent",
+              "value": 0.0
+            },
+            {
+              "name": "roadLosses",
+              "value": 0.0
+            },
+            {
+              "name": "roadTies",
+              "value": 0.0
+            },
+            {
+              "name": "roadWins",
+              "value": 0.0
+            },
+            {
+              "name": "wildCardPercent",
+              "value": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "groups": {
+      "id": "8675309"
+    },
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "clubhouse",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/_/name/tor/toronto-blue-jays",
+        "text": "Clubhouse",
+        "shortText": "Clubhouse",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "roster",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/roster/_/name/tor/toronto-blue-jays",
+        "text": "Roster",
+        "shortText": "Roster",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/stats/_/name/tor/toronto-blue-jays",
+        "text": "Statistics",
+        "shortText": "Statistics",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "schedule",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/schedule/_/name/tor",
+        "text": "Schedule",
+        "shortText": "Schedule",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "photos",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/photos/_/name/tor",
+        "text": "photos",
+        "shortText": "photos",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "tickets",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.vividseats.com/toronto-blue-jays-tickets--sports-mlb-baseball/performer/877?wsUser=717",
+        "text": "Tickets",
+        "shortText": "Tickets",
+        "isExternal": true,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transactions",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/transactions/_/name/tor",
+        "text": "Transactions",
+        "shortText": "Transactions",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "injuries",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/injuries/_/name/tor",
+        "text": "Injuries",
+        "shortText": "Injuries",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "depthchart",
+          "desktop",
+          "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/depth/_/name/tor",
+        "text": "Depth Chart",
+        "shortText": "Depth Chart",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "franchise": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/baseball/leagues/mlb/franchises/14?lang=en&region=us",
+      "id": "14",
+      "uid": "s:1~l:10~f:14",
+      "slug": "toronto-blue-jays",
+      "location": "Toronto",
+      "name": "Blue Jays",
+      "abbreviation": "TOR",
+      "displayName": "Toronto Blue Jays",
+      "shortDisplayName": "Blue Jays",
+      "color": "134a8e",
+      "isActive": true,
+      "venue": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/baseball/leagues/mlb/venues/14?lang=en&region=us",
+        "id": "14",
+        "fullName": "Rogers Centre",
+        "shortName": "Rogers Centre",
+        "address": {
+          "city": "Toronto",
+          "state": "Ontario"
+        },
+        "grass": false,
+        "indoor": true,
+        "images": [
+          {
+            "href": "https://a.espncdn.com/i/venues/mlb/day/14.jpg",
+            "width": 2000,
+            "height": 1125,
+            "alt": "",
+            "rel": [
+              "full",
+              "day"
+            ]
+          }
+        ]
+      },
+      "team": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/baseball/leagues/mlb/seasons/2025/teams/14?lang=en&region=us"
+      },
+      "awards": {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/baseball/leagues/mlb/franchises/14/awards?lang=en&region=us"
+      }
+    },
+    "nextEvent": [
+      {
+        "id": "401704055",
+        "date": "2025-02-22T18:07Z",
+        "name": "New York Yankees at Toronto Blue Jays",
+        "shortName": "NYY @ TOR",
+        "season": {
+          "year": 2025,
+          "displayName": "2025"
+        },
+        "seasonType": {
+          "id": "1",
+          "type": 1,
+          "name": "Spring Training",
+          "abbreviation": "pre"
+        },
+        "timeValid": true,
+        "competitions": [
+          {
+            "id": "401704055",
+            "date": "2025-02-22T18:07Z",
+            "attendance": 0,
+            "type": {
+              "id": "18",
+              "text": "Exhibition",
+              "abbreviation": "EXH",
+              "slug": "exhibition",
+              "type": "exhibition"
+            },
+            "timeValid": true,
+            "neutralSite": false,
+            "boxscoreAvailable": false,
+            "ticketsAvailable": true,
+            "venue": {
+              "fullName": "TD Ballpark",
+              "address": {
+                "city": "Dunedin",
+                "state": "Florida",
+                "zipCode": "34698"
+              }
+            },
+            "competitors": [
+              {
+                "id": "14",
+                "type": "team",
+                "order": 0,
+                "homeAway": "home",
+                "team": {
+                  "id": "14",
+                  "location": "Toronto",
+                  "abbreviation": "TOR",
+                  "displayName": "Toronto Blue Jays",
+                  "shortDisplayName": "Blue Jays",
+                  "logos": [
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "default"
+                      ],
+                      "lastUpdated": "2024-07-01T17:48Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/tor.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "dark"
+                      ],
+                      "lastUpdated": "2024-07-01T17:49Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tor.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "scoreboard"
+                      ],
+                      "lastUpdated": "2024-07-01T17:48Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/scoreboard/tor.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "scoreboard",
+                        "dark"
+                      ],
+                      "lastUpdated": "2024-07-01T17:49Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_white_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_white_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_black_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_black_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_primary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_primary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/primary_logo_on_secondary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_secondary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_white_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_white_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_black_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_black_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_primary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_primary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/0151aed9-9f11-ceae-195d-180ca603b64a/logos/secondary_logo_on_secondary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_secondary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:55Z"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/_/name/tor/toronto-blue-jays",
+                      "text": "Clubhouse"
+                    },
+                    {
+                      "rel": [
+                        "roster",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/roster/_/name/tor/toronto-blue-jays",
+                      "text": "Roster"
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/stats/_/name/tor/toronto-blue-jays",
+                      "text": "Statistics"
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/schedule/_/name/tor",
+                      "text": "Schedule"
+                    },
+                    {
+                      "rel": [
+                        "photos",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/photos/_/name/tor",
+                      "text": "photos"
+                    },
+                    {
+                      "rel": [
+                        "tickets",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.vividseats.com/toronto-blue-jays-tickets--sports-mlb-baseball/performer/877?wsUser=717",
+                      "text": "Tickets"
+                    },
+                    {
+                      "rel": [
+                        "transactions",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/transactions/_/name/tor",
+                      "text": "Transactions"
+                    },
+                    {
+                      "rel": [
+                        "injuries",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/injuries/_/name/tor",
+                      "text": "Injuries"
+                    },
+                    {
+                      "rel": [
+                        "depthchart",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/depth/_/name/tor",
+                      "text": "Depth Chart"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "10",
+                "type": "team",
+                "order": 1,
+                "homeAway": "away",
+                "team": {
+                  "id": "10",
+                  "location": "New York",
+                  "abbreviation": "NYY",
+                  "displayName": "New York Yankees",
+                  "shortDisplayName": "Yankees",
+                  "logos": [
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "default"
+                      ],
+                      "lastUpdated": "2024-07-01T17:48Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/nyy.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "dark"
+                      ],
+                      "lastUpdated": "2024-07-01T17:49Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "scoreboard"
+                      ],
+                      "lastUpdated": "2024-07-01T17:48Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/scoreboard/nyy.png",
+                      "width": 500,
+                      "height": 500,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "scoreboard",
+                        "dark"
+                      ],
+                      "lastUpdated": "2024-07-01T17:49Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_white_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_white_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_black_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_black_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_primary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_primary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_secondary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "primary_logo_on_secondary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_white_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_white_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_black_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_black_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_primary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_primary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    },
+                    {
+                      "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_secondary_color.png",
+                      "width": 4096,
+                      "height": 4096,
+                      "alt": "",
+                      "rel": [
+                        "full",
+                        "secondary_logo_on_secondary_color"
+                      ],
+                      "lastUpdated": "2024-12-03T19:56Z"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/_/name/nyy/new-york-yankees",
+                      "text": "Clubhouse"
+                    },
+                    {
+                      "rel": [
+                        "roster",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/roster/_/name/nyy/new-york-yankees",
+                      "text": "Roster"
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/stats/_/name/nyy/new-york-yankees",
+                      "text": "Statistics"
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/schedule/_/name/nyy",
+                      "text": "Schedule"
+                    },
+                    {
+                      "rel": [
+                        "photos",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/photos/_/name/nyy",
+                      "text": "photos"
+                    },
+                    {
+                      "rel": [
+                        "tickets",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.vividseats.com/new-york-yankees-tickets--sports-mlb-baseball/performer/607?wsUser=717",
+                      "text": "Tickets"
+                    },
+                    {
+                      "rel": [
+                        "transactions",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/transactions/_/name/nyy",
+                      "text": "Transactions"
+                    },
+                    {
+                      "rel": [
+                        "injuries",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/injuries/_/name/nyy",
+                      "text": "Injuries"
+                    },
+                    {
+                      "rel": [
+                        "depthchart",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/mlb/team/depth/_/name/nyy",
+                      "text": "Depth Chart"
+                    }
+                  ]
+                }
+              }
+            ],
+            "notes": [],
+            "broadcasts": [
+              {
+                "type": {
+                  "id": "1",
+                  "shortName": "TV"
+                },
+                "market": {
+                  "id": "2",
+                  "type": "Home"
+                },
+                "media": {
+                  "shortName": "Sportsnet"
+                },
+                "lang": "en",
+                "region": "us"
+              }
+            ],
+            "tickets": [
+              {
+                "id": "5160052",
+                "summary": "Tickets as low as $27",
+                "description": "Spring Training - New York Yankees at Toronto Blue Jays",
+                "maxPrice": 820.0,
+                "startingPrice": 27.0,
+                "numberAvailable": 126,
+                "totalPostings": 29,
+                "links": [
+                  {
+                    "rel": [
+                      "tickets",
+                      "desktop",
+                      "event"
+                    ],
+                    "href": "https://www.vividseats.com/toronto-blue-jays-tickets-td-ballpark-3-22-2025--sports-mlb-baseball/production/5160052?wsUser=717"
+                  },
+                  {
+                    "rel": [
+                      "tickets",
+                      "desktop",
+                      "venue"
+                    ],
+                    "href": "https://www.vividseats.com/td-ballpark-tickets/venue/481?wsUser=717"
+                  }
+                ]
+              }
+            ],
+            "status": {
+              "clock": 0.0,
+              "displayClock": "0:00",
+              "period": 1,
+              "type": {
+                "id": "1",
+                "name": "STATUS_SCHEDULED",
+                "state": "pre",
+                "completed": false,
+                "description": "Scheduled",
+                "detail": "Scheduled",
+                "shortDetail": "2/22 - 1:07 PM EST"
+              },
+              "halfInning": 0,
+              "periodPrefix": "Top"
+            }
+          }
+        ],
+        "links": [
+          {
+            "language": "en-US",
+            "rel": [
+              "summary",
+              "desktop",
+              "event"
+            ],
+            "href": "https://www.espn.com/mlb/game/_/gameId/401704055/yankees-blue-jays",
+            "text": "Gamecast",
+            "shortText": "Summary",
+            "isExternal": false,
+            "isPremium": false
+          },
+          {
+            "language": "en-US",
+            "rel": [
+              "summary",
+              "sportscenter",
+              "app",
+              "event"
+            ],
+            "href": "sportscenter://x-callback-url/showGame?sportName=baseball&leagueAbbrev=mlb&gameId=401704055",
+            "text": "Gamecast",
+            "shortText": "Summary",
+            "isExternal": false,
+            "isPremium": false
+          },
+          {
+            "language": "en-US",
+            "rel": [
+              "now",
+              "desktop",
+              "event"
+            ],
+            "href": "https://www.espn.com/mlb/game/_/gameId/401704055",
+            "text": "Now",
+            "shortText": "Now",
+            "isExternal": false,
+            "isPremium": false
+          }
+        ]
+      }
+    ]
+  }
+}

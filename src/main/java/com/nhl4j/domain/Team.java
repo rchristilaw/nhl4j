@@ -1,9 +1,8 @@
 package com.nhl4j.domain;
 
-import com.nhl4j.domain.Player;
-import com.nhl4j.domain.Stat;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +16,8 @@ public class Team {
     private String abbreviation;
 
     List<Player> roster;
+
+    private List<String> lineScore = new ArrayList<>();
 
     private Map<Stat, String> stats = new HashMap<>();
 }
