@@ -1,8 +1,8 @@
 package com.nhl4j.domain;
 
-import com.nhl4j.serializers.espn.statparser.BaseballStatParser;
-import com.nhl4j.serializers.espn.statparser.FootballStatParser;
-import com.nhl4j.serializers.espn.statparser.HockeyStatParser;
+import com.nhl4j.serializers.espn.statparser.MlbStatParser;
+import com.nhl4j.serializers.espn.statparser.NflStatParser;
+import com.nhl4j.serializers.espn.statparser.NhlStatParser;
 import com.nhl4j.serializers.espn.statparser.StatParser;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,10 +12,10 @@ import lombok.Getter;
 public enum ApiSource {
 
     NHL("NHL", null, null, null, null, null),
-    ESPN_MLB("ESPN", new BaseballStatParser(), "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb",
+    ESPN_MLB("ESPN", new MlbStatParser(), "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb",
             "/teams", "scoreboard?dates=", "/summary?event="),
-    ESPN_NFL("ESPN", new FootballStatParser(), null, null, null, null),
-    ESPN_NHL("ESPN", new HockeyStatParser(), null, null, null, null);
+    ESPN_NFL("ESPN", new NflStatParser(), null, null, null, null),
+    ESPN_NHL("ESPN", new NhlStatParser(), null, null, null, null);
 
     private final String apiSite;
     private final StatParser statParser;

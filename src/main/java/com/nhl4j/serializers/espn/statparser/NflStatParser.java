@@ -17,7 +17,7 @@ import static com.nhl4j.serializers.StatHelper.getSumOfPlayerStat;
 import static com.nhl4j.util.JsonUtil.getFirstNodeFromArrayByKey;
 import static com.nhl4j.util.JsonUtil.streamOf;
 
-public class FootballStatParser extends StatParser {
+public class NflStatParser extends StatParser {
 
     private static final Map<String, List<Stat>> NFL_PLAYER_STAT_CATEGORIES = Map.of(
             "passing", List.of(PASSING_YARDS, PASSING_COMPLETIONS, PASSING_TDS, PASSING_INTS),

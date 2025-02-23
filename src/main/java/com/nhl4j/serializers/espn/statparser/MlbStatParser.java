@@ -1,7 +1,6 @@
 package com.nhl4j.serializers.espn.statparser;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.nhl4j.domain.Game;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
@@ -13,7 +12,7 @@ import java.util.Map;
 import static com.nhl4j.domain.Stat.*;
 import static com.nhl4j.util.JsonUtil.*;
 
-public class BaseballStatParser extends StatParser {
+public class MlbStatParser extends StatParser {
 
     private static final Map<String, List<Stat>> MLB_PLAYER_STAT_CATEGORIES = Map.of(
             "batting", List.of(MLB_K, MLB_RBI, MLB_HITS, MLB_RUNS, MLB_DOUBLES, MLB_TRIPLES,

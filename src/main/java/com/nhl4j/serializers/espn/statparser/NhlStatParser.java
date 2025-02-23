@@ -10,11 +10,10 @@ import com.nhl4j.serializers.StatHelper;
 import java.util.*;
 
 import static com.nhl4j.domain.Stat.*;
-import static com.nhl4j.serializers.StatHelper.getSumOfPlayerStat;
 import static com.nhl4j.util.JsonUtil.getFirstNodeFromArrayByKey;
 import static com.nhl4j.util.JsonUtil.streamOf;
 
-public class HockeyStatParser extends StatParser {
+public class NhlStatParser extends StatParser {
 
     private static final Map<String, List<Stat>> NHL_PLAYER_STAT_CATEGORIES = Map.of(
             "forwards", List.of(GOALS, ASSISTS, GOALS_PP, GOALS_SH, PIMS, SOGS, HITS, FACEOFF_WINS),
