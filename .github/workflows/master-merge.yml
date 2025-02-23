@@ -46,7 +46,7 @@ jobs:
 
       # Skip tests for now since IT tests are broken
       - name: Build with Maven
-        run: mvn -B package --file pom.xml -Dmaven.test.skip
+        run: mvn -B package --file pom.xml
 
       - name: Upload assets
         id: upload_assets

@@ -1,5 +1,6 @@
 package com.nhl4j;
 
+import com.nhl4j.domain.GameStatus;
 import com.nhl4j.domain.Player;
 import com.nhl4j.domain.Stat;
 import com.nhl4j.domain.Team;
@@ -10,11 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.IOException;
-import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -23,7 +20,7 @@ import static org.mockito.Mockito.when;
 
 
 @ExtendWith(MockitoExtension.class)
-public class MlbApiUnitTest {
+public class MlbApiUnitTest extends BaseApiUnitTest{
 
     @Mock
     private RestTemplate restTemplate;
@@ -33,7 +30,7 @@ public class MlbApiUnitTest {
 
 
     @Test
-    public void getGameBoxscore_getGameBoxscore_returnsGame() throws StatsApiException {
+    public void getGameBoxscore_gameInPostGame_returnsGame() throws StatsApiException {
         when(restTemplate.exchange(
                 eq("https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401570064"),
                 eq(HttpMethod.GET),
@@ -44,6 +41,8 @@ public class MlbApiUnitTest {
         final var gameData = mlbApi.getGameDetails("401570064");
 
         assertNotNull(gameData);
+
+        assertEquals(GameStatus.FINAL, gameData.getGameStatus());
 
         assertEquals("Toronto Blue Jays", gameData.getHome().getFullName());
         assertEquals("Texas Rangers", gameData.getAway().getFullName());
@@ -78,18 +77,5 @@ public class MlbApiUnitTest {
         return team.getRoster().stream()
                 .filter(it -> it.getId().equals(playerId))
                 .findFirst().orElseThrow();
-    }
-
-    private ResponseEntity<String> mockResponse(String mockResponseFilePath) {
-        return ResponseEntity.ok(getFromFile(mockResponseFilePath));
-    }
-
-    private String getFromFile(String fileName) {
-        try {
-            return new String(Objects.requireNonNull(
-                    getClass().getClassLoader().getResourceAsStream(fileName)).readAllBytes());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

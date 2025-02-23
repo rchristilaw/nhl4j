@@ -25,7 +25,6 @@ public class MlbApiIT {
     }
 
     @Test
-    @Disabled
     public void validRequest_getTeams_notNullAndAllTeamsReturned() throws StatsApiException {
         final var teams = mlbApi.getTeams();
 

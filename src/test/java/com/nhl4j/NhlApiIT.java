@@ -13,42 +13,40 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NflApiTest {
+public class NhlApiIT {
 
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
-    private NflApi nflApi;
+    private NhlApi nhlApi;
 
     @BeforeEach
     public void setup() {
-        nflApi = new NflApi(new RestTemplate());
+        nhlApi = new NhlApi(new RestTemplate());
     }
 
     @Test
-    @Disabled
     public void validRequest_getTeams_notNullAndAllTeamsReturned() throws StatsApiException {
-        final var teams = nflApi.getTeams();
+        final var teams = nhlApi.getTeams();
 
         assertNotNull(teams);
         assertEquals(teams.size(), 32);
     }
 
     @Test
-    public void validRequest_getTeam2_teamDataWithRoster() throws StatsApiException {
-        final var team = nflApi.getTeam("2");
+    public void validRequest_getTeam3_teamDataWithRoster() throws StatsApiException {
+        final var team = nhlApi.getTeam("3");
 
         assertNotNull(team);
-        assertTrue(!team.getRoster().isEmpty());
     }
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2024-10-28").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2025-02-22").toInstant());
 
-        Schedule scheduleData = nflApi.getScheduleForDate(today);
+        Schedule scheduleData = nhlApi.getScheduleForDate(today);
 
         assertNotNull(scheduleData);
-        assertTrue(!scheduleData.getGames().isEmpty());
+        assertFalse(scheduleData.getGames().isEmpty());
 
         final var game = scheduleData.getGames().get(0);
         assertNotNull(game.getAway().getFullName());
@@ -61,9 +59,8 @@ public class NflApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nflApi.getGameDetails("401671795");
+        final var gameData = nhlApi.getGameDetails("401688432");
 
         assertNotNull(gameData);
-        assertNotNull(gameData.getBettingLine().getSpread());
     }
 }

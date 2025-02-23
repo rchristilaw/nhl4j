@@ -3,6 +3,7 @@ package com.nhl4j;
 import com.nhl4j.domain.Schedule;
 import com.nhl4j.exception.StatsApiException;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.web.client.RestTemplate;
 
@@ -12,15 +13,15 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NhlApiTest {
+public class NhlApiV1IT {
 
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
-    private NhlApi nhlApi;
+    private NhlApiV1 nhlApi;
 
     @BeforeEach
     public void setup() {
-        nhlApi = new NhlApi(new RestTemplate());
+        nhlApi = new NhlApiV1(new RestTemplate());
     }
 
     @Test
@@ -40,12 +41,12 @@ public class NhlApiTest {
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2025-02-22").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2022-11-25").toInstant());
 
         Schedule scheduleData = nhlApi.getScheduleForDate(today);
 
         assertNotNull(scheduleData);
-        assertFalse(scheduleData.getGames().isEmpty());
+        assertTrue(scheduleData.getGames().size() > 0);
 
         final var game = scheduleData.getGames().get(0);
         assertNotNull(game.getAway().getFullName());
@@ -58,7 +59,7 @@ public class NhlApiTest {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nhlApi.getGameDetails("401688432");
+        final var gameData = nhlApi.getGameDetails("2022020767");
 
         assertNotNull(gameData);
     }

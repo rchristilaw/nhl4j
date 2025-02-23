@@ -8,19 +8,17 @@ import org.springframework.web.client.RestTemplate;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class NhlApi {
-
-    private final RestClient restClient;
-
+public class NhlApi extends BaseApi {
+    
     private static final String BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/";
 
     public NhlApi(RestTemplate restTemplate) {
-        this.restClient = new RestClient(restTemplate, ApiSource.ESPN_NHL);
+        super(restTemplate, ApiSource.ESPN_NHL);
     }
 
     public List<Team> getTeams() throws StatsApiException {
         try {
-            return Arrays.asList(restClient.doGet(BASE_URL + "teams", Team[].class));
+            return Arrays.asList(doGet(BASE_URL + "teams", Team[].class));
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch the list of teams", ex);
         }
@@ -31,9 +29,9 @@ public class NhlApi {
         try {
             final var teamPath = String.format("%s/teams/%s", BASE_URL, teamId);
 
-            final var team = restClient.doGet(teamPath, Team.class);
+            final var team = doGet(teamPath, Team.class);
 
-            final var roster = Arrays.asList(restClient.doGet(teamPath + "/roster", Player[].class));
+            final var roster = Arrays.asList(doGet(teamPath + "/roster", Player[].class));
             team.setRoster(roster);
 
             return team;
@@ -57,17 +55,17 @@ public class NhlApi {
 
         try {
             String url = BASE_URL + "scoreboard?dates=" + formattedDate;
-            return restClient.doGet(url, Schedule.class);
+            return doGet(url, Schedule.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch the schedule", ex);
         }
     }
 
-    //https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/summary?event=401560124
+    //https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/summary?event=401688432
     public Game getGameDetails(String gameId) throws StatsApiException {
         try {
             String url = BASE_URL + "summary?event=" + gameId;
-            return restClient.doGet(url, Game.class);
+            return doGet(url, Game.class);
         } catch (Exception ex) {
             throw new StatsApiException("Failed to fetch game: " + gameId, ex);
         }
