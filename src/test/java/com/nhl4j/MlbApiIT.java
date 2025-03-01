@@ -42,7 +42,7 @@ public class MlbApiIT {
 
     @Test
     public void validDate_getSchedule_returnsScheduleWithGames() throws StatsApiException, ParseException {
-        final var today = Date.from(DATE_FORMAT.parse("2025-07-23").toInstant());
+        final var today = Date.from(DATE_FORMAT.parse("2025-02-22").toInstant());
 
         Schedule scheduleData = mlbApi.getScheduleForDate(today);
 

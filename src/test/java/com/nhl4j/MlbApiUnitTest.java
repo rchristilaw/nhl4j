@@ -1,9 +1,6 @@
 package com.nhl4j;
 
-import com.nhl4j.domain.GameStatus;
-import com.nhl4j.domain.Player;
-import com.nhl4j.domain.Stat;
-import com.nhl4j.domain.Team;
+import com.nhl4j.domain.*;
 import com.nhl4j.exception.StatsApiException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,6 +10,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestTemplate;
 
+import java.sql.Date;
+
+import static com.nhl4j.domain.GameStatus.UPCOMING;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -27,7 +27,6 @@ public class MlbApiUnitTest extends BaseApiUnitTest{
 
     @InjectMocks
     private MlbApi mlbApi;
-
 
     @Test
     public void getGameBoxscore_gameInPostGame_returnsGame() throws StatsApiException {
@@ -56,6 +55,12 @@ public class MlbApiUnitTest extends BaseApiUnitTest{
         assertEquals("3", gameData.getHome().getLineScore().get(2));
         assertEquals("1", gameData.getAway().getLineScore().get(5));
 
+        assertEquals("9", gameData.getHome().getStats().get(Stat.MLB_HITS));
+        assertEquals("1", gameData.getHome().getStats().get(Stat.MLB_ERRORS));
+
+        assertEquals("10", gameData.getAway().getStats().get(Stat.MLB_HITS));
+        assertEquals("0", gameData.getAway().getStats().get(Stat.MLB_ERRORS));
+
         final var playerGuerrero = getPlayerFromTeam(gameData.getHome(), "35002");
         assertEquals("1", playerGuerrero.getStats().get(Stat.MLB_HITS));
         assertEquals("0", playerGuerrero.getStats().get(Stat.MLB_BB));
@@ -71,6 +76,40 @@ public class MlbApiUnitTest extends BaseApiUnitTest{
         assertEquals("0", playerBerrios.getStats().get(Stat.MLB_PITCHER_HR));
         assertEquals("6", playerBerrios.getStats().get(Stat.MLB_PITCHER_HITS));
         assertEquals("0", playerBerrios.getStats().get(Stat.MLB_PITCHER_BB));
+    }
+
+    @Test
+    public void getSchedule_dayOfSchedule_returnsScheduleWithBettingLines() throws StatsApiException {
+        when(restTemplate.exchange(
+                eq("https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20250223"),
+                eq(HttpMethod.GET),
+                any(),
+                eq(String.class))
+        ).thenReturn(mockResponse("mlb/schedule.json"));
+
+        final var schedule = mlbApi.getScheduleForDate(Date.valueOf("2025-02-23"));
+
+        assertNotNull(schedule);
+
+        assertEquals(16, schedule.getGames().size());
+
+        final var jaysVsRedSoxGame = getGameById(schedule, "401704175");
+        assertEquals(UPCOMING, jaysVsRedSoxGame.getGameStatus());
+
+        assertEquals("Blue Jays", jaysVsRedSoxGame.getAway().getNickName());
+        assertEquals("Red Sox", jaysVsRedSoxGame.getHome().getNickName());
+
+        assertEquals(-1.5f, jaysVsRedSoxGame.getBettingLine().getSpread());
+        assertEquals(7.5f, jaysVsRedSoxGame.getBettingLine().getTotalPoints());
+
+        // 1:05 PM EST
+        assertEquals("2025-02-23T18:05Z", jaysVsRedSoxGame.getGameDate());
+    }
+
+    private Game getGameById(Schedule schedule, String gameId) {
+        return schedule.getGames().stream()
+                .filter(it -> it.getId().equals(gameId))
+                .findFirst().orElseThrow();
     }
 
     private Player getPlayerFromTeam(Team team, String playerId) {

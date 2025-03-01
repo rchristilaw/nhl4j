@@ -5,7 +5,8 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.nhl4j.domain.*;
 
 import java.util.List;
-import java.util.Map;
+
+import static com.nhl4j.util.JsonUtil.getFirstNodeFromArrayByKey;
 
 
 public abstract class StatParser {
@@ -20,24 +21,8 @@ public abstract class StatParser {
     }
 
     protected String getTeamStat(Stat stat, ArrayNode statisticsNode) {
-        final var statNode = getStatsNodeByType(statisticsNode, stat.getKey());
+        final var statNode = getFirstNodeFromArrayByKey(statisticsNode, "name", stat.getKey());
         return statNode != null ? statNode.get("displayValue").textValue() : "0";
-    }
-
-    protected JsonNode getStatsNodeByType(ArrayNode statsNodes, String statType) {
-        for (final var statsNode : statsNodes) {
-            if (statType.equals(statsNode.get("name").textValue())) {
-                return statsNode;
-            }
-        }
-        return null;
-    }
-
-    protected void parsePlayerStats(Team team, JsonNode playerStatsNode,
-                                    Map<String, List<Stat>> playerStatCategories) {
-        for (final var statCategory : playerStatCategories.entrySet()) {
-
-        }
     }
 
     protected void parsePlayerStatCategory(Team team, JsonNode categoryNode, List<Stat> categoryStats) {
@@ -46,7 +31,6 @@ public abstract class StatParser {
         }
 
         final var keys = (ArrayNode) categoryNode.get("keys");
-
         for (int i = 0; i < keys.size(); i++) {
             final var key = keys.get(i);
 

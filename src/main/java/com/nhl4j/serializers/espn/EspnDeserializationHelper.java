@@ -22,7 +22,7 @@ public class EspnDeserializationHelper {
             team.setId(teamNode.get("id").textValue());
             team.setFullName(teamNode.get("displayName").textValue());
             team.setNickName(teamNode.get("name").textValue());
-            team.setCityName(teamNode.get("name").textValue());
+            team.setCityName(teamNode.get("location").textValue());
             team.setAbbreviation(teamNode.get("abbreviation").textValue());
 
             if (competitorNode.get("score") != null) {
