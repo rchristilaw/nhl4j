@@ -3,7 +3,6 @@ package com.nhl4j;
 import com.nhl4j.domain.Schedule;
 import com.nhl4j.exception.StatsApiException;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.web.client.RestTemplate;
 
@@ -59,7 +58,7 @@ public class NhlApiIT {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nhlApi.getGameDetails("401688432");
+        final var gameData = nhlApi.getBoxscore("401688432");
 
         assertNotNull(gameData);
     }

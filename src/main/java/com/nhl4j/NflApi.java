@@ -62,7 +62,7 @@ public class NflApi extends BaseApi{
     }
 
     //https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671795
-    public Game getGameDetails(String gameId) throws StatsApiException {
+    public Game getBoxscore(String gameId) throws StatsApiException {
         try {
             String url = BASE_URL + "summary?event=" + gameId;
             return doGet(url, Game.class);

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.nhl4j.domain.*;
+import com.nhl4j.exception.StatsApiException;
 import com.nhl4j.serializers.espn.*;
 import com.nhl4j.serializers.nhl.NhlGameDeserializer;
 import com.nhl4j.serializers.nhl.NhlScheduleDeserializer;
@@ -15,8 +16,9 @@ import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.util.*;
 
-public class BaseApi {
+public abstract class BaseApi {
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
@@ -62,4 +64,9 @@ public class BaseApi {
 
         return objectMapper.readValue(response.getBody(), objectType);
     }
+
+    public abstract List<Team> getTeams() throws StatsApiException;;
+    public abstract Team getTeam(String teamId) throws StatsApiException;
+    public abstract Schedule getScheduleForDate(Date date) throws StatsApiException;
+    public abstract Game getBoxscore(String gameId) throws StatsApiException;
 }

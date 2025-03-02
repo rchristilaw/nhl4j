@@ -2,8 +2,6 @@ package com.nhl4j;
 
 import com.nhl4j.domain.*;
 import com.nhl4j.exception.StatsApiException;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -11,10 +9,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestTemplate;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -40,7 +34,7 @@ public class NflApiUnitTest extends BaseApiUnitTest {
                 eq(String.class))
         ).thenReturn(mockResponse("nfl/boxscore-postgame.json"));
 
-        final var gameData = nflApi.getGameDetails("401570064");
+        final var gameData = nflApi.getBoxscore("401570064");
 
         assertNotNull(gameData);
 

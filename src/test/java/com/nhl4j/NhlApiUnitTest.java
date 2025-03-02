@@ -36,7 +36,7 @@ public class NhlApiUnitTest extends BaseApiUnitTest {
                 eq(String.class))
         ).thenReturn(mockResponse("nhl/boxscore-postgame.json"));
 
-        final var gameData = nhlApi.getGameDetails("401570064");
+        final var gameData = nhlApi.getBoxscore("401570064");
 
         assertNotNull(gameData);
 

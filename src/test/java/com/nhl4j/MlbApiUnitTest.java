@@ -37,7 +37,7 @@ public class MlbApiUnitTest extends BaseApiUnitTest{
                 eq(String.class))
         ).thenReturn(mockResponse("mlb/boxscore-postgame.json"));
 
-        final var gameData = mlbApi.getGameDetails("401570064");
+        final var gameData = mlbApi.getBoxscore("401570064");
 
         assertNotNull(gameData);
 
