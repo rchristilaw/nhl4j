@@ -59,7 +59,7 @@ public class MlbApiIT {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = mlbApi.getBoxscore("401570064");
+        final var gameData = mlbApi.getBoxscore("401704363");
 
         assertNotNull(gameData);
     }

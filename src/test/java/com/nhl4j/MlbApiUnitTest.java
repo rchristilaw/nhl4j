@@ -71,11 +71,13 @@ public class MlbApiUnitTest extends BaseApiUnitTest{
         assertEquals("2", playerGuerrero.getStats().get(Stat.MLB_RBI));
 
         final var playerBerrios = getPlayerFromTeam(gameData.getHome(), "32811");
+        assertEquals("7.0", playerBerrios.getStats().get(Stat.MLB_PITCHER_IP));
         assertEquals("5", playerBerrios.getStats().get(Stat.MLB_PITCHER_K));
         assertEquals("1", playerBerrios.getStats().get(Stat.MLB_PITCHER_RUNS));
         assertEquals("0", playerBerrios.getStats().get(Stat.MLB_PITCHER_HR));
         assertEquals("6", playerBerrios.getStats().get(Stat.MLB_PITCHER_HITS));
         assertEquals("0", playerBerrios.getStats().get(Stat.MLB_PITCHER_BB));
+        assertEquals("1", playerBerrios.getStats().get(Stat.MLB_PITCHER_EARNED_RUNS));
     }
 
     @Test

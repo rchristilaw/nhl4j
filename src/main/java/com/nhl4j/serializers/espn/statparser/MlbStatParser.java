@@ -24,7 +24,7 @@ public class MlbStatParser extends StatParser {
                     MLB_PITCHER_RUNS, MLB_PITCHER_DOUBLES, MLB_PITCHER_TRIPLES, MLB_PITCHER_HR,
                     MLB_PITCHER_WILD_PITCHES, MLB_PITCHER_BALKS, MLB_PITCHER_INTENTIONAL_BB, MLB_PITCHER_HBP,
                     MLB_PITCHER_IP, MLB_PITCHER_BATTERS_FACED, MLB_PITCHER_OPPONENTS_TB, MLB_PITCHER_PITCHES, MLB_PITCHER_SAVES,
-                    MLB_PITCHER_BLOWN_SAVES, MLB_PITCHER_SHUTOUTS, MLB_PITCHER_W, MLB_PITCHER_L),
+                    MLB_PITCHER_EARNED_RUNS, MLB_PITCHER_BLOWN_SAVES, MLB_PITCHER_SHUTOUTS, MLB_PITCHER_W, MLB_PITCHER_L),
             "fielding", List.of(MLB_ERRORS, MLB_OUTFIELD_ASSISTS, MLB_DOUBLE_PLAYS, MLB_TRIPLE_PLAYS)
     );
 
@@ -41,6 +41,7 @@ public class MlbStatParser extends StatParser {
 
         for (final var statCategory : MLB_STAT_CATEGORIES.keySet()) {
             final var categoryNode = getFirstNodeFromArrayByKey(statisticsNode, "name", statCategory);
+            if (categoryNode == null) continue;
 
             for (final var stat : MLB_STAT_CATEGORIES.get(statCategory)) {
                 final var categoryStatsNode = categoryNode.get("stats");
@@ -65,7 +66,10 @@ public class MlbStatParser extends StatParser {
 
     @Override
     public void parseGameEvents(Game game, JsonNode gameNode) {
-        final var events = streamOf(gameNode.get("plays"))
+        final var playsNode = gameNode.get("plays");
+        if (playsNode == null) return;
+
+        final var events = streamOf(playsNode)
                 .map(this::parseEventFromPlaysNode)
                 .filter(Objects::nonNull)
                 .toList();
