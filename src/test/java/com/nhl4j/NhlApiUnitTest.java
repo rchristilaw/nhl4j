@@ -73,6 +73,24 @@ public class NhlApiUnitTest extends BaseApiUnitTest {
         assertEquals(7, gameData.getEvents().size());
     }
 
+    @Test
+    public void getGameBoxscore_gameInPreGame_returnsGame() throws StatsApiException {
+        when(restTemplate.exchange(
+                eq("https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/summary?event=401570064"),
+                eq(HttpMethod.GET),
+                any(),
+                eq(String.class))
+        ).thenReturn(mockResponse("nhl/boxscore-pregame.json"));
+
+        final var gameData = nhlApi.getBoxscore("401570064");
+
+        assertNotNull(gameData);
+
+        assertEquals(GameStatus.UPCOMING, gameData.getGameStatus());
+
+        assertEquals(0, gameData.getEvents().size());
+    }
+
     private Player getPlayerFromTeam(Team team, String playerId) {
         return team.getRoster().stream()
                 .filter(it -> it.getId().equals(playerId))

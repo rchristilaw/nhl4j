@@ -81,6 +81,24 @@ public class MlbApiUnitTest extends BaseApiUnitTest{
     }
 
     @Test
+    public void getGameBoxscore_gameInPreGame_returnsGame() throws StatsApiException {
+        when(restTemplate.exchange(
+                eq("https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401570064"),
+                eq(HttpMethod.GET),
+                any(),
+                eq(String.class))
+        ).thenReturn(mockResponse("mlb/boxscore-pregame.json"));
+
+        final var gameData = mlbApi.getBoxscore("401570064");
+
+        assertNotNull(gameData);
+
+        assertEquals(GameStatus.UPCOMING, gameData.getGameStatus());
+
+        assertEquals(0, gameData.getEvents().size());
+    }
+
+    @Test
     public void getSchedule_dayOfSchedule_returnsScheduleWithBettingLines() throws StatsApiException {
         when(restTemplate.exchange(
                 eq("https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20250223"),

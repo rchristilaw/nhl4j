@@ -58,7 +58,7 @@ public class NhlApiIT {
 
     @Test
     public void validGameId_getGameBoxscore_returnsGame() throws StatsApiException {
-        final var gameData = nhlApi.getBoxscore("401688432");
+        final var gameData = nhlApi.getBoxscore("401688606");
 
         assertNotNull(gameData);
     }

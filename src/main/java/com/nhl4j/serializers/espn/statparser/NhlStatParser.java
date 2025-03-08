@@ -51,7 +51,10 @@ public class NhlStatParser extends StatParser {
 
     @Override
     public void parseGameEvents(Game game, JsonNode gameNode) {
-        final var events = streamOf(gameNode.get("plays"))
+        final var playsNode = gameNode.get("plays");
+        if (playsNode == null) return;
+
+        final var events = streamOf(playsNode)
                 .map(this::parseEventFromPlaysNode)
                 .filter(Objects::nonNull)
                 .toList();

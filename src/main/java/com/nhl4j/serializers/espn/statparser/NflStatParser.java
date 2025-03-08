@@ -70,7 +70,10 @@ public class NflStatParser extends StatParser {
 
     @Override
     public void parseGameEvents(Game game, JsonNode gameNode) {
-        final var events = streamOf(gameNode.get("scoringPlays"))
+        final var playsNode = gameNode.get("scoringPlays");
+        if (playsNode == null) return;
+
+        final var events = streamOf(playsNode)
                 .map(this::parseEventFromScoringPlaysNode)
                 .toList();
 
